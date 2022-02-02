@@ -7,10 +7,12 @@ import './App.css'
 
 function App() {
   return (
-    <Styles.Wrapper>
+    <>
       <CSSReset />
-      <Navbar />
-    </Styles.Wrapper>
+      <Styles.Wrapper>
+        <Navbar />
+      </Styles.Wrapper>
+    </>
   )
 }
 
