@@ -1,6 +1,6 @@
-# Getting Started with Create React App
+# The 5 Letter Word Game
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Welcome
 
 ## Available Scripts
 
