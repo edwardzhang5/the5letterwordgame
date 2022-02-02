@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/the5letterwordgame/static/css/main.073c9b0a.css",
-    "main.js": "/the5letterwordgame/static/js/main.2d2152d2.js",
+    "main.js": "/the5letterwordgame/static/js/main.69b6a042.js",
     "static/js/787.9f2d13a9.chunk.js": "/the5letterwordgame/static/js/787.9f2d13a9.chunk.js",
     "index.html": "/the5letterwordgame/index.html",
     "main.073c9b0a.css.map": "/the5letterwordgame/static/css/main.073c9b0a.css.map",
-    "main.2d2152d2.js.map": "/the5letterwordgame/static/js/main.2d2152d2.js.map",
+    "main.69b6a042.js.map": "/the5letterwordgame/static/js/main.69b6a042.js.map",
     "787.9f2d13a9.chunk.js.map": "/the5letterwordgame/static/js/787.9f2d13a9.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.073c9b0a.css",
-    "static/js/main.2d2152d2.js"
+    "static/js/main.69b6a042.js"
   ]
 }
