@@ -1,6 +1,6 @@
-# The 5 Letter Word Game
+# The 5-Letter Word Game
 
-Welcome
+Welcome to our 5-Letter Word Game!
 
 ## Available Scripts
 
