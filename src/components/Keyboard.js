@@ -12,18 +12,21 @@ const StyledKey = styled.button`
 function Keyboard() {
     return (
         <div className="Key">
-            <Grid container spacing={12}>
-                <Grid item xs={9}>
-                    <StyledKey>A</StyledKey>
+            <Grid container spacing={2}>
+                <Grid item xs={2}>
+                    <StyledKey>Q</StyledKey>
                 </Grid>
-                <Grid item xs={4}>
-                    <StyledKey>A</StyledKey>
+                <Grid item xs={2}>
+                    <StyledKey>W</StyledKey>
                 </Grid>
-                <Grid item xs={4}>
-                    <StyledKey>A</StyledKey>
+                <Grid item xs={2}>
+                    <StyledKey>E</StyledKey>
                 </Grid>
-                <Grid item xs={8}>
-                    <StyledKey>A</StyledKey>
+                <Grid item xs={2}>
+                    <StyledKey>R</StyledKey>
+                </Grid>
+                <Grid item xs={2}>
+                    <StyledKey>T</StyledKey>
                 </Grid>
             </Grid>
             
