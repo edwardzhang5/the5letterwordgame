@@ -32,6 +32,9 @@ function App() {
     
       <StartPage trigger={buttonStart} setTrigger={setStart}>
       </StartPage>
+      <Keyboard>
+        
+      </Keyboard>
     </div>
   )
 }

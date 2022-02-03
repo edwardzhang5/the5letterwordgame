@@ -1,0 +1,20 @@
+
+.keyboardbackground{
+
+    /* display: flex;
+    justify-content: space-between; */
+    /* margin:0 auto;  */
+    position:relative;
+    background-color: #333333;
+    width: 100vw;
+    max-width: 700px;
+    
+    border-radius: 10px;
+    color: white;
+}
+
+.keyboardrow{
+    background-color: white;
+    color: black;
+}
+
