@@ -5,10 +5,34 @@ import React from 'react'
 import styled, { createGlobalStyle } from 'styled-components'
 import './App.css'
 import Keyboard from './components/Keyboard';
+import StartPage from './components/StartPage'
+import {iseEffect, useState} from 'react';
+
+let player1 = {
+  name: 'Player 1',
+  wordlist: [],
+  word: ''
+
+}
+
+let player2 = {
+  name: 'Player 1',
+  wordlist: [],
+  word: ''
+}
 
 function App() {
+  const [buttonStart, setStart] = useState(false);
   return (
-    <Keyboard/>
+    <div>
+      <main>
+      <button onClick={() => setStart(true)}>Open Popup</button>
+      </main>
+      
+    
+      <StartPage trigger={buttonStart} setTrigger={setStart}>
+      </StartPage>
+    </div>
   )
 }
 

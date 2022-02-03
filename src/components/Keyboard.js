@@ -9,27 +9,27 @@ const StyledKey = styled.button`
     color: black;
     border-radius: 10px;
     width: ${props => props.inputWidth || '40px'};
-    height: ${props => props.inputWidth || '60px'};
+    height: ${props => props.inputHeight || '60px'};
     padding: 0px;
+    title:
     `
+    
 const StyledContainer = styled.div`
     background-color:black;
     width:600px;
-    margin:0 auto;
-    ;
-
-    
+    margin:0 auto; 
 `
+
 function Keyboard() {
     return (
         <div className="Key">
-            <StyledContainer>
-                <Grid container justifyContent="center">
+            <StyledContainer rowSpacing='20px'>
+                <Grid container justifyContent="center" >
                     <Grid item xs={1}>
                         <StyledKey>Q</StyledKey>
                     </Grid>
                     <Grid item xs={1}>
-                        <StyledKey>W</StyledKey>
+                        <StyledKey title='W' >W</StyledKey>
                     </Grid>
                     <Grid item xs={1}>
                         <StyledKey>E</StyledKey>
@@ -86,8 +86,8 @@ function Keyboard() {
                     </Grid>
                 </Grid>
                 <Grid container justifyContent="center">
-                    <Grid item xs={1}>
-                        <StyledKey inputWidth = '60px'>Back</StyledKey>
+                    <Grid item xs={2}>
+                        <StyledKey inputWidth = '70px'>Back</StyledKey>
                     </Grid>
                     <Grid item xs={1}>
                         <StyledKey>Z</StyledKey>
