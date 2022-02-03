@@ -1,27 +1,50 @@
 import styled from 'styled-components'
 import '../App.css'
 import Grid from '@mui/material/Grid'
-import { Button, Container } from '@mui/material'
+import { Button, Container, TextField } from '@mui/material'
 import React, { useEffect } from 'react'
 import { Card } from '@mui/material'
 import { alignProperty } from '@mui/material/styles/cssUtils'
 import Keyboard from './Keyboard'
 
+const Title = styled.h1`
+    font-size: 4em;
+    text-align: center;
+    color: #34a0a4;
+    padding: 20px;
+`;
+const StyledDiv = styled.div`
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+`
+
+
+
 function StartPage(props){
     useEffect(() => props.setTrigger(true), []);
     return (props.trigger) ? (
-        <div className="StartPage">
-            <Card variant="outlined" >
-                hello
+        <StyledDiv className="StartPage">
+            <Card >
+                <Title>
+                    Player 1, insert your word!
+                </Title>
+                
+                <TextField id='standard-basic' label='insert word...' variant='standard'>
+                    
+                </TextField>
                 <button className="close-btn" onClick={() =>props.setTrigger(false)}>
                     Begin!
                 </button>
                 {props.children}
             </Card>
-            <Keyboard>
-                
-            </Keyboard>
-        </div>
+        </StyledDiv>
     ): '';
 }
 
