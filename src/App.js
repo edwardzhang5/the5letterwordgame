@@ -8,11 +8,7 @@ import Keyboard from './components/Keyboard';
 
 function App() {
   return (
-    <Styles.Wrapper>
-      <CSSReset />
-      <Navbar />
-      <Keyboard/>
-    </Styles.Wrapper>
+    <Keyboard/>
   )
 }
 
