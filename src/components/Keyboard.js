@@ -12,7 +12,7 @@ const StyledKey = styled.button`
     border-radius: 5px;
     width: ${props => props.inputWidth || '40px'};
     height: ${props => props.inputHeight || '60px'};
-    padding: 0px;
+    padding: 2px;
     border: 0;
     
     `
@@ -22,7 +22,7 @@ const keyRows = styled.div`
 `
 const StyledContainer = styled.div`
     background-color: #333333;
-    width: 100vw;
+    width: 30vw;
     max-width: 700px;
     margin:0 auto; 
     border-radius: 10px;
@@ -34,14 +34,33 @@ const StyledContainer = styled.div`
 function Keyboard() {
     return (
         <div class='keyboardbackground'>
-            <div class='keyboardrow'></div>
-            <div class='keyboardrow'></div>
+            <div class='keyboardrow'>
+                <StyledKey>Q</StyledKey>
+                <StyledKey>W</StyledKey>
+                <StyledKey>E</StyledKey>
+                <StyledKey>R</StyledKey>
+                <StyledKey>T</StyledKey>
+                <StyledKey>Y</StyledKey>
+                <StyledKey>U</StyledKey>
+                <StyledKey>I</StyledKey>
+                <StyledKey>O</StyledKey>
+                <StyledKey>P</StyledKey>
+            </div>
+            <div class='keyboardrow'>
+            <StyledKey>A</StyledKey>
+            <StyledKey>S</StyledKey>
+            </div>
+            
+            <div class='keyboardrow'>
+            <StyledKey>Z</StyledKey>
+            <StyledKey>X</StyledKey>
+            </div>
         </div>
         // <StyledContainer>
         //     <keyRows>
 
         //     </keyRows>
-        //     <Grid container justifyContent="space-evenly" >
+        //     <Grid container justifyContent="space-around">
         //         <Grid item xs={1}>
         //             <StyledKey>Q</StyledKey>
         //         </Grid>
@@ -73,7 +92,7 @@ function Keyboard() {
         //             <StyledKey>P</StyledKey>
         //         </Grid>
         //     </Grid>
-        //     <Grid container justifyContent="center" columnSpacing={5}>
+        //     <Grid container justifyContent="space-around">
         //         <Grid item xs={1}>
         //             <StyledKey>A</StyledKey>
         //         </Grid>
@@ -102,36 +121,36 @@ function Keyboard() {
         //             <StyledKey>L</StyledKey>
         //         </Grid>
         //     </Grid>
-        //     <Grid container justifyContent="space-evenly">
-        //         <Grid item xs={2}>
-        //             <StyledKey inputWidth='70px'>Back</StyledKey>
+        //     <Grid container justifyContent="space-evenly" >
+        //         <Grid item xs={1}>
+        //             <StyledKey inputWidth='60px'>ENTER</StyledKey>
         //         </Grid>
         //         <Grid item xs={1}>
-        //             <StyledKey>Z</StyledKey>
+        //             <StyledKey>S</StyledKey>
         //         </Grid>
         //         <Grid item xs={1}>
-        //             <StyledKey>X</StyledKey>
+        //             <StyledKey>D</StyledKey>
         //         </Grid>
         //         <Grid item xs={1}>
-        //             <StyledKey>C</StyledKey>
+        //             <StyledKey>F</StyledKey>
         //         </Grid>
         //         <Grid item xs={1}>
-        //             <StyledKey>V</StyledKey>
+        //             <StyledKey>G</StyledKey>
         //         </Grid>
         //         <Grid item xs={1}>
-        //             <StyledKey>B</StyledKey>
+        //             <StyledKey>H</StyledKey>
         //         </Grid>
         //         <Grid item xs={1}>
-        //             <StyledKey>N</StyledKey>
+        //             <StyledKey>J</StyledKey>
         //         </Grid>
         //         <Grid item xs={1}>
-        //             <StyledKey>M</StyledKey>
+        //             <StyledKey>K</StyledKey>
         //         </Grid>
         //         <Grid item xs={1}>
-        //             <StyledKey inputWidth='70px'>Back</StyledKey>
+        //             <StyledKey inputWidth='60px'>BACK</StyledKey>
         //         </Grid>
-
         //     </Grid>
+            
         // </StyledContainer>
     )
 }
