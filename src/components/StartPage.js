@@ -8,44 +8,45 @@ import { alignProperty } from '@mui/material/styles/cssUtils'
 import Keyboard from './Keyboard'
 
 const Title = styled.h1`
-    font-size: 4em;
-    text-align: center;
-    color: #34a0a4;
-    padding: 20px;
-`;
+  font-size: 4em;
+  text-align: center;
+  color: #34a0a4;
+  padding: 20px;
+`
 const StyledDiv = styled.div`
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  padding: 20px;
 
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 `
 
+function StartPage(props) {
+  useEffect(() => props.setTrigger(true), [])
+  return props.trigger ? (
+    <StyledDiv className='StartPage'>
+      <Card>
+        <Title>Player 1, insert your word!</Title>
 
-
-function StartPage(props){
-    useEffect(() => props.setTrigger(true), []);
-    return (props.trigger) ? (
-        <StyledDiv className="StartPage">
-            <Card >
-                <Title>
-                    Player 1, insert your word!
-                </Title>
-                
-                <TextField id='standard-basic' label='insert word...' variant='standard'>
-                    
-                </TextField>
-                <button className="close-btn" onClick={() =>props.setTrigger(false)}>
-                    Begin!
-                </button>
-                {props.children}
-            </Card>
-        </StyledDiv>
-    ): '';
+        <TextField
+          id='standard-basic'
+          label='insert word...'
+          variant='standard'
+        ></TextField>
+        <button className='close-btn' onClick={() => props.setTrigger(false)}>
+          Begin!
+        </button>
+        {props.children}
+      </Card>
+    </StyledDiv>
+  ) : (
+    ''
+  )
 }
 
 export default StartPage
