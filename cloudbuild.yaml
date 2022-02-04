@@ -1,8 +1,11 @@
+# [START cloudbuild_npm_node]
 steps:
-- name: node
-  entrypoint: npm
-  args: ['install']
-- name: node
-  entrypoint: npm
-  args: ['run', 'build']
-timeout: "1600s
+  # Install dependencies
+  - name: node
+    entrypoint: npm
+    args: ['install']
+  # Run custom commands
+  - name: node
+    entrypoint: npm
+    args: ['run', 'build']
+# [END cloudbuild_npm_node]
