@@ -4,37 +4,32 @@ import Navbar from './components/Navbar'
 import React from 'react'
 import styled, { createGlobalStyle } from 'styled-components'
 import './App.css'
-import Keyboard from './components/Keyboard';
+import Keyboard from './components/Keyboard'
 import StartPage from './components/StartPage'
-import {iseEffect, useState} from 'react';
+import { iseEffect, useState } from 'react'
 
 let player1 = {
   name: 'Player 1',
   wordlist: [],
-  word: ''
-
+  word: '',
 }
 
 let player2 = {
   name: 'Player 1',
   wordlist: [],
-  word: ''
+  word: '',
 }
 
 function App() {
-  const [buttonStart, setStart] = useState(false);
+  const [buttonStart, setStart] = useState(false)
   return (
     <div>
       <main>
-      <button onClick={() => setStart(true)}>Open Popup</button>
+        <button onClick={() => setStart(true)}>Open Popup</button>
       </main>
-      
-    
-      <StartPage trigger={buttonStart} setTrigger={setStart}>
-      </StartPage>
-      <Keyboard>
-        
-      </Keyboard>
+
+      <StartPage trigger={buttonStart} setTrigger={setStart}></StartPage>
+      <Keyboard></Keyboard>
     </div>
   )
 }
