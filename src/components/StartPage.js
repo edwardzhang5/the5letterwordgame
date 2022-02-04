@@ -2,7 +2,7 @@ import styled from 'styled-components'
 import '../App.css'
 import Grid from '@mui/material/Grid'
 import { Button, Container, TextField } from '@mui/material'
-import React, { useEffect } from 'react'
+import React, { Component, useEffect } from 'react'
 import { Card } from '@mui/material'
 import { alignProperty } from '@mui/material/styles/cssUtils'
 import Keyboard from './Keyboard'
@@ -25,7 +25,12 @@ const StyledDiv = styled.div`
     align-items: center;
 `
 
-
+// class Texts extends Component {
+//     constructor(props){
+//         super(props);
+//         comments: 'hello'
+//     }
+// }
 
 function StartPage(props){
     useEffect(() => props.setTrigger(true), []);
@@ -37,10 +42,13 @@ function StartPage(props){
                 </Title>
                 
                 <TextField id='standard-basic' label='insert word...' variant='standard'>
-                    
+
                 </TextField>
                 <button className="close-btn" onClick={() =>props.setTrigger(false)}>
                     Begin!
+                </button>
+                <button className='Next' >
+                    Next
                 </button>
                 {props.children}
             </Card>
