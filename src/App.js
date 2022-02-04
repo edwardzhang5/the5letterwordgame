@@ -8,11 +8,11 @@ import Keyboard from './components/Keyboard'
 
 function App() {
   return (
-    <Styles.Wrapper>
+    <div class = "wrapper">
       <CSSReset />
       <Navbar />
       <Keyboard />
-    </Styles.Wrapper>
+    </div>
   )
 }
 
