@@ -3,16 +3,17 @@
 A pass and play language game implemented as an app.
 
 Instructions for play:
-Both users will be selected to enter a 5 letter word. If unable to come up with a word, there is an option to chose from 5 randomly generated words.
-Once this is complete, play begins
-The goal of the game is to guess your opponent's word in as few turns as possible.
-Each turn, each player will be able to type in one 5 letter word. They will get back how many letters of the given word are present in the answer.
-(Ex if the answer is seven, and you entered snake, you would get a 3).
-Users are able to annotate their keyboard by holding and dragging on a letter.
-Once a player has input their word and recieved their letter count, both play and the keyboard automatically switch to the other player.
-At any time, a play can swipe on the keyboard in order to switch from one player's keyboard to the other, as well as scroll up on the word list to view previously entered words.
+Both users will be selected to enter a 5 letter word.If unable to come up with a word, there is an option to chose from 5 randomly generated words. \
+Once this is complete, play begins \
+The goal of the game is to guess your opponent's word in as few turns as possible. \
+Each turn, each player will be able to type in one 5 letter word. They will get back how many letters of the given word are present in the answer. \
+(Ex if the answer is seven, and you entered snake, you would get a 3). \
+Users are able to annotate their keyboard by holding and dragging on a letter. \
+Once a player has input their word and recieved their letter count, both play and the keyboard automatically switch to the other player. \
+At any time, a play can swipe on the keyboard in order to switch from one player's keyboard to the other, as well as scroll up on the word list to view previously entered words. \
 
 [Link to figma](https://www.figma.com/file/DoTQAXyR329z8eD4WO4ag4/The-5-Letter-Word-Game?node-id=0%3A1)
+[Link to live site](https://upheld-producer-340201.uc.r.appspot.com/)
 
 ## Available Scripts
 
