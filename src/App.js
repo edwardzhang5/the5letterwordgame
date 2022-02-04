@@ -27,8 +27,9 @@ function App() {
       <main>
         <button onClick={() => setStart(true)}>Open Popup</button>
       </main>
-      <Navbar />
+
       <StartPage trigger={buttonStart} setTrigger={setStart}></StartPage>
+      <Keyboard></Keyboard>
     </div>
   )
 }
