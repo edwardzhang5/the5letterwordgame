@@ -8,7 +8,7 @@ import Keyboard from './components/Keyboard'
 import StartPage from './components/StartPage'
 import { iseEffect, useState } from 'react'
 import { createMuiTheme, Typography } from '@mui/material'
-//import Board from './components/Board'
+import Board from './components/Board'
 
 let player1 = {
   name: 'Player 1',
