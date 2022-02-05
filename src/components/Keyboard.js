@@ -33,8 +33,8 @@ const StyledContainer = styled.div`
 
 function Keyboard() {
     return (
-        <div class='keyboardbackground'>
-            <div class='keyboardrow'>
+        <div className='keyboardbackground'>
+            <div className='keyboardrow'>
                 <StyledKey>Q</StyledKey>
                 <StyledKey>W</StyledKey>
                 <StyledKey>E</StyledKey>
@@ -46,12 +46,12 @@ function Keyboard() {
                 <StyledKey>O</StyledKey>
                 <StyledKey>P</StyledKey>
             </div>
-            <div class='keyboardrow'>
+            <div className='keyboardrow'>
             <StyledKey>A</StyledKey>
             <StyledKey>S</StyledKey>
             </div>
             
-            <div class='keyboardrow'>
+            <div className='keyboardrow'>
             <StyledKey>Z</StyledKey>
             <StyledKey>X</StyledKey>
             </div>

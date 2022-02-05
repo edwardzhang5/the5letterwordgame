@@ -7,6 +7,8 @@ import './App.css'
 import Keyboard from './components/Keyboard'
 import StartPage from './components/StartPage'
 import { iseEffect, useState } from 'react'
+import { createMuiTheme, Typography } from '@mui/material'
+
 
 let player1 = {
   name: 'Player 1',
@@ -15,21 +17,27 @@ let player1 = {
 }
 
 let player2 = {
-  name: 'Player 1',
+  name: 'Player 2',
   wordlist: [],
   word: '',
 }
+//Reset button
 
 function App() {
+  const [currPlayer, setPlayer] = useState(0)
   const [buttonStart, setStart] = useState(false)
   return (
     <div>
       <main>
-        <button onClick={() => setStart(true)}>Open Popup</button>
+        {/* <button onClick={() => {
+          setStart(true)
+          setPlayer(2)
+        }}>Restart</button> */}
       </main>
-
-      <StartPage trigger={buttonStart} setTrigger={setStart}></StartPage>
-      <Keyboard></Keyboard>
+      <StartPage trigger={buttonStart} setTrigger={setStart} players={[player1, player2]} curr = {currPlayer}></StartPage>
+      <Typography>
+        {player1.word}
+      </Typography>
     </div>
   )
 }
