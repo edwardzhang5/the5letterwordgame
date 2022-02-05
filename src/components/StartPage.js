@@ -61,6 +61,10 @@ function StartPage(props) {
     }
   }
 
+  const make5List = () =>{
+
+  }
+  
   return props.trigger ? (
     <StyledDiv className='StartPage'>
       <Card>

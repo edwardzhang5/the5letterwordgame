@@ -148,3 +148,9 @@ div.wrap {
 .large-key {
 	width: 80px;
 }
+
+@font-face {
+  font-family: FontsFree-Net-Didonesque-Display;
+  src: local('FontsFree-Net-Didonesque-Display'), url(./fonts/FontsFree-Net-Didonesque-Display.ttf) format('ttf');
+
+}
