@@ -18,7 +18,7 @@ let player1 = {
 
 let player2 = {
   name: 'Player 2',
-  wordlist: [],
+  wordlist: ['asd', 'asd as', 'asd d', 'asd', 'asd', 'asd as', 'asd d', 'asd', 'asd', 'asd as', 'asd d', 'asd', 'asd', 'asd as', 'asd d', 'asd', 'asd', 'asd as', 'asd d', 'asd', 'asd', 'asd as', 'asd d', 'asd', 'asd', 'asd as', 'asd d', 'asd', 'asd', 'asd as', 'asd d', 'asd'],
   word: '',
 }
 //Reset button
@@ -30,8 +30,9 @@ function App() {
     <div className = "wrapper">
       <CSSReset />
       <Navbar />
+      <Board player1={player1} player2 ={player2}/>
       <Keyboard />
-      <Board items={player1.wordlist}/>
+      
    
       <main>
         {/* <button onClick={() => {
