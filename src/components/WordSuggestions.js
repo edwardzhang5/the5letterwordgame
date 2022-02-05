@@ -1,10 +1,10 @@
+import React from "react"
 
-function WordSuggestions(){
-    
+const WordSuggestions = (props) => {
     return (
-        <div>
-            hi
+        <div className='word'>
+            <h1>{props.text}</h1>
         </div>
     )
-
 }
+export{WordSuggestions}

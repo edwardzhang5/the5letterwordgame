@@ -5,21 +5,21 @@ import styled from 'styled-components'
 
 const Navbar = (props) => {
   return (
-    <div class = "flex-container-header">
+    <div className = "flex-container-header">
       <h1>5-Letter Word Game</h1>
-      <div class = "flex-container-helper">
-        <div class="dropdown">
-          <button class="drop-button">
+      <div className = "flex-container-helper">
+        <div className="dropdown">
+          <button className="drop-button">
             <p>Home</p>
           </button>
         </div>
-        <div class="dropdown">
-          <button class="drop-button">
+        <div className="dropdown">
+          <button className="drop-button">
             <p>Settings</p>
           </button>
         </div>
-        <div class="dropdown">
-          <button class="drop-button">
+        <div className="dropdown">
+          <button className="drop-button">
             <p>About</p>
           </button>
         </div>
