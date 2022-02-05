@@ -44,39 +44,38 @@ function Keyboard() {
         <div className="flex-container-body">
             <ul id = "keyboard">
                 <div className = "key-row">
-                    <button className = "regular-key">Q</button>
-                    <button className = "regular-key">Q</button>
-                    <button className = "regular-key">Q</button>
-                    <button className = "regular-key">Q</button>
-                    <button className = "regular-key">Q</button>
-                    <button className = "regular-key">Q</button>
-                    <button className = "regular-key">Q</button>
-                    <button className = "regular-key">Q</button>
-                    <button className = "regular-key">Q</button>
-                    <button className = "regular-key">Q</button>
-                    <button className = "regular-key">Q</button>
+                    <button className = "regular-key" value="Q">Q</button>
+                    <button className = "regular-key" value="W">W</button>
+                    <button className = "regular-key" value="E">E</button>
+                    <button className = "regular-key" value="R">R</button>
+                    <button className = "regular-key" value="T">T</button>
+                    <button className = "regular-key" value="Y">Y</button>
+                    <button className = "regular-key" value="U">U</button>
+                    <button className = "regular-key" value="I">I</button>
+                    <button className = "regular-key" value="O">O</button>
+                    <button className = "regular-key" value="P">P</button>
                 </div>
                 <div className = "key-row">
-                    <button className = "regular-key">Q</button>
-                    <button className = "regular-key">Q</button>
-                    <button className = "regular-key">Q</button>
-                    <button className = "regular-key">Q</button>
-                    <button className = "regular-key">Q</button>
-                    <button className = "regular-key">Q</button>
-                    <button className = "regular-key">Q</button>
-                    <button className = "regular-key">Q</button>
-                    <button className = "regular-key">Q</button>
+                    <button className = "regular-key" value="A">A</button>
+                    <button className = "regular-key" value="S">S</button>
+                    <button className = "regular-key" value="D">D</button>
+                    <button className = "regular-key" value="F">F</button>
+                    <button className = "regular-key" value="G">G</button>
+                    <button className = "regular-key" value="H">H</button>
+                    <button className = "regular-key" value="J">J</button>
+                    <button className = "regular-key" value="K">K</button>
+                    <button className = "regular-key" value="L">L</button>
                 </div>
                 <div className = "key-row">
-                    <button className = "large-key">ENTER</button>
-                    <button className = "regular-key">Q</button>
-                    <button className = "regular-key">Q</button>
-                    <button className = "regular-key">Q</button>
-                    <button className = "regular-key">Q</button>
-                    <button className = "regular-key">Q</button>
-                    <button className = "regular-key">Q</button>
-                    <button className = "regular-key">Q</button>
-                    <button className = "large-key">DELETE</button>
+                    <button className = "large-key" value="ENTER">ENTER</button>
+                    <button className = "regular-key" value="Z">Z</button>
+                    <button className = "regular-key" value="X">X</button>
+                    <button className = "regular-key" value="C">C</button>
+                    <button className = "regular-key" value="V">V</button>
+                    <button className = "regular-key" value="B">B</button>
+                    <button className = "regular-key" value="N">N</button>
+                    <button className = "regular-key" value="M">M</button>
+                    <button className = "large-key" value="DELETE">DELETE</button>
                 </div>
             </ul>
         </div>
