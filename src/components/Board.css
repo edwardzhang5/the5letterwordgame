@@ -1,0 +1,21 @@
+.container {
+    display: flex;
+    flex-direction: row;
+    height: 20vh;
+  }
+  
+  .left-col {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #ddd;
+  }
+  
+  .center-col {
+    flex: 1;
+    background: #aaa;
+    overflow-y: scroll;
+  }
+  
+  

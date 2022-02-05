@@ -3,6 +3,7 @@ import '../App.css'
 import Grid from '@mui/material/Grid'
 import { Button, Container } from '@mui/material'
 import './Keyboard.css'
+import { useState } from 'react'
 
 const StyledKey = styled.button`
     background-color: #CCCCCC;
@@ -32,6 +33,11 @@ const StyledContainer = styled.div`
 
 
 function Keyboard() {
+    const [currWord, setCurrWord] = useState('')
+    const changeCurrWord = () => {
+        setCurrWord('e')
+    }
+
     return (
         <div className="flex-container-body">
             <ul id = "keyboard">

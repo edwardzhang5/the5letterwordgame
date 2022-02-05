@@ -22,6 +22,8 @@ const StyledDiv = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  background-color: black;
+  opacity: 90%
 `
 //Add Styles
 
