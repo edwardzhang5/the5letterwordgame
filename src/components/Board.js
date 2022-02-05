@@ -2,28 +2,6 @@ import React from 'react'
 import { useRef } from 'react'
 import './Board.css'
 
-// const items = [...Array(100)].map((val, i) => `Item ${i}`);
-
-// export const Board = () => (
-//   <div className="container">
-//     <div className="left-col">
-//       Left col
-//     </div>
-
-//     <div className="center-col">
-//       <span>List</span>
-//       <ul>
-//         {items.map((item, i) => (<li key={`item_${i}`}>{ item }</li>))}
-//       </ul>
-//     </div>
-
-//     <div className="right-col">
-//       Right col
-//     </div>
-//   </div>
-// );
-
-// ReactDOM.render(<Board />, document.getElementById('react'));
 
 function Board(props) {
     const bottomRef = useRef();
@@ -36,13 +14,16 @@ function Board(props) {
     return (
         <div className="container">
             <div className="left-col">
-                Left col
+            <span>List</span>
+                <ul>
+                    {props.player1.wordlist.map((item, i) => (<li key={`item_${i}`}>{item}</li>))}
+                </ul>
             </div>
 
-            <div className="center-col">
+            <div className="right-col">
                 <span>List</span>
                 <ul>
-                    {props.items.map((item, i) => (<li key={`item_${i}`}>{item}</li>))}
+                    {props.player2.wordlist.map((item, i) => (<li key={`item_${i}`}>{item}</li>))}
                 </ul>
             </div>
         </div>
