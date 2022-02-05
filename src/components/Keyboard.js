@@ -4,6 +4,7 @@ import Grid from '@mui/material/Grid'
 import { Button, Container } from '@mui/material'
 import './Keyboard.css'
 
+/*
 const StyledKey = styled.button`
     background-color: #CCCCCC;
     color: '#000000';
@@ -29,6 +30,7 @@ const StyledContainer = styled.div`
     color: white;
     
 `
+*/
 
 
 function Keyboard() {
@@ -36,39 +38,39 @@ function Keyboard() {
         <div className="flex-container-body">
             <ul id = "keyboard">
                 <div className = "key-row">
-                    <li className = "regular-key">Q</li>
-                    <li className = "regular-key">W</li>
-                    <li className = "regular-key">E</li>
-                    <li className = "regular-key">R</li>
-                    <li className = "regular-key">R</li>
-                    <li className = "regular-key">T</li>
-                    <li className = "regular-key">Y</li>
-                    <li className = "regular-key">U</li>
-                    <li className = "regular-key">I</li>
-                    <li className = "regular-key">O</li>
-                    <li className = "regular-key">P</li>
+                    <button className = "regular-key">Q</button>
+                    <button className = "regular-key">Q</button>
+                    <button className = "regular-key">Q</button>
+                    <button className = "regular-key">Q</button>
+                    <button className = "regular-key">Q</button>
+                    <button className = "regular-key">Q</button>
+                    <button className = "regular-key">Q</button>
+                    <button className = "regular-key">Q</button>
+                    <button className = "regular-key">Q</button>
+                    <button className = "regular-key">Q</button>
+                    <button className = "regular-key">Q</button>
                 </div>
                 <div className = "key-row">
-                    <li className = "regular-key">A</li>
-                    <li className = "regular-key">S</li>
-                    <li className = "regular-key">D</li>
-                    <li className = "regular-key">F</li>
-                    <li className = "regular-key">G</li>
-                    <li className = "regular-key">H</li>
-                    <li className = "regular-key">J</li>
-                    <li className = "regular-key">K</li>
-                    <li className = "regular-key">L</li>
+                    <button className = "regular-key">Q</button>
+                    <button className = "regular-key">Q</button>
+                    <button className = "regular-key">Q</button>
+                    <button className = "regular-key">Q</button>
+                    <button className = "regular-key">Q</button>
+                    <button className = "regular-key">Q</button>
+                    <button className = "regular-key">Q</button>
+                    <button className = "regular-key">Q</button>
+                    <button className = "regular-key">Q</button>
                 </div>
                 <div className = "key-row">
-                    <li className = "large-key">ENTER</li>
-                    <li className = "regular-key">Z</li>
-                    <li className = "regular-key">X</li>
-                    <li className = "regular-key">C</li>
-                    <li className = "regular-key">V</li>
-                    <li className = "regular-key">B</li>
-                    <li className = "regular-key">N</li>
-                    <li className = "regular-key">M</li>
-                    <li className = "large-key">DELETE</li>
+                    <button className = "large-key">ENTER</button>
+                    <button className = "regular-key">Q</button>
+                    <button className = "regular-key">Q</button>
+                    <button className = "regular-key">Q</button>
+                    <button className = "regular-key">Q</button>
+                    <button className = "regular-key">Q</button>
+                    <button className = "regular-key">Q</button>
+                    <button className = "regular-key">Q</button>
+                    <button className = "large-key">DELETE</button>
                 </div>
             </ul>
         </div>

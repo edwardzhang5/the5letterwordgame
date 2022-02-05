@@ -132,8 +132,7 @@ div.wrap {
   justify-content: center;
 }
 
-#keyboard li {
-  list-style-type: none;
+#keyboard button.regular-key {
   float: left;
 	margin: 0 5px 5px 0;
 	width: 40px;
@@ -145,8 +144,19 @@ div.wrap {
 	border: 1px solid #000000;
 }
 
-.large-key {
+#keyboard button.large-key {
+  float: left;
+	margin: 0 5px 5px 0;
 	width: 80px;
+	height: 40px;
+	line-height: 40px;
+  border-radius: 10px;
+	text-align: center;
+	background: rgb(216, 216, 216);
+	border: 1px solid #000000;}
+
+#keyboard button:hover {
+  background: blueviolet;
 }
 
 @font-face {
