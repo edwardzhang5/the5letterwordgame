@@ -27,7 +27,7 @@ function App() {
   const [currPlayer, setPlayer] = useState(0)
   const [buttonStart, setStart] = useState(false)
   return (
-    <div class = "wrapper">
+    <div className = "wrapper">
       <CSSReset />
       <Navbar />
       <Keyboard />
