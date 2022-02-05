@@ -30,7 +30,13 @@ const StyledDiv = styled.div`
   justify-content: center;
   align-items: center;
   background-color: black;
-  opacity: 90%;
+  opacity: 80%;
+`
+const FormDiv = styled.div`
+  width: 100%;
+  padding: 20px;
+  display: flex;
+  font-size: 1.5em;
 `
 //Add Styles
 
@@ -90,14 +96,16 @@ function StartPage(props) {
         <Title>{props.players[currPlayer].name}, insert your word!</Title>
         <Typography>{errMsg}</Typography>
         <form noValidate autoComplete='off' onSubmit={handleSubmit}>
-          <TextField
-            onChange={(e) => setWordVal(e.target.value)}
-            label='insert word...'
-            fullWidth
-            required
-            error={wordValErr}
-            value={wordVal}
-          ></TextField>
+          <FormDiv>
+            <TextField
+              onChange={(e) => setWordVal(e.target.value)}
+              label='insert word...'
+              fullWidth
+              required
+              error={wordValErr}
+              value={wordVal}
+            ></TextField>
+          </FormDiv>
           <Button className='next-btn' type='submit'>
             {buttonVal}
           </Button>
