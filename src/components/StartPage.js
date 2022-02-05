@@ -55,6 +55,7 @@ function StartPage(props) {
       setWordVal("")
       setButtonVal('Begin')
       setDisableNewWords(false)
+      setWords([])
       if(currPlayer == 1){
         props.setTrigger(false)
       }
@@ -91,12 +92,6 @@ function StartPage(props) {
           ></TextField>
           <Button
             className='next-btn'
-            // onClick={() => {
-            //   if (wordValErr == false) {
-            //     setPlayer(1)
-            //   }
-            // }
-            // }
             type='submit'>
             {buttonVal}
           </Button>
@@ -104,7 +99,8 @@ function StartPage(props) {
         <Button onClick={make5List} disabled = {disableNewWords}>
           I can't think of words :(
         </Button>
-        {words.map((item, i) => ( <WordSuggestions text={item} />))}
+        <WordSuggestions text = {words}> </WordSuggestions> 
+        
         {/* {props.children} */}
       </Card>
     </StyledDiv>
