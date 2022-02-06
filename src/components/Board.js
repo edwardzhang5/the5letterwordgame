@@ -1,9 +1,12 @@
 import React from 'react'
-import { useRef , useEffect} from 'react'
+import { useRef, useEffect } from 'react'
 import './Board.css'
 
-
 function Board(props) {
+  useEffect(() => {
+    console.log('imagy')
+  }, [props.players[0].wordList[props.players[0].wordList.length - 1]])
+
 
     useEffect(()=>{
     }, [props])
@@ -44,6 +47,16 @@ function Board(props) {
         </div>
     )
 
+      <div className='right-col'>
+        <span>List</span>
+        <ul>
+          {props.players[1].wordList.map((item, i) => (
+            <li key={`item_${i}`}>{item}</li>
+          ))}
+        </ul>
+      </div>
+    </div>
+  )
 }
 
 export default Board

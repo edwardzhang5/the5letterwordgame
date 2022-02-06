@@ -4,6 +4,7 @@ import {
   TextField,
 } from '@mui/material'
 import React, { Component, useEffect, useState } from 'react'
+
 import { WordSuggestions } from './WordSuggestions'
 import arr from '../data/WordList.json'
 
@@ -65,12 +66,31 @@ function StartPage(props) {
     setDisableNewWords(true)
   }
 
+  const WordSuggestions = (props) => {
+    let arr = props.text
+    return (
+      <div className='Word-Suggestions'>
+        {arr.map((word) => (
+          <button
+            key={word}
+            onClick={(word) => {
+              return setWordVal(word.target.value)
+            }}
+            type='submit'
+          >
+            {word}
+          </button>
+        ))}
+      </div>
+    )
+  }
+
   return props.trigger ? (
     <div className='StartPage'>
       <div className='Card'>
         <h1>{props.Players[currPlayer][0]}, insert your word!</h1>
         <h2>{errMsg}</h2>
-        <form noValidate autoComplete="off" onSubmit={handleSubmit}>
+        <form noValidate autoComplete='off' onSubmit={handleSubmit}>
           <TextField
             onChange={(e) => setWordVal(e.target.value)}
             label='insert word...'
@@ -79,12 +99,14 @@ function StartPage(props) {
             error={wordValErr}
             value={wordVal}
           ></TextField>
-          <Button className='next-btn' type='submit'>{buttonVal}</Button>
+          <Button className='next-btn' type='submit'>
+            {buttonVal}
+          </Button>
         </form>
         <Button onClick={make5List} disabled={disableNewWords}>
           I can't think of words :(
         </Button>
-        <WordSuggestions text = {words}> </WordSuggestions> 
+        {disableNewWords ? <WordSuggestions text={words} /> : null}
         {/* {props.children} */}
       </div>
     </div>

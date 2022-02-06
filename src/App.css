@@ -25,7 +25,6 @@ Add global styling for text / color that the rest of components will inherit
   color: inherit;
 }
 
-
 /* Start Page */
 .StartPage {
   position: fixed;
@@ -93,11 +92,19 @@ Add global styling for text / color that the rest of components will inherit
   padding-left: 20px;
   padding-bottom: 10px;
 }
+
+.Card > .Word-Suggestions > button {
+  color: inherit;
+  font-family: inherit;
+  text-align: center;
+  padding: 10px;
+  margin-right: 10px;
+}
 /* End Start Page */
 
 /* Top Bar */
 .flex-container-header {
-	display: flex;
+  display: flex;
   justify-content: center;
   font-family: inherit;
   color: inherit;
@@ -117,7 +124,6 @@ div.wrap {
   color: inherit;
 }
 /* End Top Bar */
-
 
 /* Button Stuff */
 .flex-container-helper {
@@ -158,8 +164,8 @@ div.wrap {
 	background-color: #333333;
 }
 
-.dropdown:hover .drop-button > p{
-  color: white
+.dropdown:hover .drop-button > p {
+  color: white;
 }
 /* End Button Stuff */
 
@@ -212,10 +218,10 @@ div.wrap {
 
 #keyboard button.regular-key {
   float: left;
-	margin: 0 5px 5px 0;
-	width: 40px;
-	height: 40px;
-	line-height: 40px;
+  margin: 0 5px 5px 0;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
   border-radius: 10px;
 	text-align: center;
 	background: rgb(216, 216, 216);
@@ -226,10 +232,10 @@ div.wrap {
 
 #keyboard button.large-key {
   float: left;
-	margin: 0 5px 5px 0;
-	width: 80px;
-	height: 40px;
-	line-height: 40px;
+  margin: 0 5px 5px 0;
+  width: 80px;
+  height: 40px;
+  line-height: 40px;
   border-radius: 10px;
 	text-align: center;
 	background: rgb(216, 216, 216);
@@ -245,6 +251,6 @@ div.wrap {
 
 @font-face {
   font-family: FontsFree-Net-Didonesque-Display;
-  src: local('FontsFree-Net-Didonesque-Display'), url(./fonts/FontsFree-Net-Didonesque-Display.ttf) format('ttf');
-
+  src: local('FontsFree-Net-Didonesque-Display'),
+    url(./fonts/FontsFree-Net-Didonesque-Display.ttf) format('ttf');
 }
