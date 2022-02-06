@@ -25,7 +25,6 @@ Add global styling for text / color that the rest of components will inherit
   color: inherit;
 }
 
-
 /* Start Page */
 .StartPage {
   position: fixed;
@@ -93,31 +92,38 @@ Add global styling for text / color that the rest of components will inherit
   padding-left: 20px;
   padding-bottom: 10px;
 }
+
+.Card > .Word-Suggestions > button {
+  color: inherit;
+  font-family: inherit;
+  text-align: center;
+  padding: 10px;
+  margin-right: 10px;
+}
 /* End Start Page */
 
 /* Top Bar */
 .flex-container-header {
-	display: flex;
+  display: flex;
   justify-content: center;
   font-family: inherit;
   color: inherit;
 }
 
 div.wrap {
-	word-wrap: break-word;
+  word-wrap: break-word;
   font-family: inherit;
   color: inherit;
 }
 
 .flex-container-header > h1 {
   border: 2px solid #333333;
-	padding: 10px 16px;
+  padding: 10px 16px;
   font-size: 30px;
   font-family: inherit;
   color: inherit;
 }
 /* End Top Bar */
-
 
 /* Button Stuff */
 .flex-container-helper {
@@ -126,54 +132,54 @@ div.wrap {
 }
 
 .dropdown {
-	position: relative;
-	display: inline-block;
+  position: relative;
+  display: inline-block;
   font-family: inherit;
   color: inherit;
 }
 
 .dropdown .drop-button {
-	border: none;
-	outline: none;
-	padding: 10px 16px;
-	margin: 0;
+  border: none;
+  outline: none;
+  padding: 10px 16px;
+  margin: 0;
   background-color: inherit;
   font-family: inherit;
   color: inherit;
 }
 
 .drop-button > p {
-	font-size: 20px;
-	border: none;
-	outline: none;
-	padding: 7px 8px;
-	margin: 0;
-	text-decoration: none;
+  font-size: 20px;
+  border: none;
+  outline: none;
+  padding: 7px 8px;
+  margin: 0;
+  text-decoration: none;
   background-color: inherit;
   font-family: inherit;
   color: inherit;
 }
 
 .dropdown:hover .drop-button {
-	background-color: #333333;
+  background-color: #333333;
 }
 
-.dropdown:hover .drop-button > p{
-  color: white
+.dropdown:hover .drop-button > p {
+  color: white;
 }
 /* End Button Stuff */
 
 /* Main Body Stuff */
 .flex-container-body {
   display: flex;
-	flex-shrink: 1;
-	flex-direction: column;
-	margin-top: 25px;
-	margin-right: 25px;
-	margin-left: 25px;
-	margin-bottom: 25px;
-	justify-content: center;
-	flex: 2 1 auto;
+  flex-shrink: 1;
+  flex-direction: column;
+  margin-top: 25px;
+  margin-right: 25px;
+  margin-left: 25px;
+  margin-bottom: 25px;
+  justify-content: center;
+  flex: 2 1 auto;
   font-family: inherit;
   color: inherit;
 }
@@ -212,28 +218,28 @@ div.wrap {
 
 #keyboard button.regular-key {
   float: left;
-	margin: 0 5px 5px 0;
-	width: 40px;
-	height: 40px;
-	line-height: 40px;
+  margin: 0 5px 5px 0;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
   border-radius: 10px;
-	text-align: center;
-	background: rgb(216, 216, 216);
-	border: 1px solid #000000;
+  text-align: center;
+  background: rgb(216, 216, 216);
+  border: 1px solid #000000;
   font-family: inherit;
   color: inherit;
 }
 
 #keyboard button.large-key {
   float: left;
-	margin: 0 5px 5px 0;
-	width: 80px;
-	height: 40px;
-	line-height: 40px;
+  margin: 0 5px 5px 0;
+  width: 80px;
+  height: 40px;
+  line-height: 40px;
   border-radius: 10px;
-	text-align: center;
-	background: rgb(216, 216, 216);
-	border: 1px solid #000000;
+  text-align: center;
+  background: rgb(216, 216, 216);
+  border: 1px solid #000000;
   font-family: inherit;
   color: inherit;
 }
@@ -245,6 +251,6 @@ div.wrap {
 
 @font-face {
   font-family: FontsFree-Net-Didonesque-Display;
-  src: local('FontsFree-Net-Didonesque-Display'), url(./fonts/FontsFree-Net-Didonesque-Display.ttf) format('ttf');
-
+  src: local('FontsFree-Net-Didonesque-Display'),
+    url(./fonts/FontsFree-Net-Didonesque-Display.ttf) format('ttf');
 }
