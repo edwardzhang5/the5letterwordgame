@@ -1,5 +1,8 @@
 import '../App.css'
-import { Button, TextField } from '@mui/material'
+import {
+  Button,
+  TextField,
+} from '@mui/material'
 import React, { Component, useEffect, useState } from 'react'
 
 import { WordSuggestions } from './WordSuggestions'

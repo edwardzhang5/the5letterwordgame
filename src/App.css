@@ -111,14 +111,14 @@ Add global styling for text / color that the rest of components will inherit
 }
 
 div.wrap {
-  word-wrap: break-word;
+	word-wrap: break-word;
   font-family: inherit;
   color: inherit;
 }
 
 .flex-container-header > h1 {
   border: 2px solid #333333;
-  padding: 10px 16px;
+	padding: 10px 16px;
   font-size: 30px;
   font-family: inherit;
   color: inherit;
@@ -132,36 +132,36 @@ div.wrap {
 }
 
 .dropdown {
-  position: relative;
-  display: inline-block;
+	position: relative;
+	display: inline-block;
   font-family: inherit;
   color: inherit;
 }
 
 .dropdown .drop-button {
-  border: none;
-  outline: none;
-  padding: 10px 16px;
-  margin: 0;
+	border: none;
+	outline: none;
+	padding: 10px 16px;
+	margin: 0;
   background-color: inherit;
   font-family: inherit;
   color: inherit;
 }
 
 .drop-button > p {
-  font-size: 20px;
-  border: none;
-  outline: none;
-  padding: 7px 8px;
-  margin: 0;
-  text-decoration: none;
+	font-size: 20px;
+	border: none;
+	outline: none;
+	padding: 7px 8px;
+	margin: 0;
+	text-decoration: none;
   background-color: inherit;
   font-family: inherit;
   color: inherit;
 }
 
 .dropdown:hover .drop-button {
-  background-color: #333333;
+	background-color: #333333;
 }
 
 .dropdown:hover .drop-button > p {
@@ -172,14 +172,14 @@ div.wrap {
 /* Main Body Stuff */
 .flex-container-body {
   display: flex;
-  flex-shrink: 1;
-  flex-direction: column;
-  margin-top: 25px;
-  margin-right: 25px;
-  margin-left: 25px;
-  margin-bottom: 25px;
-  justify-content: center;
-  flex: 2 1 auto;
+	flex-shrink: 1;
+	flex-direction: column;
+	margin-top: 25px;
+	margin-right: 25px;
+	margin-left: 25px;
+	margin-bottom: 25px;
+	justify-content: center;
+	flex: 2 1 auto;
   font-family: inherit;
   color: inherit;
 }
@@ -223,9 +223,9 @@ div.wrap {
   height: 40px;
   line-height: 40px;
   border-radius: 10px;
-  text-align: center;
-  background: rgb(216, 216, 216);
-  border: 1px solid #000000;
+	text-align: center;
+	background: rgb(216, 216, 216);
+	border: 1px solid #000000;
   font-family: inherit;
   color: inherit;
 }
@@ -237,9 +237,9 @@ div.wrap {
   height: 40px;
   line-height: 40px;
   border-radius: 10px;
-  text-align: center;
-  background: rgb(216, 216, 216);
-  border: 1px solid #000000;
+	text-align: center;
+	background: rgb(216, 216, 216);
+	border: 1px solid #000000;
   font-family: inherit;
   color: inherit;
 }
