@@ -93,13 +93,12 @@ Add global styling for text / color that the rest of components will inherit
   padding-bottom: 10px;
 }
 
-.Card > .Word-Suggestions > .Word-Suggestions-Button {
+.Card > .Word-Suggestions > button {
   color: inherit;
   font-family: inherit;
   text-align: center;
   padding: 10px;
   margin-right: 10px;
-  border: 1px solid black;
 }
 /* End Start Page */
 

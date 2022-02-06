@@ -68,17 +68,15 @@ function StartPage(props) {
     return (
       <div className='Word-Suggestions'>
         {arr.map((word) => (
-          <Button
-            className='Word-Suggestions-Button'
+          <button
             key={word}
-            value={word}
-            onClick={(e) => {
-              setWordVal(e.target.value)
+            onClick={(word) => {
+              return setWordVal(word.target.value)
             }}
             type='submit'
           >
             {word}
-          </Button>
+          </button>
         ))}
       </div>
     )
