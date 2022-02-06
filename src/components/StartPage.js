@@ -1,16 +1,11 @@
-import styled from 'styled-components'
 import '../App.css'
 import {
   Button,
-  Container,
-  makeStyles,
   TextField,
-  Typography,
 } from '@mui/material'
 import React, { Component, useEffect, useState } from 'react'
 import { WordSuggestions } from './WordSuggestions'
 import arr from '../data/WordList.json'
-
 
 function StartPage(props) {
   useEffect(() => props.setTrigger(true), [])
