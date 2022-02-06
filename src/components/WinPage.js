@@ -17,7 +17,7 @@ function WinPage(props) {
   return (props.win != 2) ? (
     <div className='StartPage'>
       <div className='Card'>
-        <h1>{props.Players[props.win][0]} wins !</h1>
+        <h1>{props.Players[props.win][0]} wins !!!!!</h1>
       </div>
     </div>
   ) : (
