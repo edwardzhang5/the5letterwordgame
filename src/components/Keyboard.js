@@ -1,10 +1,6 @@
-import styled from 'styled-components'
 import '../App.css'
-import Grid from '@mui/material/Grid'
-import { Button, Container } from '@mui/material'
 import { useState } from 'react'
 import CurrentWord from './CurrentWord'
-import { getThemeProps } from '@mui/system'
 
 
 function Keyboard(props) {

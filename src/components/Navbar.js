@@ -1,5 +1,4 @@
 import React from 'react'
-import styled from 'styled-components'
 
 // https://jfelix.info/blog/create-a-mobile-friendly-navigation-with-react
 
