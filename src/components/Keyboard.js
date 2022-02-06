@@ -6,34 +6,6 @@ import { useState } from 'react'
 import CurrentWord from './CurrentWord'
 import { getThemeProps } from '@mui/system'
 
-/*
-const StyledKey = styled.button`
-    background-color: #CCCCCC;
-    color: '#000000';
-    font-size: 26px;
-    color: black;
-    border-radius: 5px;
-    width: ${props => props.inputWidth || '40px'};
-    height: ${props => props.inputHeight || '60px'};
-    padding: 2px;
-    border: 0;
-    
-    `
-const keyRows = styled.div`
-    ackground-color: #5555555;
-    width: 20vw;
-`
-const StyledContainer = styled.div`
-    background-color: #333333;
-    width: 30vw;
-    max-width: 700px;
-    margin:0 auto; 
-    border-radius: 10px;
-    color: white;
-    
-`
-*/
-
 
 function Keyboard(props) {
     const [currPlayer,setPlayer] = useState(1)
@@ -52,18 +24,18 @@ function Keyboard(props) {
             if(e == 'ENTER'){
                 if(currWord.length == 5){
                     if(currPlayer == 1){
-                        props.players[0].wordList.push(currWord)
+                        props.setPlayer1WordList([...props.Players[0][2], currWord])
+                        // props.Players[0][2].push(currWord)
                         setWord('')
                         setPlayer(2)
-                        console.log("player 1: " + props.players[0].wordList[props.players[0].wordList.length-1])
+                        console.log("player 1: " + props.Players[0][2][props.Players[0][2].length-1])
                     }
                     else{
-                        props.players[1].wordList.push(currWord)
+                        props.setPlayer2WordList([...props.Players[1][2], currWord])
+                        //props.Players[1][2].push(currWord)
                         setWord('')
                         setPlayer(1)
-                        console.log("player 2: " + props.players[1].wordList[props.players[1].wordList.length-1])
-
-                        //console.log(props.Player1.wordList)
+                        console.log("player 2: " + props.Players[1][2][props.Players[1][2].length-1])
                     }
                     
                     console.log('entered ' + e)

@@ -13,7 +13,7 @@ import GlobalStyle from './globalStyle'
 
 let player1 = {
   name: 'Player 1',
-  wordList: ['hi'],
+  wordList: ['hi','hi','hi','hi','hi','hi','hi','hi','hi','hi','hi','hi','hi','hi','hi','hi','hi','hi','hi','hi'],
   word: '',
 }
 //const [player1]
@@ -26,31 +26,68 @@ let player2 = {
 //Reset button
 
 function App() {
+  const [player1Name, setPlayer1Name] = useState('Player 1')
+  const [player1Word, setPlayer1Word] = useState('')
+  const [player1WordList, setPlayer1WordList] = useState(['hi','hi','hi','hi','hi','hi','hi','hi','hi','hi','hi','hi','hi','hi','hi','hi','hi','hi','hi','hi'])
+
+  const [player2Name, setPlayer2Name] = useState('Player 2')
+  const [player2Word, setPlayer2Word] = useState('')
+  const [player2WordList, setPlayer2WordList] = useState(['hi','hi','hi','hi','hi','hi','hi','hi','hi','hi','hi','hi','hi','hi','hi','hi','hi','hi','hi','hi'])
+
   const [currPlayer, setPlayer] = useState(0)
   const [buttonStart, setStart] = useState(false)
   return (
-    <>
-      <GlobalStyle />
       <div className='wrapper'>
         <Navbar />
         <Board players={[player1, player2]} />
         <Keyboard players={[player1, player2]} />
 
-        <main>
-          {/* <button onClick={() => {
+      <Board
+        Players={[[player1Name, player1Word, player1WordList], [player2Name, player2Word, player2WordList]]}
+        setPlayer1Name={setPlayer1Name}
+        setPlayer1Word={setPlayer1Word}
+        setPlayer1WordList={setPlayer1WordList}
+        setPlayer2Name={setPlayer2Name}
+        setPlayer2Word={setPlayer2Word}
+        setPlayer2WordList={setPlayer2WordList}
+      />
+      <Keyboard
+        Players={[[player1Name, player1Word, player1WordList], [player2Name, player2Word, player2WordList]]}
+        setPlayer1Name={setPlayer1Name}
+        setPlayer1Word={setPlayer1Word}
+        setPlayer1WordList={setPlayer1WordList}
+        setPlayer2Name={setPlayer2Name}
+        setPlayer2Word={setPlayer2Word}
+        setPlayer2WordList={setPlayer2WordList} />
+
+      <main>
+        {/* <button onClick={() => {
           setStart(true)
           setPlayer(2)
         }}>Restart</button> */}
-        </main>
-        <StartPage
-          trigger={buttonStart}
-          setTrigger={setStart}
-          players={[player1, player2]}
-          curr={currPlayer}
-        ></StartPage>
-        <Typography>{player1.word}</Typography>
-      </div>
-    </>
+      </main>
+      <StartPage
+        trigger={buttonStart}
+        setTrigger={setStart}
+        players={[player1, player2]}
+        curr={currPlayer}
+
+        playersc={[[player1Name, player1Word, player1WordList], [player2Name, player2Word, player2WordList]]}
+        player1Word={player1Word}
+        player1WordList={player1WordList}
+        player2Name={player2Name}
+        player2Word={player2Word}
+        player2WordList={player2WordList}
+
+        setPlayer1Name={setPlayer1Name}
+        setPlayer1Word={setPlayer1Word}
+        setPlayer1WordList={setPlayer1WordList}
+        setPlayer2Name={setPlayer2Name}
+        setPlayer2Word={setPlayer2Word}
+        setPlayer2WordList={setPlayer2WordList}
+      ></StartPage>
+      <Typography>{player1.word}</Typography>
+    </div>
   )
 }
 
