@@ -8,39 +8,9 @@ import {
   Typography,
 } from '@mui/material'
 import React, { Component, useEffect, useState } from 'react'
-// import { Card } from '@mui/material'
 import { WordSuggestions } from './WordSuggestions'
 import arr from '../data/WordList.json'
 
-/*
-const Title = styled.h1`
-  font-size: 4em;
-  text-align: center;
-  color: #333333;
-  padding: 20px;
-  font-family: FontsFree-Net-Didonesque-Display;
-`
-const StyledDiv = styled.div`
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100vh;
-  padding: 20px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: black;
-  opacity: 80%;
-`
-const FormDiv = styled.div`
-  width: 100%;
-  padding: 20px;
-  display: flex;
-  font-size: 1.5em;
-`
-*/
-//Add Styles
 
 function StartPage(props) {
   useEffect(() => props.setTrigger(true), [])
@@ -63,8 +33,16 @@ function StartPage(props) {
       setErrMsg('Your word is not 5 letters, dumbass')
     } else if (wordVal) {
       setErrMsg('')
-      console.log(wordVal)
-      props.players[currPlayer].word = wordVal
+
+      if(currPlayer == 0){
+        props.setPlayer1Word(wordVal.toUpperCase())
+        setPlayer(1)
+      }
+      else{
+        props.setPlayer2Word(wordVal.toUpperCase())
+      }
+      
+      // props.players[currPlayer].word = wordVal
       setWordVal('')
       setButtonVal('Begin')
       setDisableNewWords(false)
@@ -95,7 +73,7 @@ function StartPage(props) {
   return props.trigger ? (
     <div className='StartPage'>
       <div className='Card'>
-        <h1>{props.players[currPlayer].name}, insert your word!</h1>
+        <h1>{props.Players[currPlayer][0]}, insert your word!</h1>
         <h2>{errMsg}</h2>
         <form noValidate autoComplete="off" onSubmit={handleSubmit}>
           <TextField
