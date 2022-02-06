@@ -6,34 +6,6 @@ import { useState } from 'react'
 import CurrentWord from './CurrentWord'
 import { getThemeProps } from '@mui/system'
 
-/*
-const StyledKey = styled.button`
-    background-color: #CCCCCC;
-    color: '#000000';
-    font-size: 26px;
-    color: black;
-    border-radius: 5px;
-    width: ${props => props.inputWidth || '40px'};
-    height: ${props => props.inputHeight || '60px'};
-    padding: 2px;
-    border: 0;
-    
-    `
-const keyRows = styled.div`
-    ackground-color: #5555555;
-    width: 20vw;
-`
-const StyledContainer = styled.div`
-    background-color: #333333;
-    width: 30vw;
-    max-width: 700px;
-    margin:0 auto; 
-    border-radius: 10px;
-    color: white;
-    
-`
-*/
-
 
 function Keyboard(props) {
     const [currPlayer,setPlayer] = useState(1)

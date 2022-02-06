@@ -1,20 +1,19 @@
+/* TODO
+Fix spacing, have it variable instead  of set for max screen size
+Add option for darkmode-lightmode
+Add global styling for text / color that the rest of components will inherit
+*/
 .App {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+:root {
+  font-family: FontsFree-Net-Didonesque-Display;
+  color: #333333;
 }
 
 .App-header {
-  background-color: #282c34;
+  background-color: #282c34; /* Dunno what this is used for */
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -22,19 +21,8 @@
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+  font-family: inherit;
+  color: inherit;
 }
 
 
@@ -50,46 +38,58 @@
   justify-content: center;
   align-items: center;
   background: rgba(0, 0, 0, 0.9);
+  font-family: inherit;
+  color: inherit;
 }
 
 .Card {
   background-color: #f9f9f9;
   border-radius: 10px;
   opacity: 100%;
+  font-family: inherit;
+  color: inherit;
 }
 
 .Card > h1 {
   font-size: 4em;
   text-align: center;
-  color: #333333;
   padding: 20px;
   padding-bottom: 5px;
-  font-family: FontsFree-Net-Didonesque-Display;
+  font-family: inherit;
+  color: inherit;
 }
 
 .Card > h2 {
   padding-left: 20px;
   padding-bottom: 10px;
   font-size: 10px;
+  font-family: inherit;
   color: #dc6161;
 }
 
 .Card > button {
   padding-left: 20px;
+  font-family: inherit;
+  color: inherit;
 }
 
 .Card > form {
   padding-left: 20px;
   padding-right: 20px;
+  font-family: inherit;
+  color: inherit;
 }
 
 .Card > form > button {
   padding-left: 0px;
   text-align: left;
+  font-family: inherit;
+  color: inherit;
 }
 
 .Card > .Word-Suggestions {
-  color: #333333;
+  color: inherit;
+  font-family: inherit;
   padding-left: 20px;
   padding-bottom: 10px;
 }
@@ -99,53 +99,63 @@
 .flex-container-header {
 	display: flex;
   justify-content: center;
+  font-family: inherit;
+  color: inherit;
 }
 
 div.wrap {
 	word-wrap: break-word;
+  font-family: inherit;
+  color: inherit;
 }
 
 .flex-container-header > h1 {
-  border: 2px solid gray;
+  border: 2px solid #333333;
 	padding: 10px 16px;
   font-size: 30px;
+  font-family: inherit;
+  color: inherit;
 }
 /* End Top Bar */
 
 
 /* Button Stuff */
 .flex-container-helper {
+  font-family: inherit;
+  color: inherit;
 }
 
 .dropdown {
 	position: relative;
 	display: inline-block;
+  font-family: inherit;
+  color: inherit;
 }
 
 .dropdown .drop-button {
 	border: none;
 	outline: none;
-	color: white;
 	padding: 10px 16px;
-	background-color: inherit;
-	font-family: inherit;
 	margin: 0;
+  background-color: inherit;
+  font-family: inherit;
+  color: inherit;
 }
 
 .drop-button > p {
 	font-size: 20px;
 	border: none;
 	outline: none;
-	color: black;
 	padding: 7px 8px;
-	background-color: inherit;
-	font-family: inherit;
 	margin: 0;
 	text-decoration: none;
+  background-color: inherit;
+  font-family: inherit;
+  color: inherit;
 }
 
 .dropdown:hover .drop-button {
-	background-color: #3D3D3D;
+	background-color: #333333;
 }
 
 .dropdown:hover .drop-button > p{
@@ -164,6 +174,8 @@ div.wrap {
 	margin-bottom: 25px;
 	justify-content: center;
 	flex: 2 1 auto;
+  font-family: inherit;
+  color: inherit;
 }
 
 .write {
@@ -171,9 +183,11 @@ div.wrap {
   padding: 5px;
   width: 671px;
   height: 200px;
-  font: 1em/1.5 Verdana, Sans-Serif;
+  font: 1em/1.5;
   background: #fff;
-  border: 1px solid #f9f9f9;
+  border: 1px solid #f9f9f9; /* What even is this border? */
+  font-family: inherit;
+  color: inherit;
 }
 
 #keyboard {
@@ -182,6 +196,8 @@ div.wrap {
   justify-content: center;
   background-color: whitesmoke;
   width: auto;
+  font-family: inherit;
+  color: inherit;
 }
 
 .key-row {
@@ -190,6 +206,8 @@ div.wrap {
   width: 100%;
   height: 50px;
   justify-content: center;
+  font-family: inherit;
+  color: inherit;
 }
 
 #keyboard button.regular-key {
@@ -202,6 +220,8 @@ div.wrap {
 	text-align: center;
 	background: rgb(216, 216, 216);
 	border: 1px solid #000000;
+  font-family: inherit;
+  color: inherit;
 }
 
 #keyboard button.large-key {
@@ -213,7 +233,10 @@ div.wrap {
   border-radius: 10px;
 	text-align: center;
 	background: rgb(216, 216, 216);
-	border: 1px solid #000000;}
+	border: 1px solid #000000;
+  font-family: inherit;
+  color: inherit;
+}
 
 #keyboard button:hover {
   background: blueviolet;
