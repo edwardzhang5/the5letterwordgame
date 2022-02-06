@@ -31,7 +31,13 @@ const StyledDiv = styled.div`
   justify-content: center;
   align-items: center;
   background-color: black;
-  opacity: 90%;
+  opacity: 80%;
+`
+const FormDiv = styled.div`
+  width: 100%;
+  padding: 20px;
+  display: flex;
+  font-size: 1.5em;
 `
 */
 //Add Styles
