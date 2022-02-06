@@ -3,14 +3,14 @@ import '../App.css'
 import Grid from '@mui/material/Grid'
 import { Button, Container } from '@mui/material'
 import { useState } from 'react'
-import CurrentWord from './CurrentWord'
+import CurrentWord from './currentWord'
 import { getThemeProps } from '@mui/system'
 
 
 function Keyboard(props) {
     const [currPlayer, setPlayer] = useState(1)
     const [currWord, setWord] = useState('')
-    
+
     const changeCurrWord = (e) => {
         if (e == 'DELETE') {
             if (currWord.length > 0) {
