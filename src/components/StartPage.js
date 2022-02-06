@@ -1,10 +1,6 @@
 import '../App.css'
-import {
-  Button,
-  TextField,
-} from '@mui/material'
+import { Button, TextField } from '@mui/material'
 import React, { Component, useEffect, useState } from 'react'
-import { WordSuggestions } from './WordSuggestions'
 import arr from '../data/WordList.json'
 
 function StartPage(props) {
@@ -29,14 +25,13 @@ function StartPage(props) {
     } else if (wordVal) {
       setErrMsg('')
 
-      if(currPlayer == 0){
+      if (currPlayer == 0) {
         props.setPlayer1Word(wordVal.toUpperCase())
         setPlayer(1)
-      }
-      else{
+      } else {
         props.setPlayer2Word(wordVal.toUpperCase())
       }
-      
+
       // props.players[currPlayer].word = wordVal
       setWordVal('')
       setButtonVal('Begin')
@@ -65,12 +60,33 @@ function StartPage(props) {
     setDisableNewWords(true)
   }
 
+  const WordSuggestions = (props) => {
+    let arr = props.text
+    return (
+      <div className='Word-Suggestions'>
+        {arr.map((word) => (
+          <Button
+            className='Word-Suggestions-Button'
+            key={word}
+            value={word}
+            onClick={(e) => {
+              setWordVal(e.target.value)
+            }}
+            type='submit'
+          >
+            {word}
+          </Button>
+        ))}
+      </div>
+    )
+  }
+
   return props.trigger ? (
     <div className='StartPage'>
       <div className='Card'>
         <h1>{props.Players[currPlayer][0]}, insert your word!</h1>
         <h2>{errMsg}</h2>
-        <form noValidate autoComplete="off" onSubmit={handleSubmit}>
+        <form noValidate autoComplete='off' onSubmit={handleSubmit}>
           <TextField
             onChange={(e) => setWordVal(e.target.value)}
             label='insert word...'
@@ -79,12 +95,14 @@ function StartPage(props) {
             error={wordValErr}
             value={wordVal}
           ></TextField>
-          <Button className='next-btn' type='submit'>{buttonVal}</Button>
+          <Button className='next-btn' type='submit'>
+            {buttonVal}
+          </Button>
         </form>
         <Button onClick={make5List} disabled={disableNewWords}>
           I can't think of words :(
         </Button>
-        <WordSuggestions text = {words}> </WordSuggestions> 
+        {disableNewWords ? <WordSuggestions text={words} /> : null}
         {/* {props.children} */}
       </div>
     </div>
