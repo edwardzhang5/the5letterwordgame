@@ -1,5 +1,4 @@
 import Navbar from './components/Navbar'
-
 import React from 'react'
 import styled from 'styled-components'
 import './App.css'
@@ -10,81 +9,18 @@ import { createMuiTheme, Typography } from '@mui/material'
 import Board from './components/Board'
 import GlobalStyle from './globalStyle'
 
+//make players hooks
+
 let player1 = {
   name: 'Player 1',
-  wordlist: [
-    'asd',
-    'asd as',
-    'asd d',
-    'asd',
-    'asd',
-    'asd as',
-    'asd d',
-    'asd',
-    'asd',
-    'asd as',
-    'asd d',
-    'asd',
-    'asd',
-    'asd as',
-    'asd d',
-    'asd',
-    'asd',
-    'asd as',
-    'asd d',
-    'asd',
-    'asd',
-    'asd as',
-    'asd d',
-    'asd',
-    'asd',
-    'asd as',
-    'asd d',
-    'asd',
-    'asd',
-    'asd as',
-    'asd d',
-    'asd',
-  ],
+  wordList: ['hi'],
   word: '',
 }
+//const [player1]
 
 let player2 = {
   name: 'Player 2',
-  wordlist: [
-    'asd',
-    'asd as',
-    'asd d',
-    'asd',
-    'asd',
-    'asd as',
-    'asd d',
-    'asd',
-    'asd',
-    'asd as',
-    'asd d',
-    'asd',
-    'asd',
-    'asd as',
-    'asd d',
-    'asd',
-    'asd',
-    'asd as',
-    'asd d',
-    'asd',
-    'asd',
-    'asd as',
-    'asd d',
-    'asd',
-    'asd',
-    'asd as',
-    'asd d',
-    'asd',
-    'asd',
-    'asd as',
-    'asd d',
-    'asd',
-  ],
+  wordList: ['hi'],
   word: '',
 }
 //Reset button
@@ -97,8 +33,8 @@ function App() {
       <GlobalStyle />
       <div className='wrapper'>
         <Navbar />
-        <Board player1={player1} player2={player2} />
-        <Keyboard />
+        <Board players={[player1, player2]} />
+        <Keyboard players={[player1, player2]} />
 
         <main>
           {/* <button onClick={() => {

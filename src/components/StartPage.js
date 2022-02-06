@@ -8,10 +8,11 @@ import {
   Typography,
 } from '@mui/material'
 import React, { Component, useEffect, useState } from 'react'
-import { Card } from '@mui/material'
+// import { Card } from '@mui/material'
 import { WordSuggestions } from './WordSuggestions'
 import arr from '../data/WordList.json'
 
+/*
 const Title = styled.h1`
   font-size: 4em;
   text-align: center;
@@ -38,6 +39,7 @@ const FormDiv = styled.div`
   display: flex;
   font-size: 1.5em;
 `
+*/
 //Add Styles
 
 function StartPage(props) {
@@ -91,33 +93,28 @@ function StartPage(props) {
   }
 
   return props.trigger ? (
-    <StyledDiv className='StartPage'>
-      <Card>
-        <Title>{props.players[currPlayer].name}, insert your word!</Title>
-        <Typography>{errMsg}</Typography>
-        <form noValidate autoComplete='off' onSubmit={handleSubmit}>
-          <FormDiv>
-            <TextField
-              onChange={(e) => setWordVal(e.target.value)}
-              label='insert word...'
-              fullWidth
-              required
-              error={wordValErr}
-              value={wordVal}
-            ></TextField>
-          </FormDiv>
-          <Button className='next-btn' type='submit'>
-            {buttonVal}
-          </Button>
+    <div className='StartPage'>
+      <div className='Card'>
+        <h1>{props.players[currPlayer].name}, insert your word!</h1>
+        <h2>{errMsg}</h2>
+        <form noValidate autoComplete="off" onSubmit={handleSubmit}>
+          <TextField
+            onChange={(e) => setWordVal(e.target.value)}
+            label='insert word...'
+            fullWidth
+            required
+            error={wordValErr}
+            value={wordVal}
+          ></TextField>
+          <Button className='next-btn' type='submit'>{buttonVal}</Button>
         </form>
         <Button onClick={make5List} disabled={disableNewWords}>
           I can't think of words :(
         </Button>
-        <WordSuggestions text={words}> </WordSuggestions>
-
+        <WordSuggestions text = {words}> </WordSuggestions> 
         {/* {props.children} */}
-      </Card>
-    </StyledDiv>
+      </div>
+    </div>
   ) : (
     ''
   )
