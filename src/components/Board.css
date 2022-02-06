@@ -19,4 +19,15 @@
     overflow-y: scroll;
   }
   
+  .flex-container {
+    display: flex
+  }
+  
+  .words {
+    flex: 1
+  }
+  
+  .numbers {
+    flex: 1
+  }
   
