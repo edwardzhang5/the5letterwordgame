@@ -261,6 +261,7 @@ div.wrap {
 /* Main Body Stuff */
 .flex-container-body {
   display: flex;
+  flex-direction: row;
   flex-shrink: 1;
   flex-direction: column;
   margin-top: 25px;
@@ -300,6 +301,11 @@ div.wrap {
   justify-content: center;
   font-family: inherit;
   color: inherit;
+}
+
+/* trying to get the keyboard to stop moving up and down */
+.currrent-word{
+  justify-content: space-between;
 }
 
 #keyboard button.regular-key {
