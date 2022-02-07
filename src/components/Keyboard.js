@@ -1,14 +1,16 @@
 import '../App.css'
 import { useState } from 'react'
 import CurrentWord from './CurrentWord'
-import { getThemeProps } from '@mui/system'
+import arr from '../data/WordList.json'
 
 
 function Keyboard(props) {
   const [currPlayer, setPlayer] = useState(1)
   const [currWord, setWord] = useState('')
+  const [errMsg, setErrMsg] = useState('')
 
   const changeCurrWord = (e) => {
+    setErrMsg('')
     if (e == 'DELETE') {
       if (currWord.length > 0) {
         setWord(currWord.substring(0, currWord.length - 1))
@@ -19,43 +21,48 @@ function Keyboard(props) {
     } else {
       if (e == 'ENTER') {
         if (currWord.length == 5) {
-          if (currPlayer == 1) {
-            if (currWord == props.Players[1][1]) {
-              console.log('Player 1 win')
-              props.setWin(0)
-            } else {
-              props.setPlayer1WordList([...props.Players[0][2], currWord])
-              let numSimilarities = 0
-              for (let i = 0; i < currWord.length; i++) {
-                if (props.Players[1][1].indexOf(currWord.charAt(i)) > -1) {
-                  numSimilarities++
+          if(arr.indexOf(currWord.toLowerCase()) == -1) {
+            console.log("not a real word stupid ass ho")
+            setErrMsg('bruh thats not a word lol')
+          }
+          else{
+            if (currPlayer == 1) {
+              if (currWord == props.Players[1][1]) {
+                console.log('Player 1 win')
+                props.setWin(0)
+              } else {
+                props.setPlayer1WordList([...props.Players[0][2], currWord])
+                let numSimilarities = 0
+                for (let i = 0; i < currWord.length; i++) {
+                  if (props.Players[1][1].indexOf(currWord.charAt(i)) > -1) {
+                    numSimilarities++
+                  }
                 }
+                console.log(numSimilarities)
+                props.setPlayer1Numbers([...props.Players[0][3], numSimilarities])
+                setWord('')
+                setPlayer(2)
               }
-              console.log(numSimilarities)
-              props.setPlayer1Numbers([...props.Players[0][3], numSimilarities])
-              setWord('')
-              setPlayer(2)
-            }
-          } else {
-            if (currWord == props.Players[0][1]) {
-              console.log('Player 2 win')
-              props.setWin(1)
             } else {
-              props.setPlayer2WordList([...props.Players[1][2], currWord])
-              let numSimilarities = 0
-              for (let i = 0; i < currWord.length; i++) {
-                if (props.Players[0][1].includes(currWord.charAt(i))) {
-                  numSimilarities++
+              if (currWord == props.Players[0][1]) {
+                console.log('Player 2 win')
+                props.setWin(1)
+              } else {
+                props.setPlayer2WordList([...props.Players[1][2], currWord])
+                let numSimilarities = 0
+                for (let i = 0; i < currWord.length; i++) {
+                  if (props.Players[0][1].includes(currWord.charAt(i))) {
+                    numSimilarities++
+                  }
                 }
+                console.log(numSimilarities)
+                props.setPlayer2Numbers([...props.Players[1][3], numSimilarities])
+                setWord('')
+                setPlayer(1)
               }
-              console.log(numSimilarities)
-              props.setPlayer2Numbers([...props.Players[1][3], numSimilarities])
-              setWord('')
-              setPlayer(1)
             }
           }
 
-          console.log('entered ' + e)
         } else {
           console.log('ur shit')
         }
@@ -74,6 +81,9 @@ function Keyboard(props) {
       <ul id='keyboard'>
         <div>
           <CurrentWord word={currWord} />
+        </div>
+        <div>
+          {errMsg}
         </div>
 
         <div className='key-row'>

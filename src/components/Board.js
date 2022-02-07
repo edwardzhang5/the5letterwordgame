@@ -6,16 +6,24 @@ import './Board.css'
 function Board(props) {
 
     useEffect(()=>{
+        scrollToBottom()
     }, [props])
     
 
-    const bottomRef = useRef();
+    const bottomRefLeft = useRef();
+    const bottomRefRight = useRef();
     const scrollToBottom = () => {
-        bottomRef.current.scrollIntoView({
+        bottomRefLeft.current.scrollIntoView({
+            behavior: "smooth",
+            block: "start",
+        });
+        bottomRefRight.current.scrollIntoView({
             behavior: "smooth",
             block: "start",
         });
     };
+    
+   
     return (
         <div className="container">
             <div className="left-col">
@@ -28,6 +36,9 @@ function Board(props) {
                     {props.Players[0][3].map((item, i) => (<li key={`item_${i}`}>{item}</li>))}
                     </div>
                 </ul>
+                <div ref={bottomRefLeft} className='list-bottom'>
+
+                </div>
             </div>
 
             <div className="right-col">
@@ -40,6 +51,9 @@ function Board(props) {
                     {props.Players[1][3].map((item, i) => (<li key={`item_${i}`}>{item}</li>))}
                     </div>
                 </ul>
+                <div ref={bottomRefRight} className='list-bottom'>
+
+                </div>
             </div>
         </div>
     )

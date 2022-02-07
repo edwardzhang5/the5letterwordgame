@@ -22,16 +22,20 @@ function StartPage(props) {
     } else if (wordVal.length != 5) {
       setWordValErr(true)
       setErrMsg('Your word is not 5 letters, dumbass')
-    } else if (wordVal) {
+    } else if (arr.indexOf(wordVal.toLowerCase()) == -1) {
+      console.log('shit word')
+      setErrMsg('wow ur so stupid and gay')
+      setWordValErr(true)
+    }
+    else if (wordVal) {
       setErrMsg('')
-
+      console.log('good word')
       if (currPlayer == 0) {
         props.setPlayer1Word(wordVal.toUpperCase())
         setPlayer(1)
       } else {
         props.setPlayer2Word(wordVal.toUpperCase())
       }
-
       // props.players[currPlayer].word = wordVal
       setWordVal('')
       setButtonVal('Begin')
