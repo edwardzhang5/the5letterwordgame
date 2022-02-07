@@ -29,9 +29,9 @@ function App() {
   
   return (
     <div className='wrapper'>
-      <Navbar 
+      {/* <Navbar 
       setInfoTrigger = {setInfoTrigger}
-      />
+      /> */}
       <div style={{textAlign:'center'}}>
        <h1> Player {currPlayer}'s Turn</h1>
       </div>
