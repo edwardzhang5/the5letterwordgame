@@ -23,7 +23,8 @@ function App() {
   const [currPlayer, setPlayer] = useState(1)
   const [buttonStart, setStart] = useState(false)
 
-  const [win, setWin] = useState(2)
+  const [win, setWin] = useState(0)
+  
   return (
     <div className='wrapper'>
       <Navbar />
@@ -39,6 +40,7 @@ function App() {
       />
       <Keyboard
         Players={[[player1Name, player1Word, player1WordList, player1Numbers], [player2Name, player2Word, player2WordList, player2Numbers]]}
+        setPlayers={[[setPlayer1Name, setPlayer1Word, setPlayer1WordList, setPlayer1Numbers], [setPlayer2Name, setPlayer2Word, setPlayer2WordList, setPlayer2Numbers]]}
         setPlayer1Name={setPlayer1Name}
         setPlayer1Word={setPlayer1Word}
         setPlayer1WordList={setPlayer1WordList}
