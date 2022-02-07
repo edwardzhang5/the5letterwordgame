@@ -170,6 +170,51 @@ div.wrap {
 }
 /* End Button Stuff */
 
+/* Board Stuff */
+.container {
+  display: flex;
+  flex-direction: row;
+  height: 20vh;
+}
+
+.left-col {
+  flex: 1;
+  background: #ddd;
+  overflow-y: scroll;
+}
+
+.right-col {
+  flex: 1;
+  background: #aaa;
+  overflow-y: scroll;
+}
+
+.words {
+  width: 100px;
+  background: red;
+  border-radius: 8px;
+  margin-right: 10px;
+  margin-left: 50vw;
+}
+
+.words > li {
+  text-align: center;
+}
+
+.numbers {
+  width: 20px;
+}
+
+.numbers > li {
+  text-align: center;
+}
+
+.words-list {
+  display: flex;
+  list-style: none;
+}
+/* End Board Stuff */
+
 /* Main Body Stuff */
 .flex-container-body {
   display: flex;
