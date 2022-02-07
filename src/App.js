@@ -6,7 +6,7 @@ import StartPage from './components/StartPage'
 import { useState } from 'react'
 import Board from './components/Board'
 import WinPage from './components/WinPage'
-
+import InfoPage from './components/InfoPage'
 //Reset button
 
 function App() {
@@ -23,11 +23,15 @@ function App() {
   const [currPlayer, setPlayer] = useState(1)
   const [buttonStart, setStart] = useState(false)
 
+  const [infoTrigger, setInfoTrigger] = useState(false)
   const [win, setWin] = useState(0)
+  
   
   return (
     <div className='wrapper'>
-      <Navbar />
+      <Navbar 
+      setInfoTrigger = {setInfoTrigger}
+      />
       <div style={{textAlign:'center'}}>
        <h1> Player {currPlayer}'s Turn</h1>
       </div>
@@ -69,6 +73,10 @@ function App() {
       <WinPage
         Players={[[player1Name, player1Word, player1WordList, player1Numbers], [player2Name, player2Word, player2WordList, player2Numbers]]}
         win={win}
+      />
+      <InfoPage
+        infoTrigger = {infoTrigger}
+        setInfoTrigger = {setInfoTrigger}
       />
     </div>
   )

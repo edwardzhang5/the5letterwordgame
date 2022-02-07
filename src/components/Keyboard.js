@@ -75,7 +75,7 @@ function Keyboard(props) {
   return (
     <div className='flex-container-body'>
       <div className='word-holder'>
-        <CurrentWord word={currWord} />
+        <CurrentWord word={currWord} setWord={setWord} />
       </div>
       <div>
         {errMsg}

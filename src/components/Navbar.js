@@ -1,3 +1,4 @@
+import { useEffect } from "react"
 import React from 'react'
 
 // https://jfelix.info/blog/create-a-mobile-friendly-navigation-with-react
@@ -18,8 +19,8 @@ const Navbar = (props) => {
           </button>
         </div>
         <div className="dropdown">
-          <button className="drop-button">
-            <p>About</p>
+          <button className="drop-button" >
+            <p>Help</p>
           </button>
         </div>
       </div>
