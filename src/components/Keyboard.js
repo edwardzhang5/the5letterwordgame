@@ -1,7 +1,7 @@
 import '../App.css'
 import { useState } from 'react'
 import CurrentWord from './CurrentWord'
-import arr from '../data/WordList.json'
+import arr from '../data/SuggestedWords.json'
 
 
 function Keyboard(props) {

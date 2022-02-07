@@ -1,7 +1,7 @@
 import '../App.css'
 import { Button, TextField } from '@mui/material'
 import React, { useEffect, useState } from 'react'
-import arr from '../data/WordList.json'
+import arr from '../data/SuggestedWords.json'
 
 function StartPage(props) {
   useEffect(() => props.setTrigger(true), [])
@@ -25,7 +25,7 @@ function StartPage(props) {
     } else if (arr.indexOf(wordVal.toLowerCase()) == -1) {
       console.log('shit word')
       setErrMsg('pick an actual word buddy who taught u english')
-      setWordValErr(true) 
+      setWordValErr(true)
     }
     else if (wordVal) {
       setErrMsg('')
