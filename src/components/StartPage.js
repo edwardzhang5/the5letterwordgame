@@ -24,8 +24,8 @@ function StartPage(props) {
       setErrMsg('Your word is not 5 letters, dumbass')
     } else if (arr.indexOf(wordVal.toLowerCase()) == -1) {
       console.log('shit word')
-      setErrMsg('wow ur so stupid and gay')
-      setWordValErr(true)
+      setErrMsg('pick an actual word buddy who taught u english')
+      setWordValErr(true) 
     }
     else if (wordVal) {
       setErrMsg('')
