@@ -5,7 +5,7 @@ import React from 'react'
 const Navbar = (props) => {
   return (
     <div className = "flex-container-header">
-      <img src="hamster.jpg" alt="hamster" className="hamster-logo" width = "200" height = "100"/>
+      <img src="5_letter_word_game.png" alt="hamster" className="hamster-logo" width = "100" height = "100"/>
       <div className = "logo">
         <h1>5-Letter Word Game</h1>
       </div>
