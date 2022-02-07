@@ -1,7 +1,7 @@
 import '../App.css'
 import { Button, TextField } from '@mui/material'
 import React, { useEffect, useState } from 'react'
-import arr from '../data/WordList.json'
+import arr from '../data/SuggestedWords.json'
 
 function StartPage(props) {
   useEffect(() => props.setTrigger(true), [])
@@ -15,21 +15,20 @@ function StartPage(props) {
 
   const handleSubmit = (e) => {
     e.preventDefault()
+    //ResetErrorState
+    setErrMsg('')
     setWordValErr(false)
     if (!/^[a-zA-Z]+$/.test(wordVal)) {
       setWordValErr(true)
-      setErrMsg('its called the 5 letter WORD game stupid ass')
+      setErrMsg('It\'s called the 5 LETTER word game - your word has non-alphabetic characters')
     } else if (wordVal.length != 5) {
       setWordValErr(true)
-      setErrMsg('Your word is not 5 letters, dumbass')
-    } else if (arr.indexOf(wordVal.toLowerCase()) == -1) {
-      console.log('shit word')
-      setErrMsg('pick an actual word buddy who taught u english')
-      setWordValErr(true) 
+      setErrMsg('It\'s called the FIVE letter word game - your word is not 5 letters')
+    } else if ((wordVal.length == 5) && (arr.indexOf(wordVal.toLowerCase()) == -1)) {
+      setWordValErr(true)
+      setErrMsg('We can\'t tell which one, but you\'re either too smart or too dumb for us - please choose a new word')
     }
-    else if (wordVal) {
-      setErrMsg('')
-      console.log('good word')
+    else {
       if (currPlayer == 1) {
         props.setPlayer1Word(wordVal.toUpperCase())
         setPlayer(2)
@@ -37,6 +36,8 @@ function StartPage(props) {
         props.setPlayer2Word(wordVal.toUpperCase())
       }
       setWordVal('')
+      setErrMsg('')
+      setWordValErr(false)
       setButtonVal('Begin')
       setDisableNewWords(false)
       setWords([])
@@ -87,7 +88,7 @@ function StartPage(props) {
   return props.trigger ? (
     <div className='StartPage'>
       <div className='Card'>
-        <h1>{props.Players[currPlayer-1][0]}, insert your word!</h1>
+        <h1>{props.Players[currPlayer - 1][0]}, insert your word!</h1>
         <h2>{errMsg}</h2>
         <form noValidate autoComplete='off' onSubmit={handleSubmit}>
           <TextField

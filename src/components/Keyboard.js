@@ -1,7 +1,7 @@
 import '../App.css'
 import { useState } from 'react'
 import CurrentWord from './CurrentWord'
-import arr from '../data/WordList.json'
+import arr from '../data/SuggestedWords.json'
 
 
 function Keyboard(props) {
@@ -19,7 +19,7 @@ function Keyboard(props) {
       if (e == 'ENTER') {
         if (currWord.length == 5) {
           if(arr.indexOf(currWord.toLowerCase()) == -1) {
-            setErrMsg('bruh thats not a word lol')
+            setErrMsg('Please input a valid word')
           }
           //This Branch can be rewritten with the currPlayer Hook
           else{
