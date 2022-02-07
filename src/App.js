@@ -25,12 +25,11 @@ function App() {
 
   const [win, setWin] = useState(2)
   return (
-      <div className='wrapper'>
-        <Navbar />
+    <div className='wrapper'>
+      <Navbar />
       <div>
         Player {currPlayer}'s Turn
       </div>
-
       <Board
         Players={[[player1Name, player1Word, player1WordList, player1Numbers], [player2Name, player2Word, player2WordList, player2Numbers]]}
         setPlayer1WordList={setPlayer1WordList}
@@ -49,17 +48,14 @@ function App() {
         setPlayer1Numbers={setPlayer1Numbers}
         setPlayer2Numbers={setPlayer2Numbers}
         win={win}
-        setWin = {setWin}
-        currPlayer = {currPlayer}
-        setPlayer = {setPlayer}
-
+        setWin={setWin}
+        currPlayer={currPlayer}
+        setPlayer={setPlayer}
       />
       <StartPage
         trigger={buttonStart}
         setTrigger={setStart}
-
         currPlayer={currPlayer}
-
         Players={[[player1Name, player1Word, player1WordList, player1Numbers], [player2Name, player2Word, player2WordList, player2Numbers]]}
         setPlayer1Name={setPlayer1Name}
         setPlayer1Word={setPlayer1Word}
@@ -69,10 +65,9 @@ function App() {
         setPlayer2WordList={setPlayer2WordList}
       />
       <WinPage
-      Players={[[player1Name, player1Word, player1WordList, player1Numbers], [player2Name, player2Word, player2WordList, player2Numbers]]}
-      win={win}
+        Players={[[player1Name, player1Word, player1WordList, player1Numbers], [player2Name, player2Word, player2WordList, player2Numbers]]}
+        win={win}
       />
-      
     </div>
   )
 }

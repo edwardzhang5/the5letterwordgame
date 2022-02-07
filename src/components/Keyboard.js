@@ -13,21 +13,18 @@ function Keyboard(props) {
     if (e == 'DELETE') {
       if (currWord.length > 0) {
         setWord(currWord.substring(0, currWord.length - 1))
-        console.log(currWord)
       } else {
-        console.log('ur shit')
       }
     } else {
       if (e == 'ENTER') {
         if (currWord.length == 5) {
           if(arr.indexOf(currWord.toLowerCase()) == -1) {
-            console.log("not a real word stupid ass ho")
             setErrMsg('bruh thats not a word lol')
           }
+          //This Branch can be rewritten with the currPlayer Hook
           else{
             if (props.currPlayer == 1) {
               if (currWord == props.Players[1][1]) {
-                console.log('Player 1 win')
                 props.setWin(0)
               } else {
                 props.setPlayer1WordList([...props.Players[0][2], currWord])
@@ -37,14 +34,12 @@ function Keyboard(props) {
                     numSimilarities++
                   }
                 }
-                console.log(numSimilarities)
                 props.setPlayer1Numbers([...props.Players[0][3], numSimilarities])
                 setWord('')
                 props.setPlayer(2)
               }
             } else {
               if (currWord == props.Players[0][1]) {
-                console.log('Player 2 win')
                 props.setWin(1)
               } else {
                 props.setPlayer2WordList([...props.Players[1][2], currWord])
