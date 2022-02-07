@@ -28,8 +28,7 @@ function App() {
   const [win, setWin] = useState(2)
   return (
       <div className='wrapper'>
-        <Navbar />
-        
+      <Navbar />
 
       <Board
         Players={[[player1Name, player1Word, player1WordList, player1Numbers], [player2Name, player2Word, player2WordList, player2Numbers]]}

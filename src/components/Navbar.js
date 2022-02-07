@@ -5,7 +5,10 @@ import React from 'react'
 const Navbar = (props) => {
   return (
     <div className = "flex-container-header">
-      <h1>5-Letter Word Game</h1>
+      <img src="hamster.jpg" alt="hamster" className="hamster-logo" width = "200" height = "100"/>
+      <div className = "logo">
+        <h1>5-Letter Word Game</h1>
+      </div>
       <div className = "flex-container-helper">
         <div className="dropdown">
           <button className="drop-button">
@@ -26,5 +29,10 @@ const Navbar = (props) => {
     </div>
   )
 }
-export default Navbar
+
+
+export default Navbar;
+
+
+
 
