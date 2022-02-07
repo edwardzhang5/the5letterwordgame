@@ -26,7 +26,7 @@ function Board(props) {
     return (
         <div className="container">
             <div className="left-col">
-                <span>{props.Players[0][0]}</span>
+                <span className='player-name'>{props.Players[0][0]}</span>
                     <ul className='words-list'>
                         <div className = 'words'>
                         {props.Players[0][2].map((item, i) => (<li key={`item_${i}`}>{item}</li>))}
@@ -41,7 +41,7 @@ function Board(props) {
             </div>
 
             <div className="right-col">
-                <span>{props.Players[0][0]}</span>
+                <span className='player-name'>{props.Players[1][0]}</span>
                 <ul className='words-list'>
                     <div className = 'words'>
                     {props.Players[1][2].map((item, i) => (<li key={`item_${i}`}>{item}</li>))}
