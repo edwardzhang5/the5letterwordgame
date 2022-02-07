@@ -29,7 +29,6 @@ function App() {
   return (
       <div className='wrapper'>
         <Navbar />
-        
 
       <Board
         Players={[[player1Name, player1Word, player1WordList, player1Numbers], [player2Name, player2Word, player2WordList, player2Numbers]]}
@@ -75,8 +74,7 @@ function App() {
       Players={[[player1Name, player1Word, player1WordList, player1Numbers], [player2Name, player2Word, player2WordList, player2Numbers]]}
       win={win}
       />
-      <Typography>{player1Word}</Typography>
-      <Typography>{player2Word}</Typography>
+      
     </div>
   )
 }
