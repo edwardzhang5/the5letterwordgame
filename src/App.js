@@ -28,8 +28,8 @@ function App() {
   return (
     <div className='wrapper'>
       <Navbar />
-      <div>
-        Player {currPlayer}'s Turn
+      <div style={{textAlign:'center'}}>
+       <h1> Player {currPlayer}'s Turn</h1>
       </div>
       <Board
         Players={[[player1Name, player1Word, player1WordList, player1Numbers], [player2Name, player2Word, player2WordList, player2Numbers]]}
