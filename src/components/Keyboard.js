@@ -74,14 +74,13 @@ function Keyboard(props) {
 
   return (
     <div className='flex-container-body'>
+      <div className='word-holder'>
+        <CurrentWord word={currWord} />
+      </div>
+      <div>
+        {errMsg}
+      </div>
       <ul id='keyboard'>
-        <div>
-          <CurrentWord word={currWord} />
-        </div>
-        <div>
-          {errMsg}
-        </div>
-
         <div className='key-row'>
           <button
             className='regular-key'

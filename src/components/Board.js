@@ -43,9 +43,7 @@ function Board(props) {
             </div>
 
             <div className="right-col">
-                <div className='player-name-container'>
-                    <span className='player-name'>{props.Players[1][0]}</span>
-                </div>
+                <span className='player-name'>{props.Players[1][0]}</span>
                 <ul className='words-list'>
                     <div className = 'words'>
                         {props.Players[1][2].map((item, i) => (<li key={`item_${i}`}>{item}</li>))}
