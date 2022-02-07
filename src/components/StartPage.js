@@ -1,12 +1,12 @@
 import '../App.css'
 import { Button, TextField } from '@mui/material'
-import React, { Component, useEffect, useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import arr from '../data/WordList.json'
 
 function StartPage(props) {
   useEffect(() => props.setTrigger(true), [])
 
-  const [currPlayer, setPlayer] = useState(props.curr)
+  const [currPlayer, setPlayer] = useState(props.currPlayer)
 
   const [wordVal, setWordVal] = useState('')
   const [wordValErr, setWordValErr] = useState(false)
@@ -30,21 +30,20 @@ function StartPage(props) {
     else if (wordVal) {
       setErrMsg('')
       console.log('good word')
-      if (currPlayer == 0) {
+      if (currPlayer == 1) {
         props.setPlayer1Word(wordVal.toUpperCase())
-        setPlayer(1)
+        setPlayer(2)
       } else {
         props.setPlayer2Word(wordVal.toUpperCase())
       }
-      // props.players[currPlayer].word = wordVal
       setWordVal('')
       setButtonVal('Begin')
       setDisableNewWords(false)
       setWords([])
-      if (currPlayer == 1) {
+      if (currPlayer == 2) {
         props.setTrigger(false)
       }
-      setPlayer(1)
+      setPlayer(2)
     }
   }
   const [words, setWords] = useState([])
@@ -88,7 +87,7 @@ function StartPage(props) {
   return props.trigger ? (
     <div className='StartPage'>
       <div className='Card'>
-        <h1>{props.Players[currPlayer][0]}, insert your word!</h1>
+        <h1>{props.Players[currPlayer-1][0]}, insert your word!</h1>
         <h2>{errMsg}</h2>
         <form noValidate autoComplete='off' onSubmit={handleSubmit}>
           <TextField

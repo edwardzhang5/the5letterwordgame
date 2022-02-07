@@ -1,10 +1,9 @@
 import Navbar from './components/Navbar'
 import React from 'react'
-import styled from 'styled-components'
 import './App.css'
 import Keyboard from './components/Keyboard'
 import StartPage from './components/StartPage'
-import { iseEffect, useState } from 'react'
+import { useState } from 'react'
 import Board from './components/Board'
 import WinPage from './components/WinPage'
 
@@ -21,13 +20,16 @@ function App() {
   const [player2WordList, setPlayer2WordList] = useState([])
   const [player2Numbers, setPlayer2Numbers] = useState([])
 
-  const [currPlayer, setPlayer] = useState(0)
+  const [currPlayer, setPlayer] = useState(1)
   const [buttonStart, setStart] = useState(false)
 
   const [win, setWin] = useState(2)
   return (
       <div className='wrapper'>
         <Navbar />
+      <div>
+        Player {currPlayer}'s Turn
+      </div>
 
       <Board
         Players={[[player1Name, player1Word, player1WordList, player1Numbers], [player2Name, player2Word, player2WordList, player2Numbers]]}
@@ -48,18 +50,15 @@ function App() {
         setPlayer2Numbers={setPlayer2Numbers}
         win={win}
         setWin = {setWin}
-      />
+        currPlayer = {currPlayer}
+        setPlayer = {setPlayer}
 
-      <main>
-        {/* <button onClick={() => {
-          setStart(true)
-          setPlayer(2)
-        }}>Restart</button> */}
-      </main>
+      />
       <StartPage
         trigger={buttonStart}
         setTrigger={setStart}
-        curr={currPlayer}
+
+        currPlayer={currPlayer}
 
         Players={[[player1Name, player1Word, player1WordList, player1Numbers], [player2Name, player2Word, player2WordList, player2Numbers]]}
         setPlayer1Name={setPlayer1Name}
@@ -78,12 +77,5 @@ function App() {
   )
 }
 
-const Styles = {
-  Wrapper: styled.main`
-    display: flex;
-    background-color: #eeeeee;
-    height: 100vh;
-  `,
-}
 
 export default App

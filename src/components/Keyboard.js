@@ -5,7 +5,6 @@ import arr from '../data/WordList.json'
 
 
 function Keyboard(props) {
-  const [currPlayer, setPlayer] = useState(1)
   const [currWord, setWord] = useState('')
   const [errMsg, setErrMsg] = useState('')
 
@@ -26,7 +25,7 @@ function Keyboard(props) {
             setErrMsg('bruh thats not a word lol')
           }
           else{
-            if (currPlayer == 1) {
+            if (props.currPlayer == 1) {
               if (currWord == props.Players[1][1]) {
                 console.log('Player 1 win')
                 props.setWin(0)
@@ -41,7 +40,7 @@ function Keyboard(props) {
                 console.log(numSimilarities)
                 props.setPlayer1Numbers([...props.Players[0][3], numSimilarities])
                 setWord('')
-                setPlayer(2)
+                props.setPlayer(2)
               }
             } else {
               if (currWord == props.Players[0][1]) {
@@ -58,7 +57,7 @@ function Keyboard(props) {
                 console.log(numSimilarities)
                 props.setPlayer2Numbers([...props.Players[1][3], numSimilarities])
                 setWord('')
-                setPlayer(1)
+                props.setPlayer(1)
               }
             }
           }
