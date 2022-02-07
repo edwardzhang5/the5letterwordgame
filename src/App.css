@@ -24,16 +24,16 @@ Add global styling for text / color that the rest of components will inherit
   background: hsl(207, 24%, 15%);
   border-radius: 5px; /* SET IT TO SAME SIZE AS LEFT-COL / RIGHT-COL */
 }
- 
+
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: hsl(207, 24%, 30%); 
+  background: hsl(207, 24%, 30%);
   border-radius: 5px;
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: hsl(207, 24%, 35%); 
+  background: hsl(207, 24%, 35%);
 }
 /* End Scrollbar */
 
@@ -352,5 +352,5 @@ div.wrap {
 @font-face {
   font-family: FontsFree-Net-Didonesque-Display;
   src: local('FontsFree-Net-Didonesque-Display'),
-    url(./fonts/FontsFree-Net-Didonesque-Display.ttf) format('ttf');
+  url(./fonts/FontsFree-Net-Didonesque-Display.ttf) format('ttf');
 }
