@@ -14,60 +14,62 @@ function Keyboard(props) {
       if (currWord.length > 0) {
         setWord(currWord.substring(0, currWord.length - 1))
       } else {
+        //ERROR: shake
       }
-    } else {
-      if (e == 'ENTER') {
-        if (currWord.length == 5) {
-          if(arr.indexOf(currWord.toLowerCase()) == -1) {
-            setErrMsg('Please input a valid word')
+    } else if (e == 'ENTER') {
+      if (currWord.length == 5) {
+        if (arr.indexOf(currWord.toLowerCase()) == -1) {
+          setErrMsg('Please input a valid word')
+        }
+        //This Branch can be rewritten with the currPlayer Hook
+        else {
+          if (props.currPlayer == 1 && currWord == props.Players[1][1]) {
+            props.setWin(props.currPlayer)
           }
-          //This Branch can be rewritten with the currPlayer Hook
-          else{
+          else if (props.currPlayer == 2 && currWord == props.Players[0][1]) {
+            props.setWin(props.currPlayer)
+          }
+          else {
             if (props.currPlayer == 1) {
-              if (currWord == props.Players[1][1]) {
-                props.setWin(0)
-              } else {
-                props.setPlayer1WordList([...props.Players[0][2], currWord])
-                let numSimilarities = 0
-                for (let i = 0; i < currWord.length; i++) {
-                  if (props.Players[1][1].indexOf(currWord.charAt(i)) > -1) {
-                    numSimilarities++
-                  }
-                }
-                props.setPlayer1Numbers([...props.Players[0][3], numSimilarities])
-                setWord('')
-                props.setPlayer(2)
-              }
-            } else {
-              if (currWord == props.Players[0][1]) {
-                props.setWin(1)
-              } else {
-                props.setPlayer2WordList([...props.Players[1][2], currWord])
-                let numSimilarities = 0
-                for (let i = 0; i < currWord.length; i++) {
-                  if (props.Players[0][1].includes(currWord.charAt(i))) {
-                    numSimilarities++
-                  }
-                }
-                console.log(numSimilarities)
-                props.setPlayer2Numbers([...props.Players[1][3], numSimilarities])
-                setWord('')
-                props.setPlayer(1)
-              }
+              props.setPlayer1WordList([...props.Players[props.currPlayer - 1][2], currWord])
             }
+            else {
+              props.setPlayer2WordList([...props.Players[props.currPlayer - 1][2], currWord])
+            }
+            let numSimilarities = 0
+            
+            if (props.currPlayer == 1) {
+              for (let i = 0; i < currWord.length; i++) {
+                if (props.Players[1][1].indexOf(currWord.charAt(i)) > -1) {
+                  numSimilarities++
+                }
+              }
+              props.setPlayer1Numbers([...props.Players[props.currPlayer - 1][3], numSimilarities])
+              props.setPlayer(2)
+            }
+            else {
+              for (let i = 0; i < currWord.length; i++) {
+                if (props.Players[0][1].indexOf(currWord.charAt(i)) > -1) {
+                  numSimilarities++
+                }
+              }
+              props.setPlayer2Numbers([...props.Players[props.currPlayer - 1][3], numSimilarities])
+              props.setPlayer(1)
+            }
+            setWord('')
           }
-
-        } else {
-          console.log('ur shit')
         }
       } else {
-        if (currWord.length == 5) {
-          console.log('ur shit')
-        } else {
-          setWord(currWord + e)
-        }
+        //ERROR: Word is not 5 Letters
+      }
+    } else {
+      if (currWord.length == 5) {
+        console.log('ur shit')
+      } else {
+        setWord(currWord + e)
       }
     }
+
   }
 
   return (
