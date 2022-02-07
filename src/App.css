@@ -223,11 +223,7 @@ div.wrap {
   border: 1px solid #000000;
 }
 
-.player-name-container {
-  text-align: center;
-  margin-top: 10px;
-}
-
+/* FIX THIS PLAYER-NAME */
 .player-name {
   flex: 1;
   display: inline;
@@ -341,11 +337,7 @@ div.wrap {
 }
 
 #keyboard button:hover {
-  background: hsl(271, 76%, 53%);
-}
-
-#keyboard button:active {
-  background: hsl(271, 90%, 53%);
+  background: blueviolet;
 }
 /* End Main Body Stuff */
 
