@@ -24,7 +24,7 @@ function StartPage(props) {
     } else if (wordVal.length != 5) {
       setWordValErr(true)
       setErrMsg('It\'s called the FIVE letter word game - your word is not 5 letters')
-    } else if ((wordVal.length == 5) && (arr.indexOf(wordVal.toLowerCase()) == -1)) {
+    } else if ((wordVal.length == 5) && (arr.indexOf(wordVal.toUpperCase()) == -1)) {
       setWordValErr(true)
       setErrMsg('We can\'t tell which one, but you\'re either too smart or too dumb for us - please choose a new word')
     }
