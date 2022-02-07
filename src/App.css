@@ -9,18 +9,41 @@ Add global styling for text / color that the rest of components will inherit
 
 :root {
   font-family: FontsFree-Net-Didonesque-Display;
-  color: #333333;
+  color: #F5F7FA;
+  background-color: hsl(210, 24%, 11%);
 }
 
+/* Scrollbar */
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: hsl(207, 24%, 15%);
+  border-radius: 5px; /* SET IT TO SAME SIZE AS LEFT-COL / RIGHT-COL */
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: hsl(207, 24%, 30%); 
+  border-radius: 5px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: hsl(207, 24%, 35%); 
+}
+/* End Scrollbar */
+
 .App-header {
-  background-color: #282c34; /* Dunno what this is used for */
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: white;
   font-family: inherit;
   color: inherit;
 }
@@ -42,7 +65,7 @@ Add global styling for text / color that the rest of components will inherit
 }
 
 .Card {
-  background-color: #f9f9f9;
+  background-color: hsl(207, 24%, 15%);;
   border-radius: 10px;
   opacity: 100%;
   font-family: inherit;
@@ -118,7 +141,7 @@ div.wrap {
 }
 
 .flex-container-header > h1 {
-  border: 2px solid #333333;
+  border: 2px solid #F5F7FA;
   padding: 10px 16px;
   font-size: 30px;
   font-family: inherit;
@@ -133,6 +156,7 @@ div.wrap {
 }
 
 .dropdown {
+  margin: 10px 16px;
   position: relative;
   display: inline-block;
   font-family: inherit;
@@ -162,11 +186,7 @@ div.wrap {
 }
 
 .dropdown:hover .drop-button {
-  background-color: #333333;
-}
-
-.dropdown:hover .drop-button > p {
-  color: white;
+  background-color: hsl(207, 24%, 15%);
 }
 /* End Button Stuff */
 
@@ -177,28 +197,57 @@ div.wrap {
   height: 20vh;
 }
 
+.words-list {
+  display: flex;
+  list-style: none;
+  padding-left: 16vw;
+}
+
 .left-col {
-  flex: 1;
-  background: #ddd;
+  margin-left: 1vw;
+  margin-right: 1vw;
+  width: 48vw;
+  background: hsl(207, 24%, 15%);
   overflow-y: scroll;
+  border-radius: 5px;
+  border: 1px solid #000000;
 }
 
 .right-col {
-  flex: 1;
-  background: #aaa;
+  margin-left: 1vw;
+  margin-right: 1vw;
+  width: 48vw;
+  background: hsl(207, 24%, 15%);
   overflow-y: scroll;
+  border-radius: 5px;
+  border: 1px solid #000000;
+}
+
+.player-name-container {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.player-name {
+  flex: 1;
+  display: inline;
+  background: hsl(207, 24%, 25%);
+  padding: 2px 5px 2px 5px;
+  border-radius: 8px;
+  margin-bottom: 5px;
+  margin-left: 30px;
 }
 
 .words {
   width: 100px;
-  background: red;
-  border-radius: 8px;
   margin-right: 10px;
-  margin-left: 50vw;
 }
 
 .words > li {
   text-align: center;
+  background: hsl(207, 24%, 20%);
+  border-radius: 8px;
+  margin-bottom: 5px;
 }
 
 .numbers {
@@ -207,17 +256,16 @@ div.wrap {
 
 .numbers > li {
   text-align: center;
-}
-
-.words-list {
-  display: flex;
-  list-style: none;
+  background: hsl(207, 24%, 20%);
+  border-radius: 8px;
+  margin-bottom: 5px;
 }
 /* End Board Stuff */
 
 /* Main Body Stuff */
 .flex-container-body {
   display: flex;
+  flex-direction: row;
   flex-shrink: 1;
   flex-direction: column;
   margin-top: 25px;
@@ -236,8 +284,6 @@ div.wrap {
   width: 671px;
   height: 200px;
   font: 1em/1.5;
-  background: #fff;
-  border: 1px solid #f9f9f9; /* What even is this border? */
   font-family: inherit;
   color: inherit;
 }
@@ -246,7 +292,6 @@ div.wrap {
   margin: 0;
   padding: 0;
   justify-content: center;
-  background-color: whitesmoke;
   width: auto;
   font-family: inherit;
   color: inherit;
@@ -262,6 +307,11 @@ div.wrap {
   color: inherit;
 }
 
+/* trying to get the keyboard to stop moving up and down */
+.currrent-word{
+  justify-content: space-between;
+}
+
 #keyboard button.regular-key {
   float: left;
   margin: 0 5px 5px 0;
@@ -270,7 +320,7 @@ div.wrap {
   line-height: 40px;
   border-radius: 10px;
   text-align: center;
-  background: rgb(216, 216, 216);
+  background: hsl(207, 24%, 15%);
   border: 1px solid #000000;
   font-family: inherit;
   color: inherit;
@@ -284,14 +334,18 @@ div.wrap {
   line-height: 40px;
   border-radius: 10px;
   text-align: center;
-  background: rgb(216, 216, 216);
+  background: hsl(207, 24%, 15%);
   border: 1px solid #000000;
   font-family: inherit;
   color: inherit;
 }
 
 #keyboard button:hover {
-  background: blueviolet;
+  background: hsl(271, 76%, 53%);
+}
+
+#keyboard button:active {
+  background: hsl(271, 90%, 53%);
 }
 /* End Main Body Stuff */
 
