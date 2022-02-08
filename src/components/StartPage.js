@@ -29,22 +29,25 @@ function StartPage(props) {
       setErrMsg('We can\'t tell which one, but you\'re either too smart or too dumb for us - please choose a new word')
     }
     else {
-      if (currPlayer == 1) {
+      if (props.currPlayer == 1) {
         props.setPlayer1Word(wordVal.toUpperCase())
-        setPlayer(2)
       } else {
         props.setPlayer2Word(wordVal.toUpperCase())
       }
       setWordVal('')
       setErrMsg('')
       setWordValErr(false)
-      setButtonVal('Begin')
       setDisableNewWords(false)
       setWords([])
-      if (currPlayer == 2) {
+      if (props.currPlayer == 2) {
+        props.setPlayer(1)
         props.setTrigger(false)
+        setButtonVal('Next')
       }
-      setPlayer(2)
+      else{
+        props.setPlayer(2)
+        setButtonVal('Begin')
+      }
     }
   }
   const [words, setWords] = useState([])
@@ -88,7 +91,7 @@ function StartPage(props) {
   return props.trigger ? (
     <div className='StartPage'>
       <div className='Card'>
-        <h1>{props.Players[currPlayer - 1][0]}, insert your word!</h1>
+        <h1>{props.Players[props.currPlayer - 1][0]}, insert your word!</h1>
         <h2>{errMsg}</h2>
         <form noValidate autoComplete='off' onSubmit={handleSubmit}>
           <TextField
