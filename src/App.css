@@ -5,13 +5,13 @@ Add global styling for text / color that the rest of components will inherit
 */
 .wrapper{
   text-align: center;
-  font-family: FontsFree-Net-Didonesque-Display;
+  font-family: SpartanMB-Regular;
   color: #ffffff;
   background-color: #151c23;
   min-width: 390px;
 }
 :root {
-  font-family: FontsFree-Net-Didonesque-Display;
+  font-family: SpartanMB-Regular;
   color: #F5F7FA;
   background-color: #151c23;
 }
@@ -63,7 +63,7 @@ Add global styling for text / color that the rest of components will inherit
   justify-content: center;
   align-items: center;
   background: rgba(0, 0, 0, 0.9);
-  font-family: FontsFree-Net-Didonesque-Display;
+  font-family: SpartanMB-Regular;
   color: inherit;
 }
 
@@ -71,7 +71,7 @@ Add global styling for text / color that the rest of components will inherit
   background-color: hsl(207, 24%, 15%);;
   border-radius: 10px;
   opacity: 100%;
-  font-family: FontsFree-Net-Didonesque-Display;
+  font-family: SpartanMB-Regular;
   color: #F5F7FA;
 }
 
@@ -146,7 +146,7 @@ div.wrap {
 
 .flex-container-header > h1 {
   border: 2px solid #F5F7FA;
-  font-family: FontsFree-Net-Didonesque-Display;
+  font-family: SpartanMB-Regular;
   color: #ffffff;
   padding: 10px 16px;
   font-size: 30px;
@@ -230,7 +230,7 @@ div.wrap {
 }
 
 .player-name-container {
-  font-family: FontsFree-Net-Didonesque-Display;
+  font-family: SpartanMB-Regular;
   color: #ffffff;
   text-align: center;
   margin-top: 10px;
@@ -283,7 +283,7 @@ div.wrap {
   margin-bottom: 25px;
   justify-content: center;
   flex: 2 1 auto;
-  font-family: FontsFree-Net-Didonesque-Display;
+  font-family: SpartanMB-Regular;
   color: #ffffff;
 }
 
@@ -302,7 +302,7 @@ div.wrap {
   padding: 0;
   justify-content: center;
   width: auto;
-  font-family: FontsFree-Net-Didonesque-Display;
+  font-family: SpartanMB-Regular;
   color: white;
 }
 
@@ -324,7 +324,7 @@ div.wrap {
   text-align: center;
   align-self: center;
   color:white;
-  font-family: FontsFree-Net-Didonesque-Display;
+  font-family: SpartanMB-Regular;
   margin-bottom: 15px;
 }
 
@@ -369,4 +369,15 @@ div.wrap {
   font-family: FontsFree-Net-Didonesque-Display;
   src: local('FontsFree-Net-Didonesque-Display'),
     url(./fonts/FontsFree-Net-Didonesque-Display.ttf) format('ttf');
+}
+
+@font-face {
+  font-family: SpartanMB-Regular;
+  src: local('SpartanMB-Regular'),
+  url(./fonts/SpartanMB-Regular.otf) format('opentype');
+}
+@font-face {
+  font-family: SpartanMB-Bold;
+  src: local('SpartanMB-Bold'),
+  url(./fonts/SpartanMB-Bold.otf) format('opentype');
 }
