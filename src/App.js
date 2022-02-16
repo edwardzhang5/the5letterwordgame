@@ -7,6 +7,7 @@ import { useState } from 'react'
 import Board from './components/Board'
 import WinPage from './components/WinPage'
 import InfoPage from './components/InfoPage'
+import 'bootstrap/dist/css/bootstrap.min.css';
 //Reset button
 
 function App() {
@@ -32,6 +33,7 @@ function App() {
       <Navbar 
       setInfoTrigger = {setInfoTrigger}
       />
+      <div className = "container-sm">
       <div style={{textAlign:'center'}}>
        <h1> Player {currPlayer}'s Turn</h1>
       </div>
@@ -78,6 +80,7 @@ function App() {
         infoTrigger = {infoTrigger}
         setInfoTrigger = {setInfoTrigger}
       />
+    </div>
     </div>
   )
 }

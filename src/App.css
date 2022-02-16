@@ -3,14 +3,17 @@ Fix spacing, have it variable instead  of set for max screen size
 Add option for darkmode-lightmode
 Add global styling for text / color that the rest of components will inherit
 */
-.App {
+.wrapper{
   text-align: center;
+  font-family: FontsFree-Net-Didonesque-Display;
+  color: #ffffff;
+  background-color: #151c23;
+  min-width: 390px;
 }
-
 :root {
   font-family: FontsFree-Net-Didonesque-Display;
   color: #F5F7FA;
-  background-color: hsl(210, 24%, 11%);
+  background-color: #151c23;
 }
 
 /* Scrollbar */
@@ -60,7 +63,7 @@ Add global styling for text / color that the rest of components will inherit
   justify-content: center;
   align-items: center;
   background: rgba(0, 0, 0, 0.9);
-  font-family: inherit;
+  font-family: FontsFree-Net-Didonesque-Display;
   color: inherit;
 }
 
@@ -68,8 +71,8 @@ Add global styling for text / color that the rest of components will inherit
   background-color: hsl(207, 24%, 15%);;
   border-radius: 10px;
   opacity: 100%;
-  font-family: inherit;
-  color: inherit;
+  font-family: FontsFree-Net-Didonesque-Display;
+  color: #F5F7FA;
 }
 
 .Card > h1 {
@@ -135,6 +138,7 @@ Add global styling for text / color that the rest of components will inherit
 }
 
 div.wrap {
+  background-color: #151c23;
   word-wrap: break-word;
   font-family: inherit;
   color: inherit;
@@ -142,10 +146,11 @@ div.wrap {
 
 .flex-container-header > h1 {
   border: 2px solid #F5F7FA;
+  font-family: FontsFree-Net-Didonesque-Display;
+  color: #ffffff;
   padding: 10px 16px;
   font-size: 30px;
-  font-family: inherit;
-  color: inherit;
+
 }
 /* End Top Bar */
 
@@ -210,6 +215,7 @@ div.wrap {
   background: hsl(207, 24%, 15%);
   overflow-y: scroll;
   border-radius: 5px;
+  background: #1d272f;
   border: 1px solid #000000;
 }
 
@@ -224,6 +230,8 @@ div.wrap {
 }
 
 .player-name-container {
+  font-family: FontsFree-Net-Didonesque-Display;
+  color: #ffffff;
   text-align: center;
   margin-top: 10px;
 }
@@ -264,6 +272,7 @@ div.wrap {
 
 /* Main Body Stuff */
 .flex-container-body {
+  background-color: #151c23;
   display: flex;
   flex-direction: row;
   flex-shrink: 1;
@@ -274,8 +283,8 @@ div.wrap {
   margin-bottom: 25px;
   justify-content: center;
   flex: 2 1 auto;
-  font-family: inherit;
-  color: inherit;
+  font-family: FontsFree-Net-Didonesque-Display;
+  color: #ffffff;
 }
 
 .write {
@@ -293,8 +302,8 @@ div.wrap {
   padding: 0;
   justify-content: center;
   width: auto;
-  font-family: inherit;
-  color: inherit;
+  font-family: FontsFree-Net-Didonesque-Display;
+  color: white;
 }
 
 .key-row {
@@ -314,6 +323,8 @@ div.wrap {
   border-radius: 5px;
   text-align: center;
   align-self: center;
+  color:white;
+  font-family: FontsFree-Net-Didonesque-Display;
   margin-bottom: 15px;
 }
 
