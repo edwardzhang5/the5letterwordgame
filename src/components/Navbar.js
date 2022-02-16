@@ -28,6 +28,8 @@ const Navbar = () => (
             <a
               className='nav-link'
               href='https://www.youtube.com/watch?v=dQw4w9WgXcQ'
+              target='_blank'
+              rel='noopener noreferrer'
             >
               How to Play
             </a>
