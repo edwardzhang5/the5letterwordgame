@@ -3,7 +3,6 @@ import { useState } from 'react'
 import CurrentWord from './CurrentWord'
 import arr from '../data/GuessableWords.json'
 
-
 function Keyboard(props) {
   const [currWord, setWord] = useState('')
   const [errMsg, setErrMsg] = useState('')
@@ -25,35 +24,43 @@ function Keyboard(props) {
         else {
           if (props.currPlayer == 1 && currWord == props.Players[1][1]) {
             props.setWin(props.currPlayer)
-          }
-          else if (props.currPlayer == 2 && currWord == props.Players[0][1]) {
+          } else if (props.currPlayer == 2 && currWord == props.Players[0][1]) {
             props.setWin(props.currPlayer)
-          }
-          else {
+          } else {
             if (props.currPlayer == 1) {
-              props.setPlayer1WordList([...props.Players[props.currPlayer - 1][2], currWord])
-            }
-            else {
-              props.setPlayer2WordList([...props.Players[props.currPlayer - 1][2], currWord])
+              props.setPlayer1WordList([
+                ...props.Players[props.currPlayer - 1][2],
+                currWord,
+              ])
+            } else {
+              props.setPlayer2WordList([
+                ...props.Players[props.currPlayer - 1][2],
+                currWord,
+              ])
             }
             let numSimilarities = 0
-            
+
             if (props.currPlayer == 1) {
               for (let i = 0; i < currWord.length; i++) {
                 if (props.Players[1][1].indexOf(currWord.charAt(i)) > -1) {
                   numSimilarities++
                 }
               }
-              props.setPlayer1Numbers([...props.Players[props.currPlayer - 1][3], numSimilarities])
+              props.setPlayer1Numbers([
+                ...props.Players[props.currPlayer - 1][3],
+                numSimilarities,
+              ])
               props.setPlayer(2)
-            }
-            else {
+            } else {
               for (let i = 0; i < currWord.length; i++) {
                 if (props.Players[0][1].indexOf(currWord.charAt(i)) > -1) {
                   numSimilarities++
                 }
               }
-              props.setPlayer2Numbers([...props.Players[props.currPlayer - 1][3], numSimilarities])
+              props.setPlayer2Numbers([
+                ...props.Players[props.currPlayer - 1][3],
+                numSimilarities,
+              ])
               props.setPlayer(1)
             }
             setWord('')
@@ -69,7 +76,6 @@ function Keyboard(props) {
         setWord(currWord + e)
       }
     }
-
   }
 
   return (
@@ -77,9 +83,7 @@ function Keyboard(props) {
       <div className='word-holder'>
         <CurrentWord word={currWord} setWord={setWord} />
       </div>
-      <div>
-        {errMsg}
-      </div>
+      <div>{errMsg}</div>
       <ul id='keyboard'>
         <div className='key-row'>
           <button
@@ -277,11 +281,22 @@ function Keyboard(props) {
             M
           </button>
           <button
-            className='large-key'
+            type='button'
+            className='btn btn-primary'
+            className='regular-key'
             value='DELETE'
             onClick={(e) => changeCurrWord('DELETE')}
           >
-            DELETE
+            <svg
+              xmlns='http://www.w3.org/2000/svg'
+              width='16'
+              height='16'
+              fill='currentColor'
+              class='bi bi-backspace-fill'
+              viewBox='0 0 16 16'
+            >
+              <path d='M15.683 3a2 2 0 0 0-2-2h-7.08a2 2 0 0 0-1.519.698L.241 7.35a1 1 0 0 0 0 1.302l4.843 5.65A2 2 0 0 0 6.603 15h7.08a2 2 0 0 0 2-2V3zM5.829 5.854a.5.5 0 1 1 .707-.708l2.147 2.147 2.146-2.147a.5.5 0 1 1 .707.708L9.39 8l2.146 2.146a.5.5 0 0 1-.707.708L8.683 8.707l-2.147 2.147a.5.5 0 0 1-.707-.708L7.976 8 5.829 5.854z' />
+            </svg>
           </button>
         </div>
       </ul>
