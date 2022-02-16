@@ -3,16 +3,15 @@ Fix spacing, have it variable instead  of set for max screen size
 Add option for darkmode-lightmode
 Add global styling for text / color that the rest of components will inherit
 */
-.wrapper{
+.wrapper {
   text-align: center;
   font-family: SpartanMB-Regular;
   color: #ffffff;
   background-color: #151c23;
-  min-width: 390px;
 }
 :root {
   font-family: SpartanMB-Regular;
-  color: #F5F7FA;
+  color: #f5f7fa;
   background-color: #151c23;
 }
 
@@ -27,16 +26,16 @@ Add global styling for text / color that the rest of components will inherit
   background: hsl(207, 24%, 15%);
   border-radius: 5px; /* SET IT TO SAME SIZE AS LEFT-COL / RIGHT-COL */
 }
- 
+
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: hsl(207, 24%, 30%); 
+  background: hsl(207, 24%, 30%);
   border-radius: 5px;
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: hsl(207, 24%, 35%); 
+  background: hsl(207, 24%, 35%);
 }
 /* End Scrollbar */
 
@@ -68,11 +67,11 @@ Add global styling for text / color that the rest of components will inherit
 }
 
 .Card {
-  background-color: hsl(207, 24%, 15%);;
+  background-color: hsl(207, 24%, 15%);
   border-radius: 10px;
   opacity: 100%;
   font-family: SpartanMB-Regular;
-  color: #F5F7FA;
+  color: #f5f7fa;
 }
 
 .Card > h1 {
@@ -145,12 +144,11 @@ div.wrap {
 }
 
 .flex-container-header > h1 {
-  border: 2px solid #F5F7FA;
+  border: 2px solid #f5f7fa;
   font-family: SpartanMB-Regular;
   color: #ffffff;
   padding: 10px 16px;
   font-size: 30px;
-
 }
 /* End Top Bar */
 
@@ -323,7 +321,7 @@ div.wrap {
   border-radius: 5px;
   text-align: center;
   align-self: center;
-  color:white;
+  color: white;
   font-family: SpartanMB-Regular;
   margin-bottom: 15px;
 }
@@ -374,10 +372,10 @@ div.wrap {
 @font-face {
   font-family: SpartanMB-Regular;
   src: local('SpartanMB-Regular'),
-  url(./fonts/SpartanMB-Regular.otf) format('opentype');
+    url(./fonts/SpartanMB-Regular.otf) format('opentype');
 }
 @font-face {
   font-family: SpartanMB-Bold;
   src: local('SpartanMB-Bold'),
-  url(./fonts/SpartanMB-Bold.otf) format('opentype');
+    url(./fonts/SpartanMB-Bold.otf) format('opentype');
 }
