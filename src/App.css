@@ -307,7 +307,7 @@ div.wrap {
 .key-row {
   display: flex;
   margin: auto;
-  width: 100%;
+  width: auto;
   justify-content: center;
   font-family: inherit;
   color: inherit;
