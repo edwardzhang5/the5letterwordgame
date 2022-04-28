@@ -10,9 +10,6 @@ function InfoPage(props) {
     <div className='StartPage'>
       <div className='Card'>
         <h1>How to Play the 5 Letter Word Game</h1>
-        <button className='btn btn-lrg btn-secondary' onClick={close}>
-          Close
-        </button>
         <h2>Each player will select a valid 5 letter word to begin the game</h2>
         <h2>Guess the other player's word first to win</h2>
         <h2>
@@ -63,6 +60,9 @@ function InfoPage(props) {
           From player 1's first guess, they know 'P' is in their opponents word.
           From their second, they are able to identify 'O' as well.
         </div>
+        <button className='btn btn-lrg btn-secondary' onClick={close}>
+          Close
+        </button>
       </div>
     </div>
   ) : (

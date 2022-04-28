@@ -94,6 +94,7 @@ Add global styling for text / color that the rest of components will inherit
 .Card > button {
   font-family: inherit;
   color: inherit;
+  margin: 10px;
 }
 
 .Card > form {
