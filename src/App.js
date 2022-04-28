@@ -105,7 +105,6 @@ function App() {
         setPlayer2WordList={setPlayer2WordList}
         setPlayer1Numbers={setPlayer1Numbers}
         setPlayer2Numbers={setPlayer2Numbers}
-        win={win}
         setWin={setWin}
         currPlayer={currPlayer}
         setPlayer={setPlayer}
