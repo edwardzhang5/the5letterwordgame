@@ -20,15 +20,23 @@ function StartPage(props) {
     setWordValErr(false)
     if (!/^[a-zA-Z]+$/.test(wordVal)) {
       setWordValErr(true)
-      setErrMsg('It\'s called the 5 LETTER word game - your word has non-alphabetic characters')
+      setErrMsg(
+        "It's called the 5 LETTER word game - your word has non-alphabetic characters"
+      )
     } else if (wordVal.length != 5) {
       setWordValErr(true)
-      setErrMsg('It\'s called the FIVE letter word game - your word is not 5 letters')
-    } else if ((wordVal.length == 5) && (arr.indexOf(wordVal.toUpperCase()) == -1)) {
+      setErrMsg(
+        "It's called the FIVE letter word game - your word is not 5 letters"
+      )
+    } else if (
+      wordVal.length == 5 &&
+      arr.indexOf(wordVal.toUpperCase()) == -1
+    ) {
       setWordValErr(true)
-      setErrMsg('We can\'t tell which one, but you\'re either too smart or too dumb for us - please choose a new word')
-    }
-    else {
+      setErrMsg(
+        "We can't tell which one, but you're either too smart or too dumb for us - please choose a new word"
+      )
+    } else {
       if (props.currPlayer == 1) {
         props.setPlayer1Word(wordVal.toUpperCase())
       } else {
@@ -43,8 +51,7 @@ function StartPage(props) {
         props.setPlayer(1)
         props.setTrigger(false)
         setButtonVal('Next')
-      }
-      else{
+      } else {
         props.setPlayer(2)
         setButtonVal('Begin')
       }
@@ -94,17 +101,26 @@ function StartPage(props) {
         <h1>{props.Players[props.currPlayer - 1][0]}, insert your word!</h1>
         <h2>{errMsg}</h2>
         <form noValidate autoComplete='off' onSubmit={handleSubmit}>
-          <TextField
-            onChange={(e) => setWordVal(e.target.value)}
-            label='insert word...'
-            fullWidth
-            required
-            error={wordValErr}
-            value={wordVal}
-          ></TextField>
-          <Button className='next-btn' type='submit'>
+          <div className='row'>
+            <div className='col-lg-12'>
+              <label htmlFor='wordInput' className='form-label'>
+                Pick your 5-Letter Word
+              </label>
+              <div className='input-group input-group-lg '>
+                <input
+                  type='text'
+                  className='form-control input-lg'
+                  onChange={(e) => setWordVal(e.target.value)}
+                  value={wordVal}
+                  id='wordInput'
+                  placeholder='Insert your word here'
+                ></input>
+              </div>
+            </div>
+          </div>
+          <button className='btn btn-lrg' type='submit'>
             {buttonVal}
-          </Button>
+          </button>
         </form>
         <Button onClick={make5List} disabled={disableNewWords}>
           I can't think of words :(

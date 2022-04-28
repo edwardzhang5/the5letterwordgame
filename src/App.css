@@ -92,7 +92,6 @@ Add global styling for text / color that the rest of components will inherit
 }
 
 .Card > button {
-  padding-left: 20px;
   font-family: inherit;
   color: inherit;
 }
@@ -106,7 +105,7 @@ Add global styling for text / color that the rest of components will inherit
 
 .Card > form > button {
   padding-left: 0px;
-  text-align: left;
+  text-align: center;
   font-family: inherit;
   color: inherit;
 }
@@ -274,13 +273,13 @@ div.wrap {
   display: flex;
   flex-direction: row;
   flex-shrink: 1;
+  flex-basis: auto;
   flex-direction: column;
   margin-top: 25px;
   margin-right: 25px;
   margin-left: 25px;
   margin-bottom: 25px;
   justify-content: center;
-  flex: 2 1 auto;
   font-family: SpartanMB-Regular;
   color: #ffffff;
 }
@@ -324,6 +323,14 @@ div.wrap {
   color: white;
   font-family: SpartanMB-Regular;
   margin-bottom: 15px;
+}
+
+.form-control > .form-label {
+  text-align: left;
+}
+
+.button > .btn {
+  text-align: center;
 }
 
 #keyboard button.regular-key {
