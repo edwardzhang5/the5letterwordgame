@@ -30,7 +30,7 @@ function App() {
   return (
     <div className='wrapper'>
       <Navbar setInfoTrigger={setInfoTrigger} />
-      <div style={{ textAlign: 'center' }}>
+      <div style={{ textAlign: 'center', marginTop: '10px' }}>
         <h1> Player {currPlayer}'s Turn</h1>
       </div>
       <Board
