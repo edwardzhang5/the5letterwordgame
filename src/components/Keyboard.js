@@ -23,8 +23,10 @@ function Keyboard(props) {
         //This Branch can be rewritten with the currPlayer Hook
         else {
           if (props.currPlayer == 1 && currWord == props.Players[1][1]) {
+            setWord("")
             props.setWin(props.currPlayer)
           } else if (props.currPlayer == 2 && currWord == props.Players[0][1]) {
+            setWord("")
             props.setWin(props.currPlayer)
           } else {
             if (props.currPlayer == 1) {
