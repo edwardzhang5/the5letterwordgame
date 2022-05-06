@@ -21,6 +21,9 @@ function InfoPage(props) {
           of the characters in the word you guessed exist in your opponents
           words
         </h2>
+        <button className='btn btn-lrg btn-secondary' onClick={close}>
+          Close
+        </button>
         <div>Player 1's word: relax</div>
         <div>Player 2's word: poles</div>
         <div className='container'>
@@ -60,9 +63,6 @@ function InfoPage(props) {
           From player 1's first guess, they know 'P' is in their opponents word.
           From their second, they are able to identify 'O' as well.
         </div>
-        <button className='btn btn-lrg btn-secondary' onClick={close}>
-          Close
-        </button>
       </div>
     </div>
   ) : (
