@@ -55,5 +55,8 @@
     "eslint-config-react-app": "^7.0.0",
     "gh-pages": "^3.2.3",
     "react-bootstrap": "^2.1.2"
+  },
+  "overrides": {
+    "autoprefixer": "10.4.5"
   }
 }
