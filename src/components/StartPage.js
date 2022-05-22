@@ -118,7 +118,7 @@ function StartPage(props) {
               </div>
             </div>
           </div>
-          <button className='btn btn-lrg' type='submit'>
+          <button className='btn btn-custom btn-lrg' type='submit'>
             {buttonVal}
           </button>
         </form>

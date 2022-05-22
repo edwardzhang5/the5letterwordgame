@@ -67,8 +67,14 @@ Add global styling for text / color that the rest of components will inherit
 }
 
 .Card {
+  overflow: auto;
+  height: 95%;
+  width: 90%;
+  margin-left: 5%;
+  padding-left: 15px;
+  padding-right: 15px;
   box-sizing: border-box;
-  background-color: hsl(207, 24%, 15%);
+  background-color: #151c23;
   border-radius: 10px;
   opacity: 100%;
   font-family: SpartanMB-Regular;
@@ -76,7 +82,7 @@ Add global styling for text / color that the rest of components will inherit
 }
 
 .Card > h1 {
-  font-size: 8vw;
+  font-size: 6vw;
   text-align: center;
   padding: 20px;
   padding-bottom: 5px;
@@ -105,6 +111,16 @@ Add global styling for text / color that the rest of components will inherit
   font-family: inherit;
   color: inherit;
   margin: 7px;
+  background-color:#1D272F;
+  border-color: #000000;
+}
+
+.Card > button:hover {
+  background: hsl(271, 76%, 53%);
+}
+
+.Card > button:active {
+  background: hsl(271, 90%, 53%);
 }
 
 .Card > form {
@@ -136,72 +152,72 @@ Add global styling for text / color that the rest of components will inherit
   margin-right: 10px;
   border: 1px solid black;
 }
+
+.test-word-container {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 10px;
+}
+
+.left-test-word {
+  text-align: center;
+  width: 50%;
+  float: left;
+}
+
+.right-test-word {
+  text-align: center;
+  width: 50%;
+  float: right;
+}
 /* End Start Page */
 
 /* Top Bar */
-.flex-container-header {
-  display: flex;
-  justify-content: center;
-  font-family: inherit;
-  color: inherit;
+.navbar-custom {
+  background-color: hsl(207, 24%, 15%);
 }
 
-div.wrap {
-  background-color: #151c23;
-  word-wrap: break-word;
-  font-family: inherit;
-  color: inherit;
-}
-
-.flex-container-header > h1 {
-  border: 2px solid #f5f7fa;
-  font-family: SpartanMB-Regular;
-  color: #ffffff;
-  padding: 10px 16px;
-  font-size: 30px;
+a.nav-link {
+  color: white !important;
 }
 /* End Top Bar */
 
-/* Button Stuff */
-.flex-container-helper {
-  font-family: inherit;
-  color: inherit;
+
+/* Annoying Button Stuff */
+.btn-custom {
+  margin-top: 5px;
+  text-align: center;
+  color: white !important;
+  padding: 5px 5px 5px 5px !important;
+  background-color: hsl(207, 24%, 15%) !important;
 }
 
-.dropdown {
-  margin: 10px 16px;
-  position: relative;
-  display: inline-block;
-  font-family: inherit;
-  color: inherit;
+.btn-custom:hover {
+  color: inherit !important;
+  background: hsl(271, 76%, 53%) !important;
 }
 
-.dropdown .drop-button {
-  border: none;
-  outline: none;
-  padding: 10px 16px;
-  margin: 0;
-  background-color: inherit;
-  font-family: inherit;
-  color: inherit;
+.btn-custom:active {
+  color: inherit !important;
+  background: hsl(271, 90%, 53%) !important;
 }
 
-.drop-button > p {
-  font-size: 20px;
-  border: none;
-  outline: none;
-  padding: 7px 8px;
-  margin: 0;
-  text-decoration: none;
-  background-color: inherit;
-  font-family: inherit;
-  color: inherit;
+.MuiButton-root {
+  color:white !important;
+  background-color: hsl(207, 24%, 15%) !important;
 }
 
-.dropdown:hover .drop-button {
-  background-color: hsl(207, 24%, 15%);
+.MuiButton-root:hover {
+  color: inherit !important;
+  background: hsl(271, 76%, 53%) !important;
 }
-/* End Button Stuff */
+
+.MuiButton-root:active {
+  color: inherit !important;
+  background: hsl(271, 90%, 53%) !important;
+}
+/* End Annoying Button STuff */
+
 
 /* Board Stuff */
 .container {
@@ -213,7 +229,7 @@ div.wrap {
 .words-list {
   display: flex;
   list-style: none;
-  padding-left: 16vw;
+  justify-content: center;
 }
 
 .left-col {

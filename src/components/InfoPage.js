@@ -25,9 +25,10 @@ function InfoPage(props) {
             in the word you guessed exist in your opponent's word
           </li>
         </ul>
-
-        <div>Player 1's word: relax</div>
-        <div>Player 2's word: poles</div>
+        <div className='test-word-container'>
+          <div className='left-test-word'>Player 1's word: relax</div>
+          <div className='right-test-word'>Player 2's word: poles</div>
+        </div>
         <div className='container'>
           <div className='left-col'>
             <div className='player-name-container'>
