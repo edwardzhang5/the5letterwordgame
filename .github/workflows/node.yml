@@ -27,6 +27,8 @@ jobs:
         cache: 'npm'
     - run: npm ci
     - run: npm install --save-exact
+    - run: git config user.name "Zach Speaks"
+    - run: git config user.email "zspeaks@ufl.edu"
     - run: npm run deploy
       env:
         CI: false
