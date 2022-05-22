@@ -11,6 +11,7 @@ Add global styling for text / color that the rest of components will inherit
   background-color: #151c23;
 }
 :root {
+  print-color-adjust: exact;
   font-family: SpartanMB-Regular;
   color: #f5f7fa;
   background-color: #151c23;
