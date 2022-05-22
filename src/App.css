@@ -82,7 +82,7 @@ Add global styling for text / color that the rest of components will inherit
 }
 
 .Card > h1 {
-  font-size: 6vw;
+  font-size: calc(14px + 2vw);
   text-align: center;
   padding: 20px;
   padding-bottom: 5px;
@@ -93,7 +93,7 @@ Add global styling for text / color that the rest of components will inherit
 
 .Card > ul {
   list-style-type: square;
-  font-size: 2vw;
+  font-size: calc(5px + 1.5vw);
   text-align: left;
   font-family: inherit;
   color: inherit;
@@ -102,12 +102,13 @@ Add global styling for text / color that the rest of components will inherit
 .Card > h2 {
   padding-left: 20px;
   padding-top: 10px;
-  font-size: 2vw;
+  font-size: calc(5px + 1.5vw);
   font-family: inherit;
   color: inherit;
 }
 
 .Card > button {
+  font-size: calc(5px + 1.5vw);
   font-family: inherit;
   color: inherit;
   margin: 7px;
@@ -160,17 +161,20 @@ Add global styling for text / color that the rest of components will inherit
 }
 
 .left-test-word {
+  font-size: calc(5px + 1.5vw);
   text-align: center;
   width: 50%;
   float: left;
 }
 
 .right-test-word {
+  font-size: calc(5px + 1.5vw);
   text-align: center;
   width: 50%;
   float: right;
 }
 /* End Start Page */
+
 
 /* Top Bar */
 .navbar-custom {
@@ -183,9 +187,14 @@ a.nav-link {
 /* End Top Bar */
 
 
+.col-lg-12 {
+  font-size: calc(5px + 1.5vw) !important;
+}
+
 /* Annoying Button Stuff */
 .btn-custom {
   margin-top: 5px;
+  font-size: calc(5px + 1.5vw) !important;
   text-align: center;
   color: white !important;
   padding: 5px 5px 5px 5px !important;
@@ -204,6 +213,7 @@ a.nav-link {
 
 .MuiButton-root {
   color:white !important;
+  font-size: calc(1px + 1.5vw) !important;
   background-color: hsl(207, 24%, 15%) !important;
 }
 
@@ -216,7 +226,12 @@ a.nav-link {
   color: inherit !important;
   background: hsl(271, 90%, 53%) !important;
 }
-/* End Annoying Button STuff */
+
+.MuiButton-root:disabled {
+  color: hsl(207, 24%, 15%) !important;
+  background: #151c23 !important;
+}
+/* End Annoying Button Stuff */
 
 
 /* Board Stuff */
@@ -227,16 +242,20 @@ a.nav-link {
 }
 
 .words-list {
+  padding: 0;
+  font-size: calc(5px + 1.5vw);
   display: flex;
   list-style: none;
   justify-content: center;
 }
 
 .left-col {
+  text-align: center;
+  padding-left: 10px;
+  padding-top: 5px;
   margin-left: 1vw;
   margin-right: 1vw;
   width: 48vw;
-  background: hsl(207, 24%, 15%);
   overflow-y: scroll;
   border-radius: 5px;
   background: #1d272f;
@@ -244,12 +263,15 @@ a.nav-link {
 }
 
 .right-col {
+  text-align: center;
+  padding-left: 10px;
+  padding-top: 5px;
   margin-left: 1vw;
   margin-right: 1vw;
   width: 48vw;
-  background: hsl(207, 24%, 15%);
   overflow-y: scroll;
   border-radius: 5px;
+  background: #1d272f;
   border: 1px solid #000000;
 }
 
@@ -257,17 +279,18 @@ a.nav-link {
   font-family: SpartanMB-Regular;
   color: #ffffff;
   text-align: center;
-  margin-top: 10px;
+  display: table;
+  margin: 0 auto;
 }
 
 .player-name {
+  font-size: calc(5px + 1.5vw);
   flex: 1;
   display: inline;
   background: hsl(207, 24%, 25%);
   padding: 2px 5px 2px 5px;
   border-radius: 8px;
   margin-bottom: 5px;
-  margin-left: 30px;
 }
 
 .words {
@@ -353,6 +376,7 @@ a.nav-link {
 }
 
 .form-control > .form-label {
+  font-size: calc(5px + 1.5vw);
   text-align: left;
 }
 
@@ -396,6 +420,60 @@ a.nav-link {
   background: hsl(271, 90%, 53%);
 }
 /* End Main Body Stuff */
+
+/* Phone Formatting */
+@media only screen and (max-device-width: 480px){
+  /* Rules Screen Stuff */
+  .Card > h1 {
+    font-size: calc(30px + 2vw);
+  }
+
+  .Card > ul {
+    font-size: calc(20px + 1.5vw);
+  }
+  
+  .Card > h2 {
+    font-size: calc(20px + 1.5vw);
+  }
+  
+  .Card > button {
+    font-size: calc(20px + 1.5vw);
+  }
+
+  .left-test-word {
+    font-size: calc(20px + 1.5vw);
+  }
+  
+  .right-test-word {
+    font-size: calc(20px + 1.5vw);
+  }
+  /* End Rules Screen Stuff */
+
+
+  /* Word Selection Stuff */
+  .col-lg-12 {
+    font-size: calc(20px + 1.5vw) !important;
+  }
+
+  .btn-custom {
+    font-size: calc(20px + 1.5vw) !important;
+  }
+
+  .MuiButton-root {
+    font-size: calc(15px + 1.5vw) !important;
+  }
+  /* End Word Selection Stuff */
+ 
+
+  .player-name {
+    font-size: calc(20px + 1.5vw);
+  }
+
+  .words-list {
+    font-size: calc(20px + 1.5vw);
+  }
+}
+/* End Phone Formatting */
 
 @font-face {
   font-family: FontsFree-Net-Didonesque-Display;
