@@ -397,6 +397,7 @@ a.nav-link {
   border: 1px solid #000000;
   font-family: inherit;
   color: inherit;
+  font-size: 16px;
 }
 
 #keyboard button.large-key {
@@ -425,8 +426,22 @@ a.nav-link {
 
 /* Formatting for Small Screen */
 @media (max-width: 488px) {
+  #keyboard button.regular-key {
+    font-size: 12px;
+  }
+
   #keyboard button.large-key {
-    font-size: 1.79vw;
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 388px) {
+  #keyboard button.regular-key {
+    font-size: 8px;
+  }
+
+  #keyboard button.large-key {
+    font-size: 8px;
   }
 }
 /* Formatting for Small Screen */
