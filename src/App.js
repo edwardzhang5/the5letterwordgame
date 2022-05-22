@@ -8,7 +8,6 @@ import Board from './components/Board'
 import WinPage from './components/WinPage'
 import InfoPage from './components/InfoPage'
 import 'bootstrap/dist/css/bootstrap.min.css'
-//Reset button
 
 function App() {
   const [player1Name, setPlayer1Name] = useState('Player 1')
