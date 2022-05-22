@@ -3,7 +3,7 @@ import React, { Component, useEffect, useState } from 'react'
 
 function InfoPage(props) {
   useEffect(() => props.setInfoTrigger(true), [])
-  const close = () => {
+  const closeInfo = () => {
     props.setInfoTrigger(false)
   }
   return props.infoTrigger ? (
@@ -21,7 +21,7 @@ function InfoPage(props) {
           of the characters in the word you guessed exist in your opponents
           words
         </h2>
-        <button className='btn btn-lrg btn-secondary' onClick={close}>
+        <button className='btn btn-lrg btn-secondary' onClick={closeInfo}>
           Close
         </button>
         <div>Player 1's word: relax</div>

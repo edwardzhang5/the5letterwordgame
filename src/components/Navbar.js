@@ -2,7 +2,14 @@ import { useEffect } from 'react'
 import React from 'react'
 import nav from 'react-bootstrap'
 
-const Navbar = () => (
+function Navbar(props){
+  const openInfo = () => {
+    props.setInfoTrigger(true)
+  }
+  const openSettings = () => {
+    props.setSettingsTrigger(true)
+  }
+  return (
   <nav className='navbar navbar-expand-sm navbar-dark bg-dark'>
     <div className='container-md'>
       <a className='navbar-brand' href='#'>
@@ -24,19 +31,16 @@ const Navbar = () => (
       </button>
       <div className='collapse navbar-collapse' id='navbarSupportedContent'>
         <ul className='navbar-nav ms-auto mb-2 mb-lg-0'>
-          <li className='nav-item'>
-            <a
-              className='nav-link'
-              href='https://www.youtube.com/watch?v=dQw4w9WgXcQ'
-              target='_blank'
-              rel='noopener noreferrer'
-            >
-              How to Play
-            </a>
-          </li>
+          <button className='nav-item' onClick={openInfo}>
+            Help
+          </button>
+          <button className='nav-item'onClick={openSettings}>
+            Settings
+          </button>
         </ul>
       </div>
     </div>
   </nav>
-)
+  )
+}
 export default Navbar
