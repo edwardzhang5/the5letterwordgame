@@ -1,7 +1,7 @@
 {
   "name": "the5letterwordgame",
   "version": "0.1.0",
-  "homepage": ".",
+  "homepage": "https://edwardzhang5.github.io/the5letterwordgame",
   "private": true,
   "dependencies": {
     "@emotion/react": "^11.7.1",
