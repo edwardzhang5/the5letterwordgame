@@ -28,6 +28,5 @@ jobs:
     - run: npm ci
     - run: npm install --save-exact
     - run: npm run deploy
-      with:
-        env:
-          CI: false
+      env:
+        CI: false
