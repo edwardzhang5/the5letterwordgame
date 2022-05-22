@@ -3,7 +3,7 @@ import React, { Component, useEffect, useState } from 'react'
 
 function InfoPage(props) {
   useEffect(() => props.setInfoTrigger(true), [])
-  const close = () => {
+  const closeInfo = () => {
     props.setInfoTrigger(false)
   }
   return props.infoTrigger ? (
