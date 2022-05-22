@@ -284,7 +284,7 @@ function Keyboard(props) {
           </button>
           <button
             type='button'
-            className='regular-key'
+            className='large-key'
             value='DELETE'
             onClick={(e) => changeCurrWord('DELETE')}
           >

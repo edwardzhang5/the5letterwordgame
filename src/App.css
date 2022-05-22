@@ -3,6 +3,7 @@ Fix spacing, have it variable instead  of set for max screen size
 Add option for darkmode-lightmode
 Add global styling for text / color that the rest of components will inherit
 */
+
 .wrapper {
   text-align: center;
   font-family: SpartanMB-Regular;
@@ -420,6 +421,16 @@ a.nav-link {
   background: hsl(271, 90%, 53%);
 }
 /* End Main Body Stuff */
+
+
+/* Formatting for Small Screen */
+@media (max-width: 488px) {
+  #keyboard button.large-key {
+    font-size: 1.79vw;
+  }
+}
+/* Formatting for Small Screen */
+
 
 /* Phone Formatting */
 @media only screen and (max-device-width: 480px){
