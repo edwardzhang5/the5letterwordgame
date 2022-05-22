@@ -18,7 +18,7 @@ function WinPage(props) {
       <div className='Card'>
         <h1>{props.Players[props.win - 1][0]} wins !!!!!</h1>
         <button onClick={resetGame}>
-          reset
+          New Game
         </button>
       </div>
     </div>
