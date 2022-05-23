@@ -16,11 +16,13 @@ function App() {
   const [player1Word, setPlayer1Word] = useState('')
   const [player1WordList, setPlayer1WordList] = useState([])
   const [player1Numbers, setPlayer1Numbers] = useState([])
+  const [player1NumbersMedium, setPlayer1NumbersMedium] = useState([])
 
   const [player2Name, setPlayer2Name] = useState('Player 2')
   const [player2Word, setPlayer2Word] = useState('')
   const [player2WordList, setPlayer2WordList] = useState([])
   const [player2Numbers, setPlayer2Numbers] = useState([])
+  const [player2NumbersMedium, setPlayer2NumbersMedium] = useState([])
 
   const [currPlayer, setPlayer] = useState(1)
 
@@ -30,6 +32,9 @@ function App() {
   const [win, setWin] = useState(0)
   
   const [onePlayer, setOnePlayer] = useState(false)
+  const [highContrast, setHighContrast] = useState(false)
+  const [dark, setDark] = useState(false)
+  const [medium, setMedium] = useState(false)
 
   return (
     <div className='wrapper'>
@@ -44,21 +49,24 @@ function App() {
 
       <Board
         Players={[
-          [player1Name, player1Word, player1WordList, player1Numbers],
-          [player2Name, player2Word, player2WordList, player2Numbers],
+          [player1Name, player1Word, player1WordList, player1Numbers, player1NumbersMedium],
+          [player2Name, player2Word, player2WordList, player2Numbers, player2NumbersMedium],
         ]}
         setPlayer1WordList={setPlayer1WordList}
         setPlayer2WordList={setPlayer2WordList}
         setPlayer1Numbers={setPlayer1Numbers}
         setPlayer2Numbers={setPlayer2Numbers}
+        setPlayer1NumbersMedium={setPlayer1NumbersMedium}
+        setPlayer2NumbersMedium={setPlayer2NumbersMedium}
         onePlayer={onePlayer}
         win={win}
         setWin={setWin}
+        medium={medium}
       />
       <Keyboard
         Players={[
-          [player1Name, player1Word, player1WordList, player1Numbers],
-          [player2Name, player2Word, player2WordList, player2Numbers],
+          [player1Name, player1Word, player1WordList, player1Numbers, player1NumbersMedium],
+          [player2Name, player2Word, player2WordList, player2Numbers, player2NumbersMedium],
         ]}
         setPlayers={[
           [
@@ -87,6 +95,8 @@ function App() {
         currPlayer={currPlayer}
         setPlayer={setPlayer}
         onePlayer={onePlayer}
+        setPlayer1NumbersMedium={setPlayer1NumbersMedium}
+        setPlayer2NumbersMedium={setPlayer2NumbersMedium}
       />
       <StartPage
         trigger={startTrigger}
@@ -124,6 +134,8 @@ function App() {
         start={startTrigger}
         setStart={setStartTrigger}
         onePlayer={onePlayer}
+        setPlayer1NumbersMedium={setPlayer1NumbersMedium}
+        setPlayer2NumbersMedium={setPlayer2NumbersMedium}
       />
       
       <SettingsPage 
@@ -142,11 +154,21 @@ function App() {
         setWin={setWin}
         setPlayer={setPlayer}
         startTrigger={startTrigger}
+        setPlayer1NumbersMedium={setPlayer1NumbersMedium}
+        setPlayer2NumbersMedium={setPlayer2NumbersMedium}
+        
         setStart={setStartTrigger}
+        medium={medium}
+        setMedium={setMedium}
+        dark={dark}
+        setDark={setDark}
+        highContrast={highContrast}
+        setHighContrast={setHighContrast}
        />
       <InfoPage
         infoTrigger={infoTrigger}
         setInfoTrigger={setInfoTrigger}
+        medium={medium}
       />
 
     </div>
