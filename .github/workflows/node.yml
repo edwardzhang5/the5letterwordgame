@@ -25,6 +25,11 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
+    - env:
+        - EZ_ACCESS_TOKEN: ${{secrets.EZ_ACCESS_TOKEN}}
     - run: npm ci
     - run: npm install --save-exact
+    - run: git config --global user.name "edwardzhang5"
+    - run: git config --global user.email "zspeaks@ufl.edu"
+    - run: git remote set-url origin https://edwardzhang5:$EZ_ACCESS_TOKEN@github.com/edwardzhang5/the5letterwordgame
     - run: npm run deploy
