@@ -453,6 +453,9 @@ a.nav-link {
   /* Rules Screen Stuff */
   .Card {
     background-color: red;
+    width: 99%;
+    height: 90%;
+    margin-left: .5%;
   }
 
   .Card > h1 {
@@ -469,6 +472,11 @@ a.nav-link {
   
   .Card > button {
     font-size: calc(20px + 1.5vw);
+  }
+
+  .container {
+    margin: 0 !important;
+    padding: 0 !important;
   }
 
   .left-test-word {
