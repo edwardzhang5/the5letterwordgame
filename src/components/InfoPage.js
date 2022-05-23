@@ -8,7 +8,7 @@ function InfoPage(props) {
   }
   if(props.infoTrigger){
     return props.medium ? (
-      <div className='StartPage'>
+      <div className='InfoPage'>
         <div className='Card'>
           <h1>How to Play the 5 Letter Word Game <br/> Medium Difficulty</h1>
           <ul >
@@ -75,7 +75,7 @@ function InfoPage(props) {
         </div>
       </div>
     ) : (
-      <div className='StartPage'>
+      <div className='InfoPage'>
         <div className='Card'>
           <h1>How to Play the 5 Letter Word Game : Standard</h1>
           <ul >
