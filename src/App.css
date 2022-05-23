@@ -459,19 +459,19 @@ a.nav-link {
   }
 
   .Card > h1 {
-    font-size: calc(30px + 2vw);
+    font-size: calc(20px + 2vw);
   }
 
   .Card > ul {
-    font-size: calc(20px + 1.5vw);
+    font-size: calc(15px + 1.5vw);
   }
   
   .Card > h2 {
-    font-size: calc(20px + 1.5vw);
+    font-size: calc(15px + 1.5vw);
   }
   
   .Card > button {
-    font-size: calc(20px + 1.5vw);
+    font-size: calc(15px + 1.5vw);
   }
 
   .container {
@@ -479,12 +479,24 @@ a.nav-link {
     padding: 0 !important;
   }
 
+  .Card .player-name {
+    font-size: calc(8px + 1.5vw);
+  }
+
+  .Card .words {
+    font-size: calc(8px + 1.5vw);
+  }
+
+  .Card .numbers {
+    font-size: calc(8px + 1.5vw);
+  }
+
   .left-test-word {
-    font-size: calc(20px + 1.5vw);
+    font-size: calc(15px + 1.5vw);
   }
   
   .right-test-word {
-    font-size: calc(20px + 1.5vw);
+    font-size: calc(15px + 1.5vw);
   }
   /* End Rules Screen Stuff */
 
