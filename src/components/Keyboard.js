@@ -52,7 +52,9 @@ function Keyboard(props) {
                 ...props.Players[props.currPlayer - 1][3],
                 numSimilarities,
               ])
-              props.setPlayer(2)
+              if(!props.onePlayer){
+                props.setPlayer(2)
+              }
             } else {
               for (let i = 0; i < currWord.length; i++) {
                 if (props.Players[0][1].indexOf(currWord.charAt(i)) > -1) {

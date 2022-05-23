@@ -23,16 +23,21 @@ function App() {
   const [player2Numbers, setPlayer2Numbers] = useState([])
 
   const [currPlayer, setPlayer] = useState(1)
-  const [buttonStart, setStart] = useState(false)
 
+  const [startTrigger, setStartTrigger] = useState(false)
   const [infoTrigger, setInfoTrigger] = useState(false)
   const [settingsTrigger, setSettingsTrigger] = useState(false)
-
   const [win, setWin] = useState(0)
+  
+  const [onePlayer, setOnePlayer] = useState(false)
 
   return (
     <div className='wrapper'>
-      <Navbar setInfoTrigger={setInfoTrigger} setSettingsTrigger={setSettingsTrigger}/>
+      <Navbar
+        setInfoTrigger={setInfoTrigger}
+        setSettingsTrigger={setSettingsTrigger}
+      />
+
       <div style={{ textAlign: 'center', marginTop: '10px' }}>
         <h1> Player {currPlayer}'s Turn</h1>
       </div>
@@ -46,6 +51,9 @@ function App() {
         setPlayer2WordList={setPlayer2WordList}
         setPlayer1Numbers={setPlayer1Numbers}
         setPlayer2Numbers={setPlayer2Numbers}
+        onePlayer={onePlayer}
+        win={win}
+        setWin={setWin}
       />
       <Keyboard
         Players={[
@@ -78,10 +86,11 @@ function App() {
         setWin={setWin}
         currPlayer={currPlayer}
         setPlayer={setPlayer}
+        onePlayer={onePlayer}
       />
       <StartPage
-        trigger={buttonStart}
-        setTrigger={setStart}
+        trigger={startTrigger}
+        setTrigger={setStartTrigger}
         currPlayer={currPlayer}
         setPlayer={setPlayer}
         Players={[
@@ -112,11 +121,33 @@ function App() {
         setWin={setWin}
         currPlayer={currPlayer}
         setPlayer={setPlayer}
-        setStart={setStart}
+        start={startTrigger}
+        setStart={setStartTrigger}
+        onePlayer={onePlayer}
       />
       
-      <SettingsPage settingsTrigger={settingsTrigger} setSettingsTrigger={setSettingsTrigger} />
-      <InfoPage infoTrigger={infoTrigger} setInfoTrigger={setInfoTrigger} />
+      <SettingsPage 
+        settingsTrigger={settingsTrigger} 
+        setSettingsTrigger={setSettingsTrigger}
+        setOnePlayer={setOnePlayer}
+        onePlayer={onePlayer}
+        setPlayer1Name={setPlayer1Name}
+        setPlayer1Word={setPlayer1Word}
+        setPlayer1WordList={setPlayer1WordList}
+        setPlayer2Name={setPlayer2Name}
+        setPlayer2Word={setPlayer2Word}
+        setPlayer2WordList={setPlayer2WordList}
+        setPlayer1Numbers={setPlayer1Numbers}
+        setPlayer2Numbers={setPlayer2Numbers}
+        setWin={setWin}
+        setPlayer={setPlayer}
+        startTrigger={startTrigger}
+        setStart={setStartTrigger}
+       />
+      <InfoPage
+        infoTrigger={infoTrigger}
+        setInfoTrigger={setInfoTrigger}
+      />
 
     </div>
   )
