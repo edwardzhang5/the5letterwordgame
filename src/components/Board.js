@@ -13,7 +13,6 @@ function Board(props) {
         }
     }, [props])
     
-
     const bottomRefLeft = useRef();
     const bottomRefRight = useRef();
     
@@ -64,8 +63,7 @@ function Board(props) {
             <div>
             <Button
             onClick = {giveUp}>
-                I give up
-                
+                I give up 
             </Button>
             </div>
         </div>

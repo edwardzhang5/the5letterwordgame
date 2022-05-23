@@ -1,8 +1,8 @@
 import '../App.css'
 import React, { Component, useEffect, useState } from 'react'
 import {Form, Button, Alert} from 'react-bootstrap'
-import {resetGameOnePlayer, AlertDismissibleExample} from '../const/const'
-import resetGameTwoPlayer from '../const/const'
+import resetGameOnePlayer from '../const/resetOnePlayer'
+import resetGameTwoPlayer from '../const/resetTwoPlayer'
 import $ from 'jquery'
 
 function SettingsPage(props) {
