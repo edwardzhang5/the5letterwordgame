@@ -17,40 +17,54 @@ function Keyboard(props) {
       }
     } else if (e == 'ENTER') {
       if (currWord.length == 5) {
+        //Word is not in our list
         if (arr.indexOf(currWord) == -1) {
           setErrMsg('Please input a valid word')
         }
         //This Branch can be rewritten with the currPlayer Hook
         else {
+          //Win
           if (props.currPlayer == 1 && currWord == props.Players[1][1]) {
             setWord("")
             props.setWin(props.currPlayer)
           } else if (props.currPlayer == 2 && currWord == props.Players[0][1]) {
             setWord("")
             props.setWin(props.currPlayer)
-          } else {
+          } 
+          //Continue Game
+          else {
+            //Add to guessed list
             if (props.currPlayer == 1) {
               props.setPlayer1WordList([
                 ...props.Players[props.currPlayer - 1][2],
                 currWord,
               ])
-            } else {
+            }
+            else {
               props.setPlayer2WordList([
                 ...props.Players[props.currPlayer - 1][2],
                 currWord,
               ])
             }
             let numSimilarities = 0
-
+            let numSimilaritiesMedium = 0;
+            //Calculations
             if (props.currPlayer == 1) {
               for (let i = 0; i < currWord.length; i++) {
                 if (props.Players[1][1].indexOf(currWord.charAt(i)) > -1) {
                   numSimilarities++
+                  if(props.Players[1][1].indexOf(currWord.charAt(i)) == i){
+                    numSimilaritiesMedium++;
+                  }
                 }
               }
               props.setPlayer1Numbers([
                 ...props.Players[props.currPlayer - 1][3],
                 numSimilarities,
+              ])
+              props.setPlayer1NumbersMedium([
+                ...props.Players[props.currPlayer - 1][4],
+                numSimilaritiesMedium,
               ])
               if(!props.onePlayer){
                 props.setPlayer(2)
@@ -59,11 +73,18 @@ function Keyboard(props) {
               for (let i = 0; i < currWord.length; i++) {
                 if (props.Players[0][1].indexOf(currWord.charAt(i)) > -1) {
                   numSimilarities++
+                  if(props.Players[1][1].indexOf(currWord.charAt(i)) == i){
+                    numSimilaritiesMedium++;
+                  }
                 }
               }
               props.setPlayer2Numbers([
                 ...props.Players[props.currPlayer - 1][3],
                 numSimilarities,
+              ])
+              props.setPlayer2NumbersMedium([
+                ...props.Players[props.currPlayer - 1][4],
+                numSimilaritiesMedium,
               ])
               props.setPlayer(1)
             }

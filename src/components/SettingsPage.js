@@ -15,6 +15,9 @@ function SettingsPage(props) {
   }
   const toggleHighContrastMode = () => {
   }
+  const toggleMediumMode = () => {
+    props.setMedium(!props.medium)
+  }
   const toggleOnePlayerMode = () => {
     setShow(true)
     $("#custom-switch").prop("checked", !$("#custom-switch").prop("checked"));
@@ -50,12 +53,14 @@ function SettingsPage(props) {
               id="ting"
               label="Dark Mode"
               onChange={toggleDarkMode}
+              checked={props.dark}
             />
             <Form.Check
               type="switch"
               label="High Contrast Mode"
               id="customswitch"
               onChange={toggleHighContrastMode}
+              checked={props.highContrast}
             />
           {/* </Form.Group> */}
           {/* <Form.Group inline> */}
@@ -65,6 +70,13 @@ function SettingsPage(props) {
               id="custom-switch"
               onChange={toggleOnePlayerMode}
               checked={props.onePlayer}
+            />
+            <Form.Check
+              type="switch"
+              label="Medium Mode"
+              id="custom-switch"
+              onChange={toggleMediumMode}
+              checked={props.medium}
             />
           {/* </Form.Group> */}
           

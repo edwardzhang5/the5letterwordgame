@@ -10,9 +10,11 @@ const resetGameOnePlayer = (props) => {
     props.setPlayer2Name("Computer")
     props.setPlayer1Numbers([])
     props.setPlayer2Numbers([])
-    props.setWin(0)
+    props.setPlayer1NumbersMedium([])
+    props.setPlayer2NumbersMedium([])
     props.setPlayer(1)
     props.setStart(false)
+    props.setWin(0)
 
 }
 
