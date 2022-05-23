@@ -450,6 +450,10 @@ a.nav-link {
 /* Phone Formatting */
 @media only screen and (max-device-width: 480px){
   /* Rules Screen Stuff */
+  .Card {
+    background-color: red;
+  }
+
   .Card > h1 {
     font-size: calc(30px + 2vw);
   }
