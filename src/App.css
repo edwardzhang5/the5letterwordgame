@@ -84,9 +84,10 @@ Add global styling for text / color that the rest of components will inherit
 
 .Card {
   overflow: auto;
-  height: 95%;
   width: 90%;
+  /* Add This */ /*height: 95%;*/
   margin-left: 5%;
+  margin-top: 20vh; /* Remove This */
   padding-left: 15px;
   padding-right: 15px;
   box-sizing: border-box;
@@ -97,8 +98,17 @@ Add global styling for text / color that the rest of components will inherit
   color: #f5f7fa;
 }
 
-.Card > h1 {
-  font-size: calc(14px + 2vw);
+.InfoPage .Card {
+  margin-top: 10vh; /* Remove This */
+}
+
+.Card > .margin-controller {
+  padding-right: 5vw;
+  padding-left: 5vw;
+}
+
+.Card h1 {
+  font-size: calc(14px + 1vw);
   text-align: center;
   padding: 20px;
   padding-bottom: 5px;
@@ -107,24 +117,25 @@ Add global styling for text / color that the rest of components will inherit
   color: inherit;
 }
 
-.Card > ul {
-  list-style-type: square;
-  font-size: calc(5px + 1.5vw);
+.Card > .margin-controller > ul {
+  list-style-type: circle;
   text-align: left;
   font-family: inherit;
+  font-size: calc(5px + 1vw);
   color: inherit;
 }
 
-.Card > h2 {
+
+.Card h2 {
   padding-left: 20px;
   padding-top: 10px;
-  font-size: calc(5px + 1.5vw);
+  font-size: calc(5px + 1vw);
   font-family: inherit;
   color: inherit;
 }
 
-.Card > button {
-  font-size: calc(5px + 1.5vw);
+.Card button {
+  font-size: calc(5px + 1vw);
   font-family: inherit;
   color: inherit;
   margin: 7px;
@@ -132,36 +143,36 @@ Add global styling for text / color that the rest of components will inherit
   border-color: #000000;
 }
 
-.Card > button:hover {
+.Card button:hover {
   background: hsl(271, 76%, 53%);
 }
 
-.Card > button:active {
+.Card button:active {
   background: hsl(271, 90%, 53%);
 }
 
-.Card > form {
+.Card form {
   padding-left: 20px;
   padding-right: 20px;
   font-family: inherit;
   color: inherit;
 }
 
-.Card > form > button {
+.Card form > button {
   padding-left: 0px;
   text-align: center;
   font-family: inherit;
   color: inherit;
 }
 
-.Card > .Word-Suggestions {
+.Card .Word-Suggestions {
   color: inherit;
   font-family: inherit;
   padding-left: 20px;
   padding-bottom: 10px;
 }
 
-.Card > .Word-Suggestions > .Word-Suggestions-Button {
+.Card .Word-Suggestions > .Word-Suggestions-Button {
   color: inherit;
   font-family: inherit;
   text-align: center;
@@ -177,17 +188,29 @@ Add global styling for text / color that the rest of components will inherit
 }
 
 .left-test-word {
-  font-size: calc(5px + 1.5vw);
+  font-size: calc(5px + 1vw);
   text-align: center;
   width: 50%;
   float: left;
 }
 
 .right-test-word {
-  font-size: calc(5px + 1.5vw);
+  font-size: calc(5px + 1vw);
   text-align: center;
   width: 50%;
   float: right;
+}
+
+.Card .words {
+  font-size: calc(5px + 1vw);
+}
+
+.Card .numbers {
+  font-size: calc(5px + 1vw);
+}
+
+.Card .player-name {
+  font-size: calc(6px + 1vw);
 }
 /* End Start Page */
 
@@ -255,6 +278,7 @@ a.nav-link {
   display: flex;
   flex-direction: row;
   height: 20vh;
+  margin: auto;
 }
 
 .words-list {
@@ -298,6 +322,7 @@ a.nav-link {
   display: table;
   margin: auto;
   margin-bottom: 5px;
+  margin-top: 2px;
 }
 
 .player-name {
@@ -467,28 +492,28 @@ a.nav-link {
 @media only screen and (max-device-width: 480px){
   /* Rules Screen Stuff */
   .Card {
-    background-color: red;
     width: 99%;
     margin-left: .5%;
+    margin-top: auto; /* Remove This */
   }
 
   .InfoPage .Card {
     height: 88%;
   }
 
-  .Card > h1 {
+  .Card h1 {
     font-size: calc(20px + 2vw);
   }
 
-  .Card > ul {
+  .Card ul {
+    font-size: calc(15px + 1.5vw) !important;
+  }
+  
+  .Card h2 {
     font-size: calc(15px + 1.5vw);
   }
   
-  .Card > h2 {
-    font-size: calc(15px + 1.5vw);
-  }
-  
-  .Card > button {
+  .Card button {
     font-size: calc(15px + 1.5vw);
   }
 
