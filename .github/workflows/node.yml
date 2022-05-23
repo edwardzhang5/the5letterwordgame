@@ -21,12 +21,12 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     - name: Use Node.js ${{ matrix.node-version }}
+      env:
+        - EZ_ACCESS_TOKEN: ${{secrets.EZ_ACCESS_TOKEN}}
       uses: actions/setup-node@v3
       with:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
-    - env:
-        - EZ_ACCESS_TOKEN: ${{secrets.EZ_ACCESS_TOKEN}}
     - run: npm ci
     - run: npm install --save-exact
     - run: git config --global user.name "edwardzhang5"
