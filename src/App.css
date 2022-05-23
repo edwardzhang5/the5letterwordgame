@@ -281,6 +281,7 @@ a.nav-link {
   color: #ffffff;
   text-align: center;
   display: table;
+  margin: auto;
   margin-bottom: 5px;
 }
 
