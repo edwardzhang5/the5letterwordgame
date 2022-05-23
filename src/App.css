@@ -494,7 +494,7 @@ a.nav-link {
   .Card {
     width: 99%;
     margin-left: .5%;
-    margin-top: auto; /* Remove This */
+    margin-top: auto !important; /* Remove This */
   }
 
   .InfoPage .Card {
@@ -505,8 +505,15 @@ a.nav-link {
     font-size: calc(20px + 2vw);
   }
 
-  .Card ul {
+  .Card > .margin-controller > ul {
     font-size: calc(15px + 1.5vw) !important;
+    list-style: none !important;
+    padding-left: 0 !important;
+    text-align: center;
+  }
+
+  .Card > .margin-controller > ul > li {
+    margin-bottom: 6px;;
   }
   
   .Card h2 {
