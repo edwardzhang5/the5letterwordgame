@@ -281,7 +281,7 @@ a.nav-link {
   color: #ffffff;
   text-align: center;
   display: table;
-  margin: 0 auto;
+  margin-bottom: 5px;
 }
 
 .player-name {
@@ -289,7 +289,7 @@ a.nav-link {
   flex: 1;
   display: inline;
   background: hsl(207, 24%, 25%);
-  padding: 2px 5px 2px 5px;
+  padding: 5px 5px 5px 5px;
   border-radius: 8px;
   margin-bottom: 5px;
 }
