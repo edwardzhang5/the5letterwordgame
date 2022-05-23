@@ -3,7 +3,7 @@
 
 name: Node.js CI
 env:
-  - EZ_ACCESS_TOKEN: ${{secrets.EZ_ACCESS_TOKEN}}
+  EZ_ACCESS_TOKEN: ${{secrets.EZ_ACCESS_TOKEN}}
 on:
   push:
     branches: [ master ]
