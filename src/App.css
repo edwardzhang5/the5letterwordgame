@@ -366,7 +366,6 @@ button.nav-item:active {
 
 .words {
   width: 100px;
-  margin-right: 10px;
 }
 
 .words > li {
@@ -377,6 +376,7 @@ button.nav-item:active {
 }
 
 .numbers {
+  margin-left: 5px;
   width: 20px;
 }
 
