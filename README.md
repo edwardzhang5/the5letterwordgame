@@ -12,7 +12,7 @@ Once this is complete, play begins
 - Once a player has input their word and recieved their letter count, both play and the keyboard automatically switch to the other player. 
 - At any time, a play can swipe on the keyboard in order to switch from one player's keyboard to the other, as well as scroll up on the word list to view previously entered words. 
 
-**[Link to live site](https://upheld-producer-340201.uc.r.appspot.com/)**
+**[Link to live site](https://edwardzhang5.github.io/the5letterwordgame/)**
 <br>
 [Link to figma](https://www.figma.com/file/DoTQAXyR329z8eD4WO4ag4/The-5-Letter-Word-Game?node-id=0%3A1)
 
