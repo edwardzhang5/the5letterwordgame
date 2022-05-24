@@ -2,7 +2,7 @@ import '../App.css'
 import { useState } from 'react'
 import CurrentWord from './CurrentWord'
 import arr from '../data/GuessableWords.json'
-import { Button, ButtonGroup } from 'react-bootstrap'
+import { Button, ToggleButton, ButtonGroup } from 'react-bootstrap'
 
 function Keyboard(props) {
   const [currWord, setWord] = useState('')
