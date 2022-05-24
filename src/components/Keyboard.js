@@ -26,10 +26,10 @@ function Keyboard(props) {
         else {
           //Win
           if (props.currPlayer == 1 && currWord == props.Players[1][1]) {
-            setWord("")
+            setWord('')
             props.setWin(props.currPlayer)
           } else if (props.currPlayer == 2 && currWord == props.Players[0][1]) {
-            setWord("")
+            setWord('')
             props.setWin(props.currPlayer)
           }
           //Continue Game
@@ -40,22 +40,21 @@ function Keyboard(props) {
                 ...props.Players[props.currPlayer - 1][2],
                 currWord,
               ])
-            }
-            else {
+            } else {
               props.setPlayer2WordList([
                 ...props.Players[props.currPlayer - 1][2],
                 currWord,
               ])
             }
             let numSimilarities = 0
-            let numSimilaritiesMedium = 0;
+            let numSimilaritiesMedium = 0
             //Calculations
             if (props.currPlayer == 1) {
               for (let i = 0; i < currWord.length; i++) {
                 if (props.Players[1][1].indexOf(currWord.charAt(i)) > -1) {
                   numSimilarities++
                   if (props.Players[1][1].indexOf(currWord.charAt(i)) == i) {
-                    numSimilaritiesMedium++;
+                    numSimilaritiesMedium++
                   }
                 }
               }
@@ -75,7 +74,7 @@ function Keyboard(props) {
                 if (props.Players[0][1].indexOf(currWord.charAt(i)) > -1) {
                   numSimilarities++
                   if (props.Players[1][1].indexOf(currWord.charAt(i)) == i) {
-                    numSimilaritiesMedium++;
+                    numSimilaritiesMedium++
                   }
                 }
               }
@@ -110,8 +109,7 @@ function Keyboard(props) {
         <CurrentWord word={currWord} setWord={setWord} />
 
       </div>
-      
-      <div>{errMsg}</div>
+      <div style={{ height: '5px', marginBottom: '25px' }}>{errMsg}</div>
       <ul id='keyboard'>
         <div className='key-row'>
           <button
