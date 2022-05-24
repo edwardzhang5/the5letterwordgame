@@ -172,7 +172,7 @@ Add global styling for text / color that the rest of components will inherit
   padding-bottom: 10px;
 }
 
-.Card .Word-Suggestions > .Word-Suggestions-Button {
+.Card .Word-Suggestions {
   color: inherit;
   font-family: inherit;
   text-align: center;
@@ -253,7 +253,7 @@ button.nav-item:active {
 /* Annoying Button Stuff */
 .btn-custom {
   margin-top: 5px;
-  font-size: calc(5px + 1.5vw) !important;
+  font-size: calc(6px + 1vw) !important;
   text-align: center;
   color: white !important;
   padding: 5px 5px 5px 5px !important;
@@ -272,7 +272,7 @@ button.nav-item:active {
 
 .MuiButton-root {
   color:white !important;
-  font-size: calc(1px + 1.5vw) !important;
+  font-size: calc(2px + 1vw) !important;
   background-color: hsl(207, 24%, 15%) !important;
 }
 
