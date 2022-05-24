@@ -321,8 +321,8 @@ button.nav-item:active {
   margin-left: 1vw;
   margin-right: 1vw;
   width: 48vw;
-  min-height: 25vw;
-  max-height: 45vw;
+  min-height: 30vw;
+  max-height: 60vw;
   overflow-y: scroll;
   border-radius: 5px;
   background: #1d272f;
@@ -336,8 +336,8 @@ button.nav-item:active {
   margin-left: 1vw;
   margin-right: 1vw;
   width: 48vw;
-  min-height: 25vw;
-  max-height: 45vw;
+  min-height: 30vw;
+  max-height: 60vw;
   overflow-y: scroll;
   border-radius: 5px;
   background: #1d272f;
@@ -603,7 +603,7 @@ button.nav-item:active {
  
 
   .outer-container {
-    height: 35vh;
+    height: 40vh;
   }
 
   .player-name {
