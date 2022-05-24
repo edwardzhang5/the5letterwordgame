@@ -46,42 +46,41 @@ function SettingsPage(props) {
 
         <h1>Settings</h1>
 
-        <Form>
-          {/* <Form.Group inline> */}
-          <Form.Check
-            type="switch"
-            id="ting"
-            label="Dark Mode"
-            onChange={toggleDarkMode}
-            checked={props.dark}
-          />
-          <Form.Check
-            type="switch"
-            label="High Contrast Mode"
-            id="customswitch"
-            onChange={toggleHighContrastMode}
-            checked={props.highContrast}
-          />
-          {/* </Form.Group> */}
-          {/* <Form.Group inline> */}
-          <Form.Check
-            type="switch"
-            label="One Player Mode"
-            id="custom-switch"
-            onChange={toggleOnePlayerMode}
-            checked={props.onePlayer}
-          />
-          <Form.Check
-            type="switch"
-            label="Medium Mode"
-            id="custom-switch"
-            onChange={toggleMediumMode}
-            checked={props.medium}
-          />
-          {/* </Form.Group> */}
-
-
-
+        <Form className='settings-form'>
+          <div className='settings-aligner'>
+            {/* <Form.Group inline> */}
+            <Form.Check
+              type="switch"
+              id="ting"
+              label="Dark Mode"
+              onChange={toggleDarkMode}
+              checked={props.dark}
+            />
+            <Form.Check
+              type="switch"
+              label="High Contrast Mode"
+              id="customswitch"
+              onChange={toggleHighContrastMode}
+              checked={props.highContrast}
+            />
+            {/* </Form.Group> */}
+            {/* <Form.Group inline> */}
+            <Form.Check
+              type="switch"
+              label="One Player Mode"
+              id="custom-switch"
+              onChange={toggleOnePlayerMode}
+              checked={props.onePlayer}
+            />
+            <Form.Check
+              type="switch"
+              label="Medium Mode"
+              id="custom-switch"
+              onChange={toggleMediumMode}
+              checked={props.medium}
+            />
+            {/* </Form.Group> */}
+          </div>
         </Form>
         <Alert show={show} variant="danger" id="a">
           <Alert.Heading>Wait!</Alert.Heading>

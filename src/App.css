@@ -494,6 +494,30 @@ button.nav-item:active {
 /* End Main Body Stuff */
 
 
+/* Setting Stuff */
+.settings-form {
+  display: flex;
+  justify-content: center;
+}
+
+.settings-aligner {
+  margin: 0;
+  width: fit-content;
+  padding-left: 25px;
+}
+
+.form-check.form-switch {
+  display: flex;
+  padding-left: 40px !important;
+  /* justify-content: center !important; */
+}
+
+.form-check-input {
+  margin-right: 5px !important;
+}
+/* Ending Setting Stuff */
+
+
 /* Formatting for Small Screen */
 @media (max-width: 488px) {
   #keyboard button.regular-key {
