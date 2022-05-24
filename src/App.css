@@ -223,6 +223,26 @@ Add global styling for text / color that the rest of components will inherit
 a.nav-link {
   color: white !important;
 }
+
+button.nav-item {
+  border-radius: 5px;
+  font-size: 13px;
+  font-family: inherit;
+  color: inherit;
+  margin: 3px;
+  padding-top: 2px;
+  background-color:hsl(207, 24%, 25%);
+  border-color: #000000;
+  border-width: 1px;
+}
+
+button.nav-item:hover {
+  background: hsl(271, 76%, 53%);
+}
+
+button.nav-item:active {
+  background: hsl(271, 90%, 53%);
+}
 /* End Top Bar */
 
 
