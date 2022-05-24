@@ -9,7 +9,6 @@ function WinPage(props) {
     console.log(props.onePlayer)
     console.log(props.start)
     if(props.onePlayer) {
-      console.log("hi")
       (resetGameOnePlayer(props))
     }
     else{

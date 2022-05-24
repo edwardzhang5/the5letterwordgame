@@ -461,6 +461,49 @@ button.nav-item:active {
   font-size: 16px;
 }
 
+#keyboard button.regular-key-yellow {
+  float: left;
+  margin: 0 5px 5px 0;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  border-radius: 10px;
+  text-align: center;
+  background: hsl(54, 100%, 69%);
+  border: 1px solid #000000;
+  font-family: inherit;
+  color: inherit;
+  font-size: 16px;
+}
+#keyboard button.regular-key-green {
+  float: left;
+  margin: 0 5px 5px 0;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  border-radius: 10px;
+  text-align: center;
+  background: hsl(108, 84%, 40%);
+  border: 1px solid #000000;
+  font-family: inherit;
+  color: inherit;
+  font-size: 16px;
+}
+#keyboard button.regular-key-red {
+  float: left;
+  margin: 0 5px 5px 0;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  border-radius: 10px;
+  text-align: center;
+  background: hsl(0, 99%, 38%);
+  border: 1px solid #000000;
+  font-family: inherit;
+  color: inherit;
+  font-size: 16px;
+}
+
 #keyboard button.large-key {
   float: left;
   margin: 0 5px 5px 0;

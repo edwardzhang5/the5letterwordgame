@@ -2,10 +2,46 @@ import '../App.css'
 import { useState } from 'react'
 import CurrentWord from './CurrentWord'
 import arr from '../data/GuessableWords.json'
+import {ButtonGroup, Button, ToggleButton} from 'react-bootstrap'
 
 function Keyboard(props) {
   const [currWord, setWord] = useState('')
   const [errMsg, setErrMsg] = useState('')
+  const [radioValue, setRadioValue] = useState('0');
+  const radios = [
+    { name: 'Green', value: '1' },
+    { name: 'Yellow', value: '2' },
+    { name: 'Red', value: '3' },
+    { name: 'Type', value: '4' }
+  ];
+
+  const delegateKeyAction = (e) => {
+    if(radioValue == 0 || radioValue == 4){
+      changeCurrWord(e);
+    }
+    else if (radioValue == 1){
+      toggleGreen(e);
+    }
+    else if (radioValue == 2){
+      toggleYellow(e);
+    }
+    else if (radioValue == 3){
+      toggleRed(e);
+    }
+
+  }
+  const toggleYellow = (e) =>{
+    document.getElementById(e).classList.remove("regular-key-red", "regular-key-green")
+    document.getElementById(e).classList.toggle("regular-key-yellow")
+  }
+  const toggleRed = (e) =>{
+    document.getElementById(e).classList.toggle("regular-key-red")
+    document.getElementById(e).classList.remove("regular-key-green", "regular-key-yellow")
+  }
+  const toggleGreen = (e) =>{
+    document.getElementById(e).classList.remove("regular-key-red", "regular-key-yellow")
+    document.getElementById(e).classList.toggle("regular-key-green")
+  }
 
   const changeCurrWord = (e) => {
     setErrMsg('')
@@ -109,12 +145,32 @@ function Keyboard(props) {
         <CurrentWord word={currWord} setWord={setWord} />
       </div>
       <div>{errMsg}</div>
+      <div>
+        <ButtonGroup className="mb-2">
+        {radios.map((radio, idx) => (
+          <ToggleButton
+            key={idx}
+            id={`radio-${idx}`}
+            type="radio"
+            variant="secondary"
+            name="radio"
+            value={radio.value}
+            checked={radioValue === radio.value}
+            onChange={(e) => setRadioValue(e.currentTarget.value)}
+          >
+            {radio.name}
+          </ToggleButton>
+        ))}
+      </ButtonGroup>
+
+      </div>
       <ul id='keyboard'>
         <div className='key-row'>
           <button
             className='regular-key'
+            id='Q'
             value='Q'
-            onClick={(e) => changeCurrWord('Q')}
+            onClick={(e) => delegateKeyAction('Q')}
           >
             {' '}
             Q
@@ -122,63 +178,72 @@ function Keyboard(props) {
           <button
             className='regular-key'
             value='W'
-            onClick={(e) => changeCurrWord('W')}
+            id='W'
+            onClick={(e) => delegateKeyAction('W')}
           >
             W
           </button>
           <button
             className='regular-key'
             value='E'
-            onClick={(e) => changeCurrWord('E')}
+            id='E'
+            onClick={(e) => delegateKeyAction('E')}
           >
             E
           </button>
           <button
             className='regular-key'
             value='R'
-            onClick={(e) => changeCurrWord('R')}
+            id='R'
+            onClick={(e) => delegateKeyAction('R')}
           >
             R
           </button>
           <button
             className='regular-key'
             value='T'
-            onClick={(e) => changeCurrWord('T')}
+            id='T'
+            onClick={(e) => delegateKeyAction('T')}
           >
             T
           </button>
           <button
             className='regular-key'
             value='Y'
-            onClick={(e) => changeCurrWord('Y')}
+            id='Y'
+            onClick={(e) => delegateKeyAction('Y')}
           >
             Y
           </button>
           <button
             className='regular-key'
             value='U'
-            onClick={(e) => changeCurrWord('U')}
+            id='U'
+            onClick={(e) => delegateKeyAction('U')}
           >
             U
           </button>
           <button
             className='regular-key'
             value='I'
-            onClick={(e) => changeCurrWord('I')}
+            id='I'
+            onClick={(e) => delegateKeyAction('I')}
           >
             I
           </button>
           <button
             className='regular-key'
             value='O'
-            onClick={(e) => changeCurrWord('O')}
+            id='O'
+            onClick={(e) => delegateKeyAction('O')}
           >
             O
           </button>
           <button
             className='regular-key'
             value='P'
-            onClick={(e) => changeCurrWord('P')}
+            id='P'
+            onClick={(e) => delegateKeyAction('P')}
           >
             P
           </button>
@@ -187,63 +252,72 @@ function Keyboard(props) {
           <button
             className='regular-key'
             value='A'
-            onClick={(e) => changeCurrWord('A')}
+            id='A'
+            onClick={(e) => delegateKeyAction('A')}
           >
             A
           </button>
           <button
             className='regular-key'
             value='S'
-            onClick={(e) => changeCurrWord('S')}
+            id='S'
+            onClick={(e) => delegateKeyAction('S')}
           >
             S
           </button>
           <button
             className='regular-key'
             value='D'
-            onClick={(e) => changeCurrWord('D')}
+            id='D'
+            onClick={(e) => delegateKeyAction('D')}
           >
             D
           </button>
           <button
             className='regular-key'
             value='F'
-            onClick={(e) => changeCurrWord('F')}
+            id='F'
+            onClick={(e) => delegateKeyAction('F')}
           >
             F
           </button>
           <button
             className='regular-key'
             value='G'
-            onClick={(e) => changeCurrWord('G')}
+            id='G'
+            onClick={(e) => delegateKeyAction('G')}
           >
             G
           </button>
           <button
             className='regular-key'
             value='H'
-            onClick={(e) => changeCurrWord('H')}
+            id='H'
+            onClick={(e) => delegateKeyAction('H')}
           >
             H
           </button>
           <button
             className='regular-key'
             value='J'
-            onClick={(e) => changeCurrWord('J')}
+            id='J'
+            onClick={(e) => delegateKeyAction('J')}
           >
             J
           </button>
           <button
             className='regular-key'
             value='K'
-            onClick={(e) => changeCurrWord('K')}
+            id='K'
+            onClick={(e) => delegateKeyAction('K')}
           >
             K
           </button>
           <button
             className='regular-key'
             value='L'
-            onClick={(e) => changeCurrWord('L')}
+            id='L'
+            onClick={(e) => delegateKeyAction('L')}
           >
             L
           </button>
@@ -259,49 +333,56 @@ function Keyboard(props) {
           <button
             className='regular-key'
             value='Z'
-            onClick={(e) => changeCurrWord('Z')}
+            id='Z'
+            onClick={(e) => delegateKeyAction('Z')}
           >
             Z
           </button>
           <button
             className='regular-key'
             value='X'
-            onClick={(e) => changeCurrWord('X')}
+            id='X'
+            onClick={(e) => delegateKeyAction('X')}
           >
             X
           </button>
           <button
             className='regular-key'
             value='C'
-            onClick={(e) => changeCurrWord('C')}
+            id='C'
+            onClick={(e) => delegateKeyAction('C')}
           >
             C
           </button>
           <button
             className='regular-key'
             value='V'
-            onClick={(e) => changeCurrWord('V')}
+            id='V'
+            onClick={(e) => delegateKeyAction('V')}
           >
             V
           </button>
           <button
             className='regular-key'
             value='B'
-            onClick={(e) => changeCurrWord('B')}
+            id='B'
+            onClick={(e) => delegateKeyAction('B')}
           >
             B
           </button>
           <button
             className='regular-key'
             value='N'
-            onClick={(e) => changeCurrWord('N')}
+            id='N'
+            onClick={(e) => delegateKeyAction('N')}
           >
             N
           </button>
           <button
             className='regular-key'
             value='M'
-            onClick={(e) => changeCurrWord('M')}
+            id='M'
+            onClick={(e) => delegateKeyAction('M')}
           >
             M
           </button>
