@@ -41,7 +41,7 @@ function SettingsPage(props) {
 
   return props.settingsTrigger ? (
 
-    <div className='StartPage'>
+    <div className='SettingsPage'>
       <div className='Card'>
 
         <h1>Settings</h1>
@@ -92,7 +92,7 @@ function SettingsPage(props) {
             <Button onClick={yesButton} variant="danger">
               Yep
             </Button>
-            <Button onClick={noButton} variant="danger">
+            <Button onClick={noButton} variant="normal">
               No :o
             </Button>
           </div>

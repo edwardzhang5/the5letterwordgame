@@ -495,6 +495,21 @@ button.nav-item:active {
 
 
 /* Setting Stuff */
+.SettingsPage {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  padding: 20px;
+
+  justify-content: center;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.9);
+  font-family: SpartanMB-Regular;
+  color: inherit;
+}
+
 .settings-form {
   display: flex;
   justify-content: center;
@@ -514,6 +529,21 @@ button.nav-item:active {
 
 .form-check-input {
   margin-right: 5px !important;
+}
+
+.fade.alert.alert-danger.show {
+  font-family: SpartanMB-Regular;
+  border-color: #000000;
+  color: #f5f7fa;
+  background-color: hsl(207, 24%, 15%);
+}
+
+button.btn.btn-danger:hover {
+  background-color: red;
+}
+
+button.btn.btn-normal:hover {
+  border-color: #000000;
 }
 /* Ending Setting Stuff */
 
