@@ -294,10 +294,15 @@ button.nav-item:active {
 
 
 /* Board Stuff */
+.outer-container {
+  flex: 0 0 auto;
+  height: 40vh;
+}
+
 .container {
   display: flex;
+  flex: 0 1 auto;
   flex-direction: row;
-  height: 20vh;
   margin: auto;
 }
 
@@ -316,6 +321,8 @@ button.nav-item:active {
   margin-left: 1vw;
   margin-right: 1vw;
   width: 48vw;
+  min-height: 25vw;
+  max-height: 45vw;
   overflow-y: scroll;
   border-radius: 5px;
   background: #1d272f;
@@ -329,6 +336,8 @@ button.nav-item:active {
   margin-left: 1vw;
   margin-right: 1vw;
   width: 48vw;
+  min-height: 25vw;
+  max-height: 45vw;
   overflow-y: scroll;
   border-radius: 5px;
   background: #1d272f;
@@ -560,11 +569,11 @@ button.nav-item:active {
     font-size: calc(8px + 1.5vw);
   }
 
-  .Card .words {
+  .words {
     font-size: calc(8px + 1.5vw);
   }
 
-  .Card .numbers {
+  .numbers {
     font-size: calc(8px + 1.5vw);
   }
 
@@ -594,11 +603,11 @@ button.nav-item:active {
  
 
   .player-name {
-    font-size: calc(20px + 1.5vw);
+    font-size: calc(12px + 1vw);
   }
 
   .words-list {
-    font-size: calc(20px + 1.5vw);
+    font-size: calc(8px + 1vw);
   }
 }
 /* End Phone Formatting */
