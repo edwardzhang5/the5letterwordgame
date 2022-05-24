@@ -606,6 +606,14 @@ button.nav-item:active {
     height: 38vh;
   }
 
+  .left-col {
+    max-height: 38vh;
+  }
+
+  .right-col {
+    max-height: 38vh;
+  }
+
   .player-name {
     font-size: calc(12px + 1vw);
   }
