@@ -6,7 +6,6 @@ function InfoPage(props) {
   const closeInfo = () => {
     props.setInfoTrigger(false)
   }
-  if(props.infoTrigger){
     return props.medium ? (
       <div className='InfoPage'>
         <div className='Card'>
@@ -136,9 +135,11 @@ function InfoPage(props) {
     )
   }
   else{
+  else {
     return "";
   }
   
+
 }
 
 export default InfoPage

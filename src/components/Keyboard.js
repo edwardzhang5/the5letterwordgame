@@ -2,6 +2,7 @@ import '../App.css'
 import { useState } from 'react'
 import CurrentWord from './CurrentWord'
 import arr from '../data/GuessableWords.json'
+import { Button, ButtonGroup } from 'react-bootstrap'
 
 function Keyboard(props) {
   const [currWord, setWord] = useState('')
@@ -30,7 +31,7 @@ function Keyboard(props) {
           } else if (props.currPlayer == 2 && currWord == props.Players[0][1]) {
             setWord("")
             props.setWin(props.currPlayer)
-          } 
+          }
           //Continue Game
           else {
             //Add to guessed list
@@ -53,7 +54,7 @@ function Keyboard(props) {
               for (let i = 0; i < currWord.length; i++) {
                 if (props.Players[1][1].indexOf(currWord.charAt(i)) > -1) {
                   numSimilarities++
-                  if(props.Players[1][1].indexOf(currWord.charAt(i)) == i){
+                  if (props.Players[1][1].indexOf(currWord.charAt(i)) == i) {
                     numSimilaritiesMedium++;
                   }
                 }
@@ -66,14 +67,14 @@ function Keyboard(props) {
                 ...props.Players[props.currPlayer - 1][4],
                 numSimilaritiesMedium,
               ])
-              if(!props.onePlayer){
+              if (!props.onePlayer) {
                 props.setPlayer(2)
               }
             } else {
               for (let i = 0; i < currWord.length; i++) {
                 if (props.Players[0][1].indexOf(currWord.charAt(i)) > -1) {
                   numSimilarities++
-                  if(props.Players[1][1].indexOf(currWord.charAt(i)) == i){
+                  if (props.Players[1][1].indexOf(currWord.charAt(i)) == i) {
                     numSimilaritiesMedium++;
                   }
                 }
@@ -107,7 +108,9 @@ function Keyboard(props) {
     <div className='flex-container-body'>
       <div className='word-holder'>
         <CurrentWord word={currWord} setWord={setWord} />
+
       </div>
+      
       <div>{errMsg}</div>
       <ul id='keyboard'>
         <div className='key-row'>

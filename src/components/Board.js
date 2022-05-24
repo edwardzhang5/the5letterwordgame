@@ -1,21 +1,21 @@
 import React from 'react'
-import { useRef , useEffect} from 'react'
-import {Form, Button, Alert} from 'react-bootstrap'
+import { useRef, useEffect } from 'react'
+import { Form, Button, Alert } from 'react-bootstrap'
 
 function Board(props) {
 
-    useEffect(()=>{
-        if(props.onePlayer){
+    useEffect(() => {
+        if (props.onePlayer) {
             scrollToBottomOne();
         }
-        else{
+        else {
             scrollToBottomTwo();
         }
     }, [props])
-    
+
     const bottomRefLeft = useRef();
     const bottomRefRight = useRef();
-    
+
     const bottomRef = useRef();
 
     const scrollToBottomTwo = () => {
@@ -34,13 +34,13 @@ function Board(props) {
             behavior: "smooth",
             block: "start",
         });
-        
+
     };
     const giveUp = () => {
         props.setWin(2)
     }
-    
-    if(props.onePlayer){
+
+    if (props.onePlayer) {
         return props.medium ? (
             <div className="container">
                 <div className="left-col">
@@ -48,58 +48,58 @@ function Board(props) {
                         <span className='player-name'>{props.Players[0][0]}</span>
                     </div>
                     <ul className='words-list'>
-                        <div className = 'words'>
-                        {props.Players[0][2].map((item, i) => (<li key={`word_item_${i}`}>{item}</li>))}
+                        <div className='words'>
+                            {props.Players[0][2].map((item, i) => (<li key={`word_item_${i}`}>{item}</li>))}
                         </div>
-                        <div className = 'numbers'>
-                        {props.Players[0][3].map((item, i) => (<li key={`number_item_${i}`}>{item}</li>))}
+                        <div className='numbers'>
+                            {props.Players[0][3].map((item, i) => (<li key={`number_item_${i}`}>{item}</li>))}
                         </div>
-                        <div className = 'numbers'>
-                        {props.Players[0][4].map((item, i) => (<li key={`number_medium_item_${i}`}>{item}</li>))}
+                        <div className='numbers'>
+                            {props.Players[0][4].map((item, i) => (<li key={`number_medium_item_${i}`}>{item}</li>))}
                         </div>
-                        
+
                     </ul>
                     <div ref={bottomRef} className='list-bottom'>
-    
+
                     </div>
                 </div>
                 <div>
-                <Button
-                onClick = {giveUp}>
-                    I give up 
-                </Button>
+                    <Button
+                        onClick={giveUp}>
+                        I give up
+                    </Button>
                 </div>
             </div>
-        ) : 
-        (
-            <div className="container">
-                <div className="left-col">
-                    <div className='player-name-container'>
-                        <span className='player-name'>{props.Players[0][0]}</span>
+        ) :
+            (
+                <div className="container">
+                    <div className="left-col">
+                        <div className='player-name-container'>
+                            <span className='player-name'>{props.Players[0][0]}</span>
+                        </div>
+                        <ul className='words-list'>
+                            <div className='words'>
+                                {props.Players[0][2].map((item, i) => (<li key={`word_item_${i}`}>{item}</li>))}
+                            </div>
+                            <div className='numbers'>
+                                {props.Players[0][3].map((item, i) => (<li key={`number_item_${i}`}>{item}</li>))}
+                            </div>
+                        </ul>
+                        <div ref={bottomRef} className='list-bottom'>
+
+                        </div>
                     </div>
-                    <ul className='words-list'>
-                        <div className = 'words'>
-                        {props.Players[0][2].map((item, i) => (<li key={`word_item_${i}`}>{item}</li>))}
-                        </div>
-                        <div className = 'numbers'>
-                        {props.Players[0][3].map((item, i) => (<li key={`number_item_${i}`}>{item}</li>))}
-                        </div>
-                    </ul>
-                    <div ref={bottomRef} className='list-bottom'>
-    
+                    <div>
+                        <Button
+                            onClick={giveUp}>
+                            I give up
+                        </Button>
                     </div>
                 </div>
-                <div>
-                <Button
-                onClick = {giveUp}>
-                    I give up 
-                </Button>
-                </div>
-            </div>
-        )
+            )
 
     }
-    else{
+    else {
         return props.medium ? (
             <div className="container">
                 <div className="left-col">
@@ -107,85 +107,85 @@ function Board(props) {
                         <span className='player-name'>{props.Players[0][0]}</span>
                     </div>
                     <ul className='words-list'>
-                        <div className = 'words'>
-                        {props.Players[0][2].map((item, i) => (<li key={`word_item_${i}`}>{item}</li>))}
+                        <div className='words'>
+                            {props.Players[0][2].map((item, i) => (<li key={`word_item_${i}`}>{item}</li>))}
                         </div>
-                        <div className = 'numbers'>
-                        {props.Players[0][3].map((item, i) => (<li key={`number_item_${i}`}>{item}</li>))}
+                        <div className='numbers'>
+                            {props.Players[0][3].map((item, i) => (<li key={`number_item_${i}`}>{item}</li>))}
                         </div>
-                        <div className = 'numbers'>
-                        {props.Players[0][4].map((item, i) => (<li key={`number_medium_item_${i}`}>{item}</li>))}
+                        <div className='numbers'>
+                            {props.Players[0][4].map((item, i) => (<li key={`number_medium_item_${i}`}>{item}</li>))}
                         </div>
-                        
+
                     </ul>
                     <div ref={bottomRefLeft} className='list-bottom'>
-    
+
                     </div>
                 </div>
-    
+
                 <div className="right-col">
                     <div className='player-name-container'>
                         <span className='player-name'>{props.Players[1][0]}</span>
                     </div>
                     <ul className='words-list'>
-                        <div className = 'words'>
-                        {props.Players[1][2].map((item, i) => (<li key={`word_item_${i}`}>{item}</li>))}
+                        <div className='words'>
+                            {props.Players[1][2].map((item, i) => (<li key={`word_item_${i}`}>{item}</li>))}
                         </div>
-                        <div className = 'numbers'>
-                        {props.Players[1][3].map((item, i) => (<li key={`number_item_${i}`}>{item}</li>))}
+                        <div className='numbers'>
+                            {props.Players[1][3].map((item, i) => (<li key={`number_item_${i}`}>{item}</li>))}
                         </div>
-                        <div className = 'numbers'>
-                        {props.Players[1][4].map((item, i) => (<li key={`number_medium_item_${i}`}>{item}</li>))}
+                        <div className='numbers'>
+                            {props.Players[1][4].map((item, i) => (<li key={`number_medium_item_${i}`}>{item}</li>))}
                         </div>
                     </ul>
                     <div ref={bottomRefRight} className='list-bottom'>
-    
+
                     </div>
                 </div>
             </div>
         ) :
-        (
-            <div className="container">
-                <div className="left-col">
-                    <div className='player-name-container'>
-                        <span className='player-name'>{props.Players[0][0]}</span>
+            (
+                <div className="container">
+                    <div className="left-col">
+                        <div className='player-name-container'>
+                            <span className='player-name'>{props.Players[0][0]}</span>
+                        </div>
+                        <ul className='words-list'>
+                            <div className='words'>
+                                {props.Players[0][2].map((item, i) => (<li key={`item_${i}`}>{item}</li>))}
+                            </div>
+                            <div className='numbers'>
+                                {props.Players[0][3].map((item, i) => (<li key={`item_${i}`}>{item}</li>))}
+                            </div>
+
+                        </ul>
+                        <div ref={bottomRefLeft} className='list-bottom'>
+
+                        </div>
                     </div>
-                    <ul className='words-list'>
-                        <div className = 'words'>
-                        {props.Players[0][2].map((item, i) => (<li key={`item_${i}`}>{item}</li>))}
+
+                    <div className="right-col">
+                        <div className='player-name-container'>
+                            <span className='player-name'>{props.Players[1][0]}</span>
                         </div>
-                        <div className = 'numbers'>
-                        {props.Players[0][3].map((item, i) => (<li key={`item_${i}`}>{item}</li>))}
+                        <ul className='words-list'>
+                            <div className='words'>
+                                {props.Players[1][2].map((item, i) => (<li key={`item_${i}`}>{item}</li>))}
+                            </div>
+                            <div className='numbers'>
+                                {props.Players[1][3].map((item, i) => (<li key={`item_${i}`}>{item}</li>))}
+                            </div>
+                        </ul>
+                        <div ref={bottomRefRight} className='list-bottom'>
+
                         </div>
-                        
-                    </ul>
-                    <div ref={bottomRefLeft} className='list-bottom'>
-    
                     </div>
                 </div>
-    
-                <div className="right-col">
-                    <div className='player-name-container'>
-                        <span className='player-name'>{props.Players[1][0]}</span>
-                    </div>
-                    <ul className='words-list'>
-                        <div className = 'words'>
-                        {props.Players[1][2].map((item, i) => (<li key={`item_${i}`}>{item}</li>))}
-                        </div>
-                        <div className = 'numbers'>
-                        {props.Players[1][3].map((item, i) => (<li key={`item_${i}`}>{item}</li>))}
-                        </div>
-                    </ul>
-                    <div ref={bottomRefRight} className='list-bottom'>
-    
-                    </div>
-                </div>
-            </div>
-        )
+            )
 
     }
-   
-    
+
+
 
 }
 

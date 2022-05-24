@@ -127,6 +127,7 @@ function StartPage(props) {
         </Button>
         {disableNewWords ? <WordSuggestions text={words} /> : null}
         {/* {props.children} */}
+        
       </div>
     </div>
   ) : (

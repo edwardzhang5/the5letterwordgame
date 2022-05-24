@@ -2,17 +2,17 @@ import '../App.css'
 import React, { Component, useEffect, useState } from 'react'
 import resetGameOnePlayer from '../const/resetOnePlayer'
 import resetGameTwoPlayer from '../const/resetTwoPlayer'
-import {Form, Button, Alert} from 'react-bootstrap'
+import { Form, Button, Alert } from 'react-bootstrap'
 
 function WinPage(props) {
   const resetGameCaller = () => {
     console.log(props.onePlayer)
     console.log(props.start)
-    if(props.onePlayer) {
+    if (props.onePlayer) {
       console.log("hi")
-      (resetGameOnePlayer(props))
+        (resetGameOnePlayer(props))
     }
-    else{
+    else {
       (resetGameTwoPlayer(props))
     }
   }
@@ -24,9 +24,9 @@ function WinPage(props) {
           The word was {props.Players[1][1]}
         </Alert>
         <button onClick={resetGameCaller}>
-          New Game 
+          New Game
         </button>
-        
+
       </div>
     </div>
   ) : (
