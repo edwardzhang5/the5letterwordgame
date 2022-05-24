@@ -2,12 +2,69 @@ import '../App.css'
 import { useState } from 'react'
 import CurrentWord from './CurrentWord'
 import arr from '../data/GuessableWords.json'
-import {ButtonGroup, Button, ToggleButton} from 'react-bootstrap'
+import { ButtonGroup, Button, ToggleButton } from 'react-bootstrap'
+import IndividualKeyboard from './IndividualKeyboard'
 
 function Keyboard(props) {
   const [currWord, setWord] = useState('')
   const [errMsg, setErrMsg] = useState('')
   const [radioValue, setRadioValue] = useState('0');
+
+  const [Q1, setQ1] = useState('0')
+  const [W1, setW1] = useState('0')
+  const [E1, setE1] = useState('0')
+  const [R1, setR1] = useState('0')
+  const [T1, setT1] = useState('0')
+  const [Y1, setY1] = useState('0')
+  const [U1, setU1] = useState('0')
+  const [I1, setI1] = useState('0')
+  const [O1, setO1] = useState('0')
+  const [P1, setP1] = useState('0')
+  const [A1, setA1] = useState('0')
+  const [S1, setS1] = useState('0')
+  const [D1, setD1] = useState('0')
+  const [F1, setF1] = useState('0')
+  const [G1, setG1] = useState('0')
+  const [H1, setH1] = useState('0')
+  const [J1, setJ1] = useState('0')
+  const [K1, setK1] = useState('0')
+  const [L1, setL1] = useState('0')
+  const [Z1, setZ1] = useState('0')
+  const [X1, setX1] = useState('0')
+  const [C1, setC1] = useState('0')
+  const [V1, setV1] = useState('0')
+  const [B1, setB1] = useState('0')
+  const [N1, setN1] = useState('0')
+  const [M1, setM1] = useState('0')
+
+  const keys = new Map();
+  keys.set('Q', [Q1, setQ1])
+  keys.set('W', [W1, setW1])
+  keys.set('E', [E1, setE1])
+  keys.set('R', [R1, setR1])
+  keys.set('T', [T1, setT1])
+  keys.set('Y', [Y1, setY1])
+  keys.set('U', [U1, setU1])
+  keys.set('I', [I1, setI1])
+  keys.set('O', [O1, setO1])
+  keys.set('P', [P1, setP1])
+  keys.set('A', [A1, setA1])
+  keys.set('S', [S1, setS1])
+  keys.set('D', [D1, setD1])
+  keys.set('F', [F1, setF1])
+  keys.set('G', [G1, setG1])
+  keys.set('H', [H1, setH1])
+  keys.set('J', [J1, setJ1])
+  keys.set('K', [K1, setK1])
+  keys.set('L', [L1, setL1])
+  keys.set('Z', [Z1, setZ1])
+  keys.set('X', [X1, setX1])
+  keys.set('C', [C1, setC1])
+  keys.set('V', [V1, setV1])
+  keys.set('B', [B1, setB1])
+  keys.set('N', [N1, setN1])
+  keys.set('M', [M1, setM1])
+
   const radios = [
     { name: 'Green', value: '1' },
     { name: 'Yellow', value: '2' },
@@ -16,31 +73,50 @@ function Keyboard(props) {
   ];
 
   const delegateKeyAction = (e) => {
-    if(radioValue == 0 || radioValue == 4){
+    if (radioValue == 0 || radioValue == 4) {
       changeCurrWord(e);
     }
-    else if (radioValue == 1){
+    else if (radioValue == 1) {
       toggleGreen(e);
     }
-    else if (radioValue == 2){
+    else if (radioValue == 2) {
       toggleYellow(e);
     }
-    else if (radioValue == 3){
+    else if (radioValue == 3) {
       toggleRed(e);
     }
 
   }
-  const toggleYellow = (e) =>{
+  const toggleYellow = (e) => {
     document.getElementById(e).classList.remove("regular-key-red", "regular-key-green")
     document.getElementById(e).classList.toggle("regular-key-yellow")
+    if(keys.get(e)[0] == 2){
+      keys.get(e)[1](0);
+    }
+    else{
+      keys.get(e)[1](2);
+    }
+    
   }
-  const toggleRed = (e) =>{
+  const toggleRed = (e) => {
     document.getElementById(e).classList.toggle("regular-key-red")
     document.getElementById(e).classList.remove("regular-key-green", "regular-key-yellow")
+    if(keys.get(e)[0] == 3){
+      keys.get(e)[1](0);
+    }
+    else{
+      keys.get(e)[1](3);
+    }
   }
-  const toggleGreen = (e) =>{
+  const toggleGreen = (e) => {
     document.getElementById(e).classList.remove("regular-key-red", "regular-key-yellow")
     document.getElementById(e).classList.toggle("regular-key-green")
+    if(keys.get(e)[0] == 1){
+      keys.get(e)[1](0);
+    }
+    else{
+      keys.get(e)[1](1);
+    }
   }
 
   const changeCurrWord = (e) => {
@@ -66,7 +142,7 @@ function Keyboard(props) {
           } else if (props.currPlayer == 2 && currWord == props.Players[0][1]) {
             setWord("")
             props.setWin(props.currPlayer)
-          } 
+          }
           //Continue Game
           else {
             //Add to guessed list
@@ -89,7 +165,7 @@ function Keyboard(props) {
               for (let i = 0; i < currWord.length; i++) {
                 if (props.Players[1][1].indexOf(currWord.charAt(i)) > -1) {
                   numSimilarities++
-                  if(props.Players[1][1].indexOf(currWord.charAt(i)) == i){
+                  if (props.Players[1][1].indexOf(currWord.charAt(i)) == i) {
                     numSimilaritiesMedium++;
                   }
                 }
@@ -102,14 +178,14 @@ function Keyboard(props) {
                 ...props.Players[props.currPlayer - 1][4],
                 numSimilaritiesMedium,
               ])
-              if(!props.onePlayer){
+              if (!props.onePlayer) {
                 props.setPlayer(2)
               }
             } else {
               for (let i = 0; i < currWord.length; i++) {
                 if (props.Players[0][1].indexOf(currWord.charAt(i)) > -1) {
                   numSimilarities++
-                  if(props.Players[1][1].indexOf(currWord.charAt(i)) == i){
+                  if (props.Players[1][1].indexOf(currWord.charAt(i)) == i) {
                     numSimilaritiesMedium++;
                   }
                 }
@@ -138,7 +214,7 @@ function Keyboard(props) {
       }
     }
   }
-
+  
   return (
     <div className='flex-container-body'>
       <div className='word-holder'>
@@ -147,264 +223,28 @@ function Keyboard(props) {
       <div>{errMsg}</div>
       <div>
         <ButtonGroup className="mb-2">
-        {radios.map((radio, idx) => (
-          <ToggleButton
-            key={idx}
-            id={`radio-${idx}`}
-            type="radio"
-            variant="secondary"
-            name="radio"
-            value={radio.value}
-            checked={radioValue === radio.value}
-            onChange={(e) => setRadioValue(e.currentTarget.value)}
-          >
-            {radio.name}
-          </ToggleButton>
-        ))}
-      </ButtonGroup>
-
-      </div>
-      <ul id='keyboard'>
-        <div className='key-row'>
-          <button
-            className='regular-key'
-            id='Q'
-            value='Q'
-            onClick={(e) => delegateKeyAction('Q')}
-          >
-            {' '}
-            Q
-          </button>
-          <button
-            className='regular-key'
-            value='W'
-            id='W'
-            onClick={(e) => delegateKeyAction('W')}
-          >
-            W
-          </button>
-          <button
-            className='regular-key'
-            value='E'
-            id='E'
-            onClick={(e) => delegateKeyAction('E')}
-          >
-            E
-          </button>
-          <button
-            className='regular-key'
-            value='R'
-            id='R'
-            onClick={(e) => delegateKeyAction('R')}
-          >
-            R
-          </button>
-          <button
-            className='regular-key'
-            value='T'
-            id='T'
-            onClick={(e) => delegateKeyAction('T')}
-          >
-            T
-          </button>
-          <button
-            className='regular-key'
-            value='Y'
-            id='Y'
-            onClick={(e) => delegateKeyAction('Y')}
-          >
-            Y
-          </button>
-          <button
-            className='regular-key'
-            value='U'
-            id='U'
-            onClick={(e) => delegateKeyAction('U')}
-          >
-            U
-          </button>
-          <button
-            className='regular-key'
-            value='I'
-            id='I'
-            onClick={(e) => delegateKeyAction('I')}
-          >
-            I
-          </button>
-          <button
-            className='regular-key'
-            value='O'
-            id='O'
-            onClick={(e) => delegateKeyAction('O')}
-          >
-            O
-          </button>
-          <button
-            className='regular-key'
-            value='P'
-            id='P'
-            onClick={(e) => delegateKeyAction('P')}
-          >
-            P
-          </button>
-        </div>
-        <div className='key-row'>
-          <button
-            className='regular-key'
-            value='A'
-            id='A'
-            onClick={(e) => delegateKeyAction('A')}
-          >
-            A
-          </button>
-          <button
-            className='regular-key'
-            value='S'
-            id='S'
-            onClick={(e) => delegateKeyAction('S')}
-          >
-            S
-          </button>
-          <button
-            className='regular-key'
-            value='D'
-            id='D'
-            onClick={(e) => delegateKeyAction('D')}
-          >
-            D
-          </button>
-          <button
-            className='regular-key'
-            value='F'
-            id='F'
-            onClick={(e) => delegateKeyAction('F')}
-          >
-            F
-          </button>
-          <button
-            className='regular-key'
-            value='G'
-            id='G'
-            onClick={(e) => delegateKeyAction('G')}
-          >
-            G
-          </button>
-          <button
-            className='regular-key'
-            value='H'
-            id='H'
-            onClick={(e) => delegateKeyAction('H')}
-          >
-            H
-          </button>
-          <button
-            className='regular-key'
-            value='J'
-            id='J'
-            onClick={(e) => delegateKeyAction('J')}
-          >
-            J
-          </button>
-          <button
-            className='regular-key'
-            value='K'
-            id='K'
-            onClick={(e) => delegateKeyAction('K')}
-          >
-            K
-          </button>
-          <button
-            className='regular-key'
-            value='L'
-            id='L'
-            onClick={(e) => delegateKeyAction('L')}
-          >
-            L
-          </button>
-        </div>
-        <div className='key-row'>
-          <button
-            className='large-key'
-            value='ENTER'
-            onClick={(e) => changeCurrWord('ENTER')}
-          >
-            ENTER
-          </button>
-          <button
-            className='regular-key'
-            value='Z'
-            id='Z'
-            onClick={(e) => delegateKeyAction('Z')}
-          >
-            Z
-          </button>
-          <button
-            className='regular-key'
-            value='X'
-            id='X'
-            onClick={(e) => delegateKeyAction('X')}
-          >
-            X
-          </button>
-          <button
-            className='regular-key'
-            value='C'
-            id='C'
-            onClick={(e) => delegateKeyAction('C')}
-          >
-            C
-          </button>
-          <button
-            className='regular-key'
-            value='V'
-            id='V'
-            onClick={(e) => delegateKeyAction('V')}
-          >
-            V
-          </button>
-          <button
-            className='regular-key'
-            value='B'
-            id='B'
-            onClick={(e) => delegateKeyAction('B')}
-          >
-            B
-          </button>
-          <button
-            className='regular-key'
-            value='N'
-            id='N'
-            onClick={(e) => delegateKeyAction('N')}
-          >
-            N
-          </button>
-          <button
-            className='regular-key'
-            value='M'
-            id='M'
-            onClick={(e) => delegateKeyAction('M')}
-          >
-            M
-          </button>
-          <button
-            type='button'
-            className='large-key'
-            value='DELETE'
-            onClick={(e) => changeCurrWord('DELETE')}
-          >
-            <svg
-              xmlns='http://www.w3.org/2000/svg'
-              width='16'
-              height='16'
-              fill='currentColor'
-              className='bi bi-backspace-fill'
-              viewBox='0 0 16 16'
+          {radios.map((radio, idx) => (
+            <ToggleButton
+              key={idx}
+              id={`radio-${idx}`}
+              type="radio"
+              variant="secondary"
+              name="radio"
+              value={radio.value}
+              checked={radioValue === radio.value}
+              onChange={(e) => setRadioValue(e.currentTarget.value)}
             >
-              <path d='M15.683 3a2 2 0 0 0-2-2h-7.08a2 2 0 0 0-1.519.698L.241 7.35a1 1 0 0 0 0 1.302l4.843 5.65A2 2 0 0 0 6.603 15h7.08a2 2 0 0 0 2-2V3zM5.829 5.854a.5.5 0 1 1 .707-.708l2.147 2.147 2.146-2.147a.5.5 0 1 1 .707.708L9.39 8l2.146 2.146a.5.5 0 0 1-.707.708L8.683 8.707l-2.147 2.147a.5.5 0 0 1-.707-.708L7.976 8 5.829 5.854z' />
-            </svg>
-          </button>
-        </div>
-      </ul>
+              {radio.name}
+            </ToggleButton>
+          ))}
+        </ButtonGroup>
+      </div>
+      <IndividualKeyboard
+      Q1={Q1}
+      setQ1={setQ1}
+      >
+
+      </IndividualKeyboard>
     </div>
   )
 }
