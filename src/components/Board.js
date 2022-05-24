@@ -1,21 +1,21 @@
 import React from 'react'
-import { useRef , useEffect} from 'react'
-import {Form, Button, Alert} from 'react-bootstrap'
+import { useRef, useEffect } from 'react'
+import { Form, Button, Alert } from 'react-bootstrap'
 
 function Board(props) {
 
-    useEffect(()=>{
-        if(props.onePlayer){
+    useEffect(() => {
+        if (props.onePlayer) {
             scrollToBottomOne();
         }
-        else{
+        else {
             scrollToBottomTwo();
         }
     }, [props])
-    
+
     const bottomRefLeft = useRef();
     const bottomRefRight = useRef();
-    
+
     const bottomRef = useRef();
 
     const scrollToBottomTwo = () => {
@@ -34,13 +34,13 @@ function Board(props) {
             behavior: "smooth",
             block: "start",
         });
-        
+
     };
     const giveUp = () => {
         props.setWin(2)
     }
-    
-    if(props.onePlayer){
+
+    if (props.onePlayer) {
         return props.medium ? (
             <div className='outer-container'>
                 <div className="container">
@@ -103,7 +103,7 @@ function Board(props) {
         )
 
     }
-    else{
+    else {
         return props.medium ? (
             <div className='outer-container'>
                 <div className="container">
@@ -192,8 +192,8 @@ function Board(props) {
         )
 
     }
-   
-    
+
+
 
 }
 

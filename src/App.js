@@ -30,7 +30,7 @@ function App() {
   const [infoTrigger, setInfoTrigger] = useState(false)
   const [settingsTrigger, setSettingsTrigger] = useState(false)
   const [win, setWin] = useState(0)
-  
+
   const [onePlayer, setOnePlayer] = useState(false)
   const [highContrast, setHighContrast] = useState(false)
   const [dark, setDark] = useState(false)
@@ -137,9 +137,9 @@ function App() {
         setPlayer1NumbersMedium={setPlayer1NumbersMedium}
         setPlayer2NumbersMedium={setPlayer2NumbersMedium}
       />
-      
-      <SettingsPage 
-        settingsTrigger={settingsTrigger} 
+
+      <SettingsPage
+        settingsTrigger={settingsTrigger}
         setSettingsTrigger={setSettingsTrigger}
         setOnePlayer={setOnePlayer}
         onePlayer={onePlayer}
@@ -156,7 +156,7 @@ function App() {
         startTrigger={startTrigger}
         setPlayer1NumbersMedium={setPlayer1NumbersMedium}
         setPlayer2NumbersMedium={setPlayer2NumbersMedium}
-        
+
         setStart={setStartTrigger}
         medium={medium}
         setMedium={setMedium}
@@ -164,7 +164,7 @@ function App() {
         setDark={setDark}
         highContrast={highContrast}
         setHighContrast={setHighContrast}
-       />
+      />
       <InfoPage
         infoTrigger={infoTrigger}
         setInfoTrigger={setInfoTrigger}

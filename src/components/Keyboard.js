@@ -2,6 +2,7 @@ import '../App.css'
 import { useState } from 'react'
 import CurrentWord from './CurrentWord'
 import arr from '../data/GuessableWords.json'
+import { Button, ButtonGroup } from 'react-bootstrap'
 
 function Keyboard(props) {
   const [currWord, setWord] = useState('')
@@ -106,6 +107,7 @@ function Keyboard(props) {
     <div className='flex-container-body'>
       <div className='word-holder'>
         <CurrentWord word={currWord} setWord={setWord} />
+
       </div>
       <div style={{ height: '5px', marginBottom: '25px' }}>{errMsg}</div>
       <ul id='keyboard'>

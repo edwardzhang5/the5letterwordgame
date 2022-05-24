@@ -1,6 +1,6 @@
 import '../App.css'
 import React, { Component, useEffect, useState } from 'react'
-import {Form, Button, Alert} from 'react-bootstrap'
+import { Form, Button, Alert } from 'react-bootstrap'
 import resetGameOnePlayer from '../const/resetOnePlayer'
 import resetGameTwoPlayer from '../const/resetTwoPlayer'
 import $ from 'jquery'
@@ -24,11 +24,11 @@ function SettingsPage(props) {
   }
   const yesButton = () => {
     $("#custom-switch").prop("checked", !$("#custom-switch").prop("checked"));
-    if(props.onePlayer) {
+    if (props.onePlayer) {
       resetGameTwoPlayer(props)
       setShow(true)
-     }
-    else{
+    }
+    else {
       resetGameOnePlayer(props)
       setShow(true)
     }
@@ -38,68 +38,68 @@ function SettingsPage(props) {
   const noButton = () => {
     setShow(false);
   }
- 
+
   return props.settingsTrigger ? (
 
     <div className='StartPage'>
       <div className='Card'>
 
         <h1>Settings</h1>
-        
+
         <Form>
           {/* <Form.Group inline> */}
-            <Form.Check
-              type="switch"
-              id="ting"
-              label="Dark Mode"
-              onChange={toggleDarkMode}
-              checked={props.dark}
-            />
-            <Form.Check
-              type="switch"
-              label="High Contrast Mode"
-              id="customswitch"
-              onChange={toggleHighContrastMode}
-              checked={props.highContrast}
-            />
+          <Form.Check
+            type="switch"
+            id="ting"
+            label="Dark Mode"
+            onChange={toggleDarkMode}
+            checked={props.dark}
+          />
+          <Form.Check
+            type="switch"
+            label="High Contrast Mode"
+            id="customswitch"
+            onChange={toggleHighContrastMode}
+            checked={props.highContrast}
+          />
           {/* </Form.Group> */}
           {/* <Form.Group inline> */}
-            <Form.Check
-              type="switch"
-              label="One Player Mode"
-              id="custom-switch"
-              onChange={toggleOnePlayerMode}
-              checked={props.onePlayer}
-            />
-            <Form.Check
-              type="switch"
-              label="Medium Mode"
-              id="custom-switch"
-              onChange={toggleMediumMode}
-              checked={props.medium}
-            />
+          <Form.Check
+            type="switch"
+            label="One Player Mode"
+            id="custom-switch"
+            onChange={toggleOnePlayerMode}
+            checked={props.onePlayer}
+          />
+          <Form.Check
+            type="switch"
+            label="Medium Mode"
+            id="custom-switch"
+            onChange={toggleMediumMode}
+            checked={props.medium}
+          />
           {/* </Form.Group> */}
-          
-          
+
+
 
         </Form>
-        <Alert show={show} variant="danger" id= "a">
-        <Alert.Heading>Wait!</Alert.Heading>
-        <p>
-          This will end the curret game. Are you sure you want to continue?
-        </p>
-        <hr />
-        <div className="d-flex justify-content-center" >
-          <Button onClick={yesButton} variant="danger">
-            Yep
-          </Button>
-          <Button onClick={noButton} variant="danger">
-            No :o
-          </Button>
-        </div>
-      </Alert>
-        
-        
+        <Alert show={show} variant="danger" id="a">
+          <Alert.Heading>Wait!</Alert.Heading>
+          <p>
+            This will end the curret game. Are you sure you want to continue?
+          </p>
+          <hr />
+          <div className="d-flex justify-content-center" >
+            <Button onClick={yesButton} variant="danger">
+              Yep
+            </Button>
+            <Button onClick={noButton} variant="danger">
+              No :o
+            </Button>
+          </div>
+        </Alert>
+
+
         <button className='btn btn-lrg btn-secondary' onClick={closeSettings}>
           Close
         </button>
