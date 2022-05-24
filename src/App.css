@@ -602,6 +602,10 @@ button.nav-item:active {
   /* End Word Selection Stuff */
  
 
+  .outer-container {
+    height: 30vh;
+  }
+
   .player-name {
     font-size: calc(12px + 1vw);
   }
