@@ -482,9 +482,7 @@ function Keyboard(props) {
           </button>
         </div>
       </ul>
-      <div>
-        Player 1 Keyboard
-      </div>
+      
     </div>
   )
   :
@@ -754,9 +752,7 @@ function Keyboard(props) {
           </button>
         </div>
       </ul>
-      <div>
-        Player 2 Keyboard
-      </div>
+      
     </div>
   )
 
