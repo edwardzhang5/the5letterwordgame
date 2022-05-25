@@ -501,10 +501,11 @@ function Keyboard(props) {
               variant="secondary"
               name="radio"
               value={radio.value}
+              className={`radio-${idx}`}
               checked={radioValue === radio.value}
               onChange={(e) => setRadioValue(e.currentTarget.value)}
             >
-              {radio.name}
+              {""}
             </ToggleButton>
           ))}
         </ButtonGroup>
