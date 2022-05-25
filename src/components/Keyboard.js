@@ -163,6 +163,7 @@ function Keyboard(props) {
                 if (props.Players[1][1].indexOf(currWord.charAt(i)) > -1) {
                   numSimilarities++
                   if (props.Players[1][1].indexOf(currWord.charAt(i)) == i) {
+                    console.log(currWord.charAt(i))
                     numSimilaritiesMedium++;
                   }
                 }
@@ -183,6 +184,7 @@ function Keyboard(props) {
                 if (props.Players[0][1].indexOf(currWord.charAt(i)) > -1) {
                   numSimilarities++
                   if (props.Players[1][1].indexOf(currWord.charAt(i)) == i) {
+                    console.log(currWord.charAt(i))
                     numSimilaritiesMedium++;
                   }
                 }

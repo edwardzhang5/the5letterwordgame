@@ -540,7 +540,7 @@ button.nav-item:active {
   border-width: 3px !important;
   border-color: #000000 !important;
   margin: 5px !important;
-  background-color: hsl(0, 99%, 38%) !important;
+  background-color: hsl(108, 84%, 32%) !important;
 }
 
 .radio-1.btn.btn-secondary {
@@ -556,7 +556,8 @@ button.nav-item:active {
   border-width: 3px !important;
   border-color: #000000 !important;
   margin: 5px !important;
-  background-color: hsl(108, 84%, 32%) !important;
+  background-color: hsl(0, 99%, 38%) !important;
+
 }
 
 .radio-3.btn.btn-secondary {
