@@ -482,7 +482,6 @@ function Keyboard(props) {
           </button>
         </div>
       </ul>
-      
     </div>
   )
   :

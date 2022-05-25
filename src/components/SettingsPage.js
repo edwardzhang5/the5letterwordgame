@@ -85,7 +85,7 @@ function SettingsPage(props) {
         <Alert show={show} variant="danger" id="a">
           <Alert.Heading>Wait!</Alert.Heading>
           <p>
-            This will end the curret game. Are you sure you want to continue?
+            This will end the current game. Are you sure you want to continue?
           </p>
           <hr />
           <div className="d-flex justify-content-center" >
