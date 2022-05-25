@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.css": "/the5letterwordgame/static/css/main.10f50bbe.css",
-    "main.js": "/the5letterwordgame/static/js/main.4999bef8.js",
+    "main.css": "/the5letterwordgame/static/css/main.e64f1c7d.css",
+    "main.js": "/the5letterwordgame/static/js/main.a5be68f4.js",
     "static/js/787.9f2d13a9.chunk.js": "/the5letterwordgame/static/js/787.9f2d13a9.chunk.js",
     "static/media/FontsFree-Net-Didonesque-Display.ttf": "/the5letterwordgame/static/media/FontsFree-Net-Didonesque-Display.d9c7a13f8c9f4d5d8ec7.ttf",
     "service-worker.js": "/the5letterwordgame/service-worker.js",
     "static/media/SpartanMB-Bold.otf": "/the5letterwordgame/static/media/SpartanMB-Bold.de4d036fe2a739963d49.otf",
     "static/media/SpartanMB-Regular.otf": "/the5letterwordgame/static/media/SpartanMB-Regular.e8b51b12de8a76d9a46f.otf",
     "index.html": "/the5letterwordgame/index.html",
-    "main.10f50bbe.css.map": "/the5letterwordgame/static/css/main.10f50bbe.css.map",
-    "main.4999bef8.js.map": "/the5letterwordgame/static/js/main.4999bef8.js.map",
+    "main.e64f1c7d.css.map": "/the5letterwordgame/static/css/main.e64f1c7d.css.map",
+    "main.a5be68f4.js.map": "/the5letterwordgame/static/js/main.a5be68f4.js.map",
     "787.9f2d13a9.chunk.js.map": "/the5letterwordgame/static/js/787.9f2d13a9.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.10f50bbe.css",
-    "static/js/main.4999bef8.js"
+    "static/css/main.e64f1c7d.css",
+    "static/js/main.a5be68f4.js"
   ]
 }
