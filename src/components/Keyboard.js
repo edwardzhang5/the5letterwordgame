@@ -220,7 +220,7 @@ function Keyboard(props) {
         <CurrentWord word={currWord} setWord={setWord} />
 
       </div>
-      <div>{errMsg}</div>
+      <div className='err-msg-holder'>{errMsg}</div>
       <div>
         <ButtonGroup className="mb-2">
           {radios.map((radio, idx) => (
@@ -493,7 +493,7 @@ function Keyboard(props) {
       <div className='word-holder'>
         <CurrentWord word={currWord} setWord={setWord} />
       </div>
-      <div>{errMsg}</div>
+      <div className='err-msg-holder'>{errMsg}</div>
       <div>
         <ButtonGroup className="mb-2">
           {radios.map((radio, idx) => (

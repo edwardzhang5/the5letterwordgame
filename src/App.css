@@ -389,6 +389,11 @@ button.nav-item:active {
 /* End Board Stuff */
 
 /* Main Body Stuff */
+.err-msg-holder {
+  height: 5px;
+  margin-bottom: 25px;
+}
+
 .flex-container-body {
   background-color: #151c23;
   display: flex;
