@@ -296,7 +296,7 @@ button.nav-item:active {
 /* Board Stuff */
 .outer-container {
   flex: 0 0 auto;
-  height: 50vh;
+  height: 43vh;
 }
 
 .container {
@@ -322,7 +322,7 @@ button.nav-item:active {
   margin-right: 1vw;
   width: 48vw;
   min-height: 30vh;
-  max-height: 50vh;
+  max-height: 43vh;
   overflow-y: scroll;
   border-radius: 5px;
   background: #1d272f;
@@ -337,7 +337,7 @@ button.nav-item:active {
   margin-right: 1vw;
   width: 48vw;
   min-height: 30vh;
-  max-height: 50vh;
+  max-height: 43vh;
   overflow-y: scroll;
   border-radius: 5px;
   background: #1d272f;
@@ -762,15 +762,15 @@ button.btn.btn-normal:hover {
  
 
   .outer-container {
-    height: 38vh;
+    height: 31vh;
   }
 
   .left-col {
-    max-height: 38vh;
+    max-height: 31vh;
   }
 
   .right-col {
-    max-height: 38vh;
+    max-height: 31vh;
   }
 
   .player-name {
