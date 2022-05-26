@@ -1,13 +1,16 @@
-import '../App.css'
+import styles from '../App.css'
 import { useState } from 'react'
 import CurrentWord from './CurrentWord'
 import arr from '../data/GuessableWords.json'
 import { Button, ToggleButton, ButtonGroup } from 'react-bootstrap'
+import { wait } from '@testing-library/user-event/dist/utils'
 
 function Keyboard(props) {
   const [currWord, setWord] = useState('')
   const [errMsg, setErrMsg] = useState('')
   const [radioValue, setRadioValue] = useState('0');
+  const [animate, setAnimate] = useState('start');
+
 
   const keys = new Map();
   keys.set('Q1', [props.Q1, props.setQ1])
@@ -124,6 +127,13 @@ function Keyboard(props) {
         setWord(currWord.substring(0, currWord.length - 1))
       } else {
         //ERROR: shake
+        if(animate != 'y1') {
+          setAnimate('y1')
+        }
+
+        else {
+          setAnimate('y2')
+        }
       }
     } else if (e == 'ENTER') {
       if (currWord.length == 5) {
@@ -204,9 +214,24 @@ function Keyboard(props) {
         }
       } else {
         //ERROR: Word is not 5 Letters
+        if(animate != 'y1') {
+          setAnimate('y1')
+        }
+
+        else {
+          setAnimate('y2')
+        }
       }
     } else {
       if (currWord.length == 5) {
+        if(animate != 'y1') {
+          setAnimate('y1')
+        }
+
+        else {
+          setAnimate('y2')
+        }
+
         console.log('ur shit')
       } else {
         setWord(currWord + e)
@@ -216,9 +241,8 @@ function Keyboard(props) {
   
   return props.currPlayer == 1 ? (
     <div className='flex-container-body'>
-      <div className='word-holder'>
+      <div className={`word-holder ${animate}`}>
         <CurrentWord word={currWord} setWord={setWord} />
-
       </div>
       <div className='err-msg-holder'>{errMsg}</div>
       <div>

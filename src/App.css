@@ -451,6 +451,34 @@ button.nav-item:active {
   margin-bottom: 15px;
 }
 
+.word-holder.y1 {
+  margin-bottom: 15px;
+  animation-name: shake1;
+  animation-duration: .1s;
+  animation-iteration-count: 3;
+}
+
+.word-holder.y2 {
+  margin-bottom: 15px;
+  animation-name: shake2;
+  animation-duration: .1s;
+  animation-iteration-count: 3;
+}
+
+@keyframes shake1 {
+  0% { transform: translateX(0) }
+  33% { transform: translateX(5px) }
+  66% { transform: translateX(-5px) }
+  100% { transform: translateX(0) }
+}
+
+@keyframes shake2 {
+  0% { transform: translateX(0) }
+  33% { transform: translateX(5px) }
+  66% { transform: translateX(-5px) }
+  100% { transform: translateX(0) }
+}
+
 .form-control > .form-label {
   font-size: calc(5px + 1.5vw);
   text-align: left;
