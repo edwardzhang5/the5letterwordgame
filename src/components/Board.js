@@ -44,9 +44,13 @@ function Board(props) {
         return !props.hard ? (
             <div className='outer-container'>
                 <div className="container">
-                    <div className="left-col">
+                    <div className="middle-col">
                         <div className='player-name-container'>
+                            <div className='empty'></div>
                             <span className='player-name'>{props.Players[0][0]}</span>
+                            <Button className='loser-button' onClick = {giveUp}>
+                                <span className='loser-button-words'>I give up</span> 
+                            </Button>
                         </div>
                         <ul className='words-list'>
                             <div className = 'words'>
@@ -64,21 +68,19 @@ function Board(props) {
         
                         </div>
                     </div>
-                    <div>
-                    <Button
-                    onClick = {giveUp}>
-                        I give up 
-                    </Button>
-                    </div>
                 </div>
             </div>
         ) : 
         (
             <div className='outer-container'>
                 <div className="container">
-                    <div className="left-col">
+                    <div className="middle-col">
                         <div className='player-name-container'>
+                            <div className='empty'></div>
                             <span className='player-name'>{props.Players[0][0]}</span>
+                            <Button className='loser-button' onClick = {giveUp}>
+                                <span className='loser-button-words'>I give up</span> 
+                            </Button>
                         </div>
                         <ul className='words-list'>
                             <div className = 'words'>
@@ -89,14 +91,7 @@ function Board(props) {
                             </div>
                         </ul>
                         <div ref={bottomRef} className='list-bottom'>
-        
                         </div>
-                    </div>
-                    <div>
-                    <Button
-                    onClick = {giveUp}>
-                        I give up 
-                    </Button>
                     </div>
                 </div>
             </div>
@@ -109,6 +104,7 @@ function Board(props) {
                 <div className="container">
                     <div className="left-col">
                         <div className='player-name-container'>
+                            <div className='empty'></div>
                             <span className='player-name'>{props.Players[0][0]}</span>
                         </div>
                         <ul className='words-list'>
@@ -130,6 +126,7 @@ function Board(props) {
         
                     <div className="right-col">
                         <div className='player-name-container'>
+                            <div className='empty'></div>
                             <span className='player-name'>{props.Players[1][0]}</span>
                         </div>
                         <ul className='words-list'>
@@ -155,6 +152,7 @@ function Board(props) {
                 <div className="container">
                     <div className="left-col">
                         <div className='player-name-container'>
+                            <div className='empty'></div>
                             <span className='player-name'>{props.Players[0][0]}</span>
                         </div>
                         <ul className='words-list'>
@@ -173,6 +171,7 @@ function Board(props) {
         
                     <div className="right-col">
                         <div className='player-name-container'>
+                            <div className='empty'></div>
                             <span className='player-name'>{props.Players[1][0]}</span>
                         </div>
                         <ul className='words-list'>

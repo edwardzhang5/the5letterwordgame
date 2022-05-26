@@ -314,6 +314,21 @@ button.nav-item:active {
   justify-content: center;
 }
 
+.middle-col {
+  text-align: center;
+  padding-left: 10px;
+  padding-top: 5px;
+  margin-left: 1vw;
+  margin-right: 1vw;
+  width: 96vw;
+  min-height: 30vh;
+  max-height: 43vh;
+  overflow-y: scroll;
+  border-radius: 5px;
+  background: #1d272f;
+  border: 1px solid #000000;
+}
+
 .left-col {
   text-align: center;
   padding-left: 10px;
@@ -347,21 +362,51 @@ button.nav-item:active {
 .player-name-container {
   font-family: SpartanMB-Regular;
   color: #ffffff;
-  text-align: center;
-  display: table;
+  display: grid;
   margin: auto;
   margin-bottom: 5px;
   margin-top: 2px;
+  grid-template-columns: 1fr 1fr 1fr;
 }
 
 .player-name {
   font-size: calc(5px + 1.5vw);
   flex: 1;
-  display: inline;
+  flex-shrink: 0;
+  display: inline-block;
   background: hsl(207, 24%, 25%);
   padding: 5px 5px 5px 5px;
   border-radius: 8px;
   margin-bottom: 5px;
+  justify-self: center;
+}
+
+button.loser-button {
+  background: hsl(0, 99%, 38%);
+  border: none !important;
+  padding: 0px !important;
+  display: inline-block;
+  justify-self: right;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+button.loser-button > span.loser-button-words {
+  font-size: calc(5px + 1vw);
+  flex: 1;
+  flex-shrink: 0;
+  display: inline;
+  padding: 5px 5px 5px 5px;
+  border-radius: 8px;
+  margin-bottom: 5px;
+}
+
+button.loser-button:hover {
+  background: hsl(271, 76%, 33%) !important;
+}
+
+button.loser-button:active {
+  background: hsl(271, 76%, 43%) !important;
 }
 
 .words {
@@ -796,6 +841,10 @@ button.btn.btn-normal:hover {
     height: 31vh;
   }
 
+  .middle-col {
+    max-height: 31vh;
+  }
+
   .left-col {
     max-height: 31vh;
   }
@@ -805,6 +854,10 @@ button.btn.btn-normal:hover {
   }
 
   .player-name {
+    font-size: calc(12px + 1vw);
+  }
+
+  button.loser-button > span.loser-button-words {
     font-size: calc(12px + 1vw);
   }
 
