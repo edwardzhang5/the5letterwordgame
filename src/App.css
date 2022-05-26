@@ -574,6 +574,7 @@ button.nav-item:active {
   border-color: #000000 !important;
   margin: 5px !important;
   background-color: hsl(108, 84%, 32%) !important;
+  z-index: 0 !important;
 }
 
 .radio-1.btn.btn-secondary {
@@ -582,6 +583,7 @@ button.nav-item:active {
   border-color: #000000 !important;
   margin: 5px !important;
   background-color: hsl(43, 66%, 51%) !important;
+  z-index: 0 !important;
 }
 
 .radio-2.btn.btn-secondary {
@@ -590,7 +592,7 @@ button.nav-item:active {
   border-color: #000000 !important;
   margin: 5px !important;
   background-color: hsl(0, 99%, 38%) !important;
-
+  z-index: 0 !important;
 }
 
 .radio-3.btn.btn-secondary {
@@ -599,6 +601,7 @@ button.nav-item:active {
   border-color: #000000 !important;
   margin: 5px !important;
   background-color: hsl(207, 24%, 25%) !important;
+  z-index: 0 !important;
 }
 /* End Main Body Stuff */
 
