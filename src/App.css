@@ -441,7 +441,7 @@ button.nav-item:active {
 .word-holder {
   width: 100px;
   height: 25px;
-  background: hsl(207, 24%, 15%);
+  background: hsl(207, 24%, 20%);
   border: 1px solid #000000;
   border-radius: 5px;
   text-align: center;
