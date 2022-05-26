@@ -144,11 +144,11 @@ Add global styling for text / color that the rest of components will inherit
 }
 
 .Card button:hover {
-  background: hsl(271, 76%, 53%);
+  background: hsl(271, 76%, 33%);
 }
 
 .Card button:active {
-  background: hsl(271, 90%, 53%);
+  background: hsl(271, 76%, 43%);
 }
 
 .Card form {
@@ -237,11 +237,11 @@ button.nav-item {
 }
 
 button.nav-item:hover {
-  background: hsl(271, 76%, 53%);
+  background: hsl(271, 76%, 33%);
 }
 
 button.nav-item:active {
-  background: hsl(271, 90%, 53%);
+  background: hsl(271, 76%, 43%);
 }
 /* End Top Bar */
 
@@ -262,12 +262,12 @@ button.nav-item:active {
 
 .btn-custom:hover {
   color: inherit !important;
-  background: hsl(271, 76%, 53%) !important;
+  background: hsl(271, 76%, 33%) !important;
 }
 
 .btn-custom:active {
   color: inherit !important;
-  background: hsl(271, 90%, 53%) !important;
+  background: hsl(271, 76%, 43%) !important;
 }
 
 .MuiButton-root {
@@ -278,12 +278,12 @@ button.nav-item:active {
 
 .MuiButton-root:hover {
   color: inherit !important;
-  background: hsl(271, 76%, 53%) !important;
+  background: hsl(271, 76%, 33%) !important;
 }
 
 .MuiButton-root:active {
   color: inherit !important;
-  background: hsl(271, 90%, 53%) !important;
+  background: hsl(271, 76%, 43%) !important;
 }
 
 .MuiButton-root:disabled {
@@ -561,11 +561,11 @@ button.nav-item:active {
 }
 
 #keyboard button:hover {
-  background: hsl(271, 76%, 53%);
+  background: hsl(271, 76%, 33%);
 }
 
 #keyboard button:active {
-  background: hsl(271, 90%, 53%);
+  background: hsl(271, 76%, 43%);
 }
 
 .radio-0.btn.btn-secondary {
