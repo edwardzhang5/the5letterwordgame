@@ -34,7 +34,7 @@ function App() {
   const [onePlayer, setOnePlayer] = useState(false)
   const [highContrast, setHighContrast] = useState(false)
   const [dark, setDark] = useState(false)
-  const [medium, setMedium] = useState(false)
+  const [hard, setHard] = useState(false)
 
   const [Q1, setQ1] = useState('0')
   const [W1, setW1] = useState('0')
@@ -114,7 +114,7 @@ function App() {
         onePlayer={onePlayer}
         win={win}
         setWin={setWin}
-        medium={medium}
+        hard={hard}
       />
       <Keyboard
         Players={[
@@ -422,8 +422,8 @@ function App() {
         setPlayer2NumbersMedium={setPlayer2NumbersMedium}
 
         setStart={setStartTrigger}
-        medium={medium}
-        setMedium={setMedium}
+        hard={hard}
+        setHard={setHard}
         dark={dark}
         setDark={setDark}
         highContrast={highContrast}
@@ -536,7 +536,7 @@ function App() {
       <InfoPage
         infoTrigger={infoTrigger}
         setInfoTrigger={setInfoTrigger}
-        medium={medium}
+        hard={hard}
       />
 
     </div>

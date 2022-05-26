@@ -15,8 +15,8 @@ function SettingsPage(props) {
   }
   const toggleHighContrastMode = () => {
   }
-  const toggleMediumMode = () => {
-    props.setMedium(!props.medium)
+  const toggleHardMode = () => {
+    props.setHard(!props.hard)
   }
   const toggleOnePlayerMode = () => {
     setShow(true)
@@ -74,10 +74,10 @@ function SettingsPage(props) {
             />
             <Form.Check
               type="switch"
-              label="Medium Mode"
+              label="Hard Mode"
               id="custom-switch"
-              onChange={toggleMediumMode}
-              checked={props.medium}
+              onChange={toggleHardMode}
+              checked={props.hard}
             />
             {/* </Form.Group> */}
           </div>

@@ -7,11 +7,11 @@ function InfoPage(props) {
     props.setInfoTrigger(false)
   }
   if (props.infoTrigger) {
-    return props.medium ? (
+    return props.hard ? (
       <div className='InfoPage'>
         <div className='Card'>
           <div className='margin-controller'>
-            <h1>How to Play the 5 Letter Word Game : Standard</h1>
+            <h1>How to Play the 5 Letter Word Game : Hard</h1>
             <ul >
               <li>Guess the other player's word first to win</li>
               <li>
@@ -74,7 +74,7 @@ function InfoPage(props) {
       <div className='InfoPage'>
         <div className='Card'>
           <div className='margin-controller'>
-            <h1>How to Play the 5 Letter Word Game : Standard</h1>
+            <h1>How to Play the 5 Letter Word Game</h1>
             <ul >
               <li>Guess the other player's word first to win</li>
               <li>
@@ -82,8 +82,7 @@ function InfoPage(props) {
                 opponent's word
               </li>
               <li>
-                Each time you input a word, the number of
-                correct characters will be revealed
+                Each time you input a word, the left number reveals words in the correct position and the right number reveals how many letters are in the incorrect position
               </li>
             </ul>
             <div className='test-word-container'>
@@ -98,10 +97,14 @@ function InfoPage(props) {
                 <ul className='words-list'>
                   <div className='words'>
                     <li>POPPY</li>
-                    <li>STOLE</li>
+                    <li>CONCH</li>
                   </div>
                   <div className='numbers'>
                     <li>4</li>
+                    <li>0</li>
+                  </div>
+                  <div className='numbers'>
+                    <li>2</li>
                     <li>0</li>
                   </div>
                 </ul>
@@ -118,6 +121,9 @@ function InfoPage(props) {
                   </div>
                   <div className='numbers'>
                     <li>2</li>
+                  </div>
+                  <div className='numbers'>
+                    <li>0</li>
                   </div>
                 </ul>
                 <div className='list-bottom'></div>

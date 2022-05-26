@@ -41,7 +41,7 @@ function Board(props) {
     }
 
     if (props.onePlayer) {
-        return props.medium ? (
+        return !props.hard ? (
             <div className='outer-container'>
                 <div className="container">
                     <div className="left-col">
@@ -104,7 +104,7 @@ function Board(props) {
 
     }
     else {
-        return props.medium ? (
+        return !props.hard ? (
             <div className='outer-container'>
                 <div className="container">
                     <div className="left-col">
