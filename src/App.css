@@ -362,7 +362,6 @@ button.nav-item:active {
 .player-name-container {
   font-family: SpartanMB-Regular;
   color: #ffffff;
-  display: grid;
   margin: auto;
   margin-bottom: 5px;
   margin-top: 2px;
@@ -373,12 +372,37 @@ button.nav-item:active {
   font-size: calc(5px + 1.5vw);
   flex: 1;
   flex-shrink: 0;
-  display: inline-block;
   background: hsl(207, 24%, 25%);
   padding: 5px 5px 5px 5px;
   border-radius: 8px;
   margin-bottom: 5px;
   justify-self: center;
+}
+
+.left-col .player-name-container {
+  text-align: center;
+  display: table;
+}
+
+.right-col .player-name-container {
+  text-align: center;
+  display: table;
+}
+
+.middle-col .player-name-container {
+  display: grid;
+}
+
+.left-col .player-name {
+  display: inline;
+}
+
+.right-col .player-name {
+  display: inline;
+}
+
+.middle-col .player-name {
+  display: inline-block;
 }
 
 button.loser-button {
