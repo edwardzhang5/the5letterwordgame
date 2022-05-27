@@ -255,16 +255,19 @@ button.nav-item:active {
   color: white !important;
   padding: 5px 5px 5px 5px !important;
   background-color: hsl(207, 24%, 15%) !important;
+  border: 1px solid #000000 !important;
 }
 
 .btn-custom:hover {
   color: inherit !important;
   background: hsl(271, 76%, 33%) !important;
+  border: 1px solid #000000 !important;
 }
 
 .btn-custom:active {
   color: inherit !important;
   background: hsl(271, 76%, 43%) !important;
+  border: 1px solid #000000 !important;
 }
 
 .MuiButton-root {
