@@ -168,7 +168,6 @@ Add global styling for text / color that the rest of components will inherit
 .Card .Word-Suggestions {
   color: inherit;
   font-family: inherit;
-  padding-left: 20px;
   padding-bottom: 10px;
 }
 
