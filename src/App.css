@@ -172,15 +172,6 @@ Add global styling for text / color that the rest of components will inherit
   padding-bottom: 10px;
 }
 
-.Card .Word-Suggestions {
-  color: inherit;
-  font-family: inherit;
-  text-align: center;
-  padding: 10px;
-  margin-right: 10px;
-  
-}
-
 .test-word-container {
   display: flex;
   flex-direction: row;
@@ -209,7 +200,13 @@ Add global styling for text / color that the rest of components will inherit
   font-size: calc(5px + 1vw);
 }
 
+.Card .player-name-container {
+  text-align: center;
+  display: table;
+}
+
 .Card .player-name {
+  display: inline;
   font-size: calc(6px + 1vw);
 }
 /* End Start Page */
@@ -274,6 +271,7 @@ button.nav-item:active {
   color:white !important;
   font-size: calc(2px + 1vw) !important;
   background-color: hsl(207, 24%, 15%) !important;
+  border: 1px solid black !important;
 }
 
 .MuiButton-root:hover {
