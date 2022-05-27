@@ -199,13 +199,7 @@ Add global styling for text / color that the rest of components will inherit
   font-size: calc(5px + 1vw);
 }
 
-.Card .player-name-container {
-  text-align: center;
-  display: table;
-}
-
 .Card .player-name {
-  display: inline;
   font-size: calc(6px + 1vw);
 }
 /* End Start Page */
