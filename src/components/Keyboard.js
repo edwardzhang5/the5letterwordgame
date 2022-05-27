@@ -126,7 +126,6 @@ function Keyboard(props) {
       if (currWord.length > 0) {
         setWord(currWord.substring(0, currWord.length - 1))
       } else {
-        //ERROR: shake
         if(animate != 'y1') {
           setAnimate('y1')
         }
@@ -140,6 +139,13 @@ function Keyboard(props) {
         //Word is not in our list
         if (arr.indexOf(currWord) == -1) {
           setErrMsg('Please input a valid word')
+          if(animate != 'y1') {
+            setAnimate('y1')
+          }
+  
+          else {
+            setAnimate('y2')
+          }
         }
         //This Branch can be rewritten with the currPlayer Hook
         else {
