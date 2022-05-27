@@ -842,15 +842,15 @@ button.btn.btn-normal:hover {
 
   /* Word Selection Stuff */
   .col-lg-12 {
-    font-size: calc(20px + 1.5vw) !important;
+    font-size: calc(10px + 1.5vw) !important;
   }
 
   .btn-custom {
-    font-size: calc(20px + 1.5vw) !important;
+    font-size: calc(10px + 1.5vw) !important;
   }
 
   .MuiButton-root {
-    font-size: calc(15px + 1.5vw) !important;
+    font-size: calc(5px + 1.5vw) !important;
   }
   /* End Word Selection Stuff */
  
