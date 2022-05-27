@@ -82,14 +82,12 @@ function SettingsPage(props) {
             {/* </Form.Group> */}
           </div>
         </Form>
-        <Alert show={show} variant="danger" id="a">
-          <Alert.Heading>Wait!</Alert.Heading>
+        <Alert show={show} transition= {false} variant="danger" id="a">
           <p>
             This will end the current game. Are you sure you want to continue?
           </p>
-          <hr />
           <div className="d-flex justify-content-center" >
-            <Button onClick={yesButton} variant="danger">
+            <Button onClick={yesButton} variant="normal">
               Yep
             </Button>
             <Button onClick={noButton} variant="normal">
