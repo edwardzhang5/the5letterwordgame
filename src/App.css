@@ -4,10 +4,35 @@ Add option for darkmode-lightmode
 Add global styling for text / color that the rest of components will inherit
 */
 
+/*
+Colors Reference:
+hsl(207, 24%, 15%) = #1d272f
+hsl(207, 24%, 25%) = #30414f
+
+#f5f7fa - Text Color (off-white)
+#151c23 - Dark Background Color
+#1D272F - Lighter Background Color
+#30414f - Lightest Background Color
+
+hsl(207, 24%, 15%) - Scrollbar track color
+hsl(207, 24%, 30%) - Scrollbar color
+hsl(207, 24%, 35%) - Scrollbar hover color
+
+hsl(207, 24%, 15%) - Button Color
+hsl(207, 24%, 25%) - Button Disabled Color
+hsl(271, 76%, 33%) - Button Highlight Color
+hsl(271, 76%, 43%) - Button Press Color
+
+hsl(43, 66%, 51%) - Yellow
+hsl(108, 84%, 32%) - Red
+hsl(0, 99%, 38%) - Green
+*/
+
+
 .wrapper {
   text-align: center;
   font-family: SpartanMB-Regular;
-  color: #ffffff;
+  color: #f5f7fa;
   background-color: #151c23;
 }
 :root {
@@ -211,7 +236,7 @@ Add global styling for text / color that the rest of components will inherit
 }
 
 a.nav-link {
-  color: white !important;
+  color: f5f7fa !important;
 }
 
 button.nav-item {
@@ -721,6 +746,15 @@ button.btn.btn-normal:hover {
   border-color: #000000;
 }
 /* Ending Setting Stuff */
+
+
+/* Win Screen Stuff */
+.fade.alert.alert-primary.show {
+  background-color: hsl(207, 24%, 20%) !important;
+  color: #ffffff !important;
+  border-color: #000000;
+}
+/* End Win Screen Stuff Stuff */
 
 
 /* Formatting for Small Screen */
