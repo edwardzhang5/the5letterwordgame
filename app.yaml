@@ -3,6 +3,7 @@ handlers:
 # Serve all static files with url ending with a file extension
 - url: /(.*\..+)$
   static_files: build/\1
+  secure: always
   upload: build/(.*\..+)$
 # Handles all non https requests
 #- url: /.*
@@ -12,4 +13,5 @@ handlers:
   # Catch all handler to index.html
 - url: /.*
   static_files: build/index.html
+  secure: always
   upload: build/index.html
