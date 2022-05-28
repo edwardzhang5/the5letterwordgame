@@ -3,7 +3,7 @@ steps:
   # Install dependencies
   - name: node
     entrypoint: npm
-    args: ['install']
+    args: ['install', '--save-exact']
   # Run custom commands
   - name: node
     entrypoint: npm
