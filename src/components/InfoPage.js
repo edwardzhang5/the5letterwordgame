@@ -35,7 +35,7 @@ function InfoPage(props) {
                 <ul className='words-list'>
                   <div className='words'>
                     <li>POPPY</li>
-                    <li>STOLE</li>
+                    <li>RAINY</li>
                   </div>
                   <div className='numbers'>
                     <li>4</li>
@@ -62,7 +62,7 @@ function InfoPage(props) {
             </div>
             <h2>
               From player 1's first guess, they know 'P' is in their opponents word. <br/>
-              From their second, they are able to identify 'Y' as well.
+              From their second, they are able to identify 'O' as well.
             </h2>
             <button className='btn btn-sm btn-secondary' onClick={closeInfo}>
               Close
@@ -97,7 +97,7 @@ function InfoPage(props) {
                 <ul className='words-list'>
                   <div className='words'>
                     <li>POPPY</li>
-                    <li>CONCH</li>
+                    <li>RAINY</li>
                   </div>
                   <div className='numbers'>
                     <li>4</li>
@@ -131,7 +131,7 @@ function InfoPage(props) {
             </div>
             <h2>
               From player 1's first guess, they know 'P' is in their opponents word. <br/>
-              From their second, they are able to identify 'Y' as well.
+              From their second, they are able to identify 'O' as well.
             </h2>
             <button className='btn btn-sm btn-secondary' onClick={closeInfo}>
               Close

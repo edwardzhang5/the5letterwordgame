@@ -178,8 +178,7 @@ function Keyboard(props) {
               for (let i = 0; i < currWord.length; i++) {
                 if (props.Players[1][1].indexOf(currWord.charAt(i)) > -1) {
                   numSimilarities++
-                  if (props.Players[1][1].indexOf(currWord.charAt(i)) == i) {
-                    console.log(currWord.charAt(i))
+                  if (props.Players[1][1].charAt(i) == currWord.charAt(i)) {
                     numSimilaritiesMedium++;
                   }
                 }
@@ -199,8 +198,7 @@ function Keyboard(props) {
               for (let i = 0; i < currWord.length; i++) {
                 if (props.Players[0][1].indexOf(currWord.charAt(i)) > -1) {
                   numSimilarities++
-                  if (props.Players[1][1].indexOf(currWord.charAt(i)) == i) {
-                    console.log(currWord.charAt(i))
+                  if (props.Players[0][1].charAt(i) == currWord.charAt(i)) {
                     numSimilaritiesMedium++;
                   }
                 }
@@ -237,8 +235,6 @@ function Keyboard(props) {
         else {
           setAnimate('y2')
         }
-
-        console.log('ur shit')
       } else {
         setWord(currWord + e)
       }
